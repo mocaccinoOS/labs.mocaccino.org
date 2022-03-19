@@ -71,9 +71,9 @@ body {
     {{- if $description }}
     {{$description}}
     {{- else }}
-    To enable {{$reponame}} add in /etc/luet/luet.yaml the following:
+    To enable {{$reponame}} create /etc/luet/repos.conf.d/{{$reponame}}.yaml with the following:
     <pre><code class="language-yaml">repositories:
-  - name: "{{$reponame}}"
+    name: "{{$reponame}}"
     type: "{{$type}}"
     enable: true
     urls:
