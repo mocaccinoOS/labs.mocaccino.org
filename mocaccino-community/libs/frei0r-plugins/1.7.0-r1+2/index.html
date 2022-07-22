@@ -1,0 +1,782 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing libs/frei0r-plugins-1.7.0-r1&#43;2 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> libs/frei0r-plugins-1.7.0-r1&#43;2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of libs/frei0r-plugins
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:frei0r-plugins-libs-1.7.0-r1-2" target="_blank"> quay.io/mocaccino/mocaccino-community:frei0r-plugins-libs-1.7.0-r1-2 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:frei0r-plugins-libs-1.7.0-r1-2/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.7.0-r1&#43;2  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/gavl">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  gavl 1.4.0-r2&#43;1 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/opencv">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  opencv 4.5.5-r2 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 3
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-plugins/frei0r-plugins
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/media-plugins/frei0r-plugins">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  frei0r-plugins &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/include\/frei0r.h" ],
+            
+              [  "usr\/lib\/frei0r-1\/3dflippo.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/B.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/G.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/IIRblur.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/R.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/RGB.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/addition.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/addition_alpha.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alpha0ps.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphaatop.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphagrad.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphain.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphainjection.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphaout.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphaover.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphaspot.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/alphaxor.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/balanc0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/baltan.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/bgsubtract0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/blend.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/bluescreen0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/brightness.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/burn.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/bw0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/c0rners.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/cairoaffineblend.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/cairoblend.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/cairogradient.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/cairoimagegrid.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/cartoon.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/cluster.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/colgate.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/color_only.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/coloradj_RGB.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/colordistance.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/colorhalftone.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/colorize.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/colortap.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/composition.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/contrast0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/curves.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/d90stairsteppingfix.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/darken.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/defish0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/delay0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/delaygrab.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/difference.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/distort0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/dither.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/divide.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/dodge.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/edgeglow.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/elastic_scale.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/emboss.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/equaliz0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/facebl0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/facedetect.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/flippo.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/gamma.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/glitch0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/glow.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/grain_extract.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/grain_merge.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/hardlight.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/hqdn3d.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/hue.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/hueshift0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/invert0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/ising0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/keyspillm0pup.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/lenscorrection.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/letterb0xed.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/levels.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/lighten.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/lightgraffiti.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/lissajous0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/luminance.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/mask0mate.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/medians.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/multiply.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/ndvi.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/nervous.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/nois0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/normaliz0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/nosync0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/onecol0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/overlay.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/partik0l.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/perspective.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/pixeliz0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/plasma.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/posterize.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/pr0be.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/pr0file.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/premultiply.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/primaries.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/rgbnoise.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/rgbparade.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/rgbsplit0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/saturat0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/saturation.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/scale0tilt.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/scanline0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/screen.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/select0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/sharpness.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/sigmoidaltransfer.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/sobel.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/softglow.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/softlight.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/sopsat.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/spillsupress.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/squareblur.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/subtract.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/tehRoxx0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/test_pat_B.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/test_pat_C.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/test_pat_G.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/test_pat_I.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/test_pat_L.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/test_pat_R.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/three_point_balance.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/threelay0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/threshold0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/timeout.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/tint0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/transparency.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/twolay0r.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/uvmap.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/value.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/vectorscope.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/vertigo.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/vignette.so" ],
+            
+              [  "usr\/lib\/frei0r-1\/xfade0r.so" ],
+            
+              [  "usr\/lib\/pkgconfig\/frei0r.pc" ],
+            
+              [  "usr\/lib64\/frei0r-1\/3dflippo.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/B.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/G.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/IIRblur.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/R.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/RGB.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/addition.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/addition_alpha.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alpha0ps.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphaatop.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphagrad.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphain.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphainjection.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphaout.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphaover.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphaspot.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/alphaxor.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/balanc0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/baltan.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/bgsubtract0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/blend.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/bluescreen0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/brightness.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/burn.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/bw0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/c0rners.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/cairoaffineblend.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/cairoblend.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/cairogradient.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/cairoimagegrid.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/cartoon.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/cluster.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/colgate.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/color_only.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/coloradj_RGB.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/colordistance.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/colorhalftone.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/colorize.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/colortap.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/composition.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/contrast0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/curves.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/d90stairsteppingfix.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/darken.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/defish0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/delay0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/delaygrab.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/difference.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/distort0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/dither.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/divide.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/dodge.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/edgeglow.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/elastic_scale.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/emboss.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/equaliz0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/facebl0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/facedetect.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/flippo.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/gamma.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/glitch0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/glow.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/grain_extract.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/grain_merge.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/hardlight.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/hqdn3d.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/hue.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/hueshift0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/invert0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/ising0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/keyspillm0pup.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/lenscorrection.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/letterb0xed.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/levels.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/lighten.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/lightgraffiti.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/lissajous0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/luminance.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/mask0mate.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/medians.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/multiply.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/ndvi.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/nervous.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/nois0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/normaliz0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/nosync0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/onecol0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/overlay.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/partik0l.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/perspective.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/pixeliz0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/plasma.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/posterize.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/pr0be.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/pr0file.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/premultiply.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/primaries.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/rgbnoise.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/rgbparade.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/rgbsplit0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/saturat0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/saturation.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/scale0tilt.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/scanline0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/screen.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/select0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/sharpness.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/sigmoidaltransfer.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/sobel.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/softglow.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/softlight.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/sopsat.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/spillsupress.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/squareblur.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/subtract.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/tehRoxx0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/test_pat_B.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/test_pat_C.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/test_pat_G.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/test_pat_I.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/test_pat_L.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/test_pat_R.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/three_point_balance.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/threelay0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/threshold0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/timeout.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/tint0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/transparency.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/twolay0r.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/uvmap.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/value.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/vectorscope.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/vertigo.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/vignette.so" ],
+            
+              [  "usr\/lib64\/frei0r-1\/xfade0r.so" ],
+            
+              [  "usr\/lib64\/pkgconfig\/frei0r.pc" ],
+            
+              [  "usr\/share\/doc\/frei0r-plugins-1.7.0-r1\/AUTHORS.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/frei0r-plugins-1.7.0-r1\/ChangeLog.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/frei0r-plugins-1.7.0-r1\/README.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/frei0r-plugins-1.7.0-r1\/TODO.txt.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,905 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/qemu-7.0.0&#43;2 in mocaccino-desktop-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/qemu-7.0.0&#43;2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                QEMU &#43; Kernel-based Virtual Machine userland tools
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-desktop-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-desktop-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/qemu
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/desktop:qemu-apps-7.0.0-2" target="_blank"> quay.io/mocaccino/desktop:qemu-apps-7.0.0-2 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/desktop:qemu-apps-7.0.0-2/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 7.0.0&#43;2  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 LGPL-2 BSD-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/X">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  X &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: app-emulation/qemu app-emulation/spice sys-apps/usbredir
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://www.qemu.org" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://www.qemu.org </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/app-emulation/qemu">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qemu &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/app-emulation/spice">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  spice &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/sys-apps/usbredir">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  usbredir &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/init.d\/qemu-binfmt" ],
+            
+              [  "etc\/portage\/savedconfig\/sys-firmware\/ipxe-1.21.1" ],
+            
+              [  "etc\/qemu\/bridge.conf" ],
+            
+              [  "lib\/udev\/rules.d\/65-kvm.rules" ],
+            
+              [  "usr\/bin\/convert-dtsv0" ],
+            
+              [  "usr\/bin\/dtc" ],
+            
+              [  "usr\/bin\/dtdiff" ],
+            
+              [  "usr\/bin\/elf2dmp" ],
+            
+              [  "usr\/bin\/fdtdump" ],
+            
+              [  "usr\/bin\/fdtget" ],
+            
+              [  "usr\/bin\/fdtoverlay" ],
+            
+              [  "usr\/bin\/fdtput" ],
+            
+              [  "usr\/bin\/qemu-arm" ],
+            
+              [  "usr\/bin\/qemu-edid" ],
+            
+              [  "usr\/bin\/qemu-ga-client" ],
+            
+              [  "usr\/bin\/qemu-img" ],
+            
+              [  "usr\/bin\/qemu-io" ],
+            
+              [  "usr\/bin\/qemu-nbd" ],
+            
+              [  "usr\/bin\/qemu-pr-helper" ],
+            
+              [  "usr\/bin\/qemu-storage-daemon" ],
+            
+              [  "usr\/bin\/qemu-system-arm" ],
+            
+              [  "usr\/bin\/qemu-system-x86_64" ],
+            
+              [  "usr\/bin\/qmp-shell" ],
+            
+              [  "usr\/bin\/usbredirect" ],
+            
+              [  "usr\/bin\/vmxcap" ],
+            
+              [  "usr\/include\/fdt.h" ],
+            
+              [  "usr\/include\/libfdt.h" ],
+            
+              [  "usr\/include\/libfdt_env.h" ],
+            
+              [  "usr\/include\/slirp\/libslirp-version.h" ],
+            
+              [  "usr\/include\/slirp\/libslirp.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-audio.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-char.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-core.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-input.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-migration.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-qxl.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-replay.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-server.h" ],
+            
+              [  "usr\/include\/spice-server\/spice-version.h" ],
+            
+              [  "usr\/include\/spice-server\/spice.h" ],
+            
+              [  "usr\/include\/usbredirfilter.h" ],
+            
+              [  "usr\/include\/usbredirhost.h" ],
+            
+              [  "usr\/include\/usbredirparser.h" ],
+            
+              [  "usr\/include\/usbredirproto.h" ],
+            
+              [  "usr\/lib\/python-exec\/python3.10\/qemu-ga-client" ],
+            
+              [  "usr\/lib\/python-exec\/python3.10\/qmp-shell" ],
+            
+              [  "usr\/lib\/python-exec\/python3.10\/vmxcap" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/README.rst" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/__init__.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/__init__.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/__init__.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/aqmp_tui.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/aqmp_tui.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/aqmp_tui.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/error.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/error.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/error.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/events.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/events.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/events.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/legacy.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/legacy.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/legacy.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/message.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/message.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/message.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/models.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/models.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/models.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/protocol.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/protocol.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/protocol.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/qmp_client.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/qmp_client.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/qmp_client.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/qmp_shell.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/qmp_shell.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/qmp_shell.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/util.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/util.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/__pycache__\/util.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/aqmp_tui.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/error.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/events.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/legacy.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/message.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/models.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/protocol.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/py.typed" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/qmp_client.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/qmp_shell.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/aqmp\/util.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/README.rst" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/__init__.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/__init__.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/__init__.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/console_socket.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/console_socket.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/console_socket.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/machine.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/machine.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/machine.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/qtest.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/qtest.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/__pycache__\/qtest.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/console_socket.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/machine.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/py.typed" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/machine\/qtest.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/qmp\/README.rst" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/qmp\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/qmp\/__pycache__\/__init__.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/qmp\/__pycache__\/__init__.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/qmp\/__pycache__\/__init__.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/qmp\/py.typed" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/README.rst" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/__init__.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/__init__.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/__init__.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/accel.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/accel.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/accel.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qemu_ga_client.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qemu_ga_client.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qemu_ga_client.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom_common.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom_common.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom_common.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom_fuse.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom_fuse.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/__pycache__\/qom_fuse.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/accel.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/py.typed" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/qemu_ga_client.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/qom.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/qom_common.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/qemu\/utils\/qom_fuse.py" ],
+            
+              [  "usr\/lib64\/libfdt-1.6.0.so" ],
+            
+              [  "usr\/lib64\/libfdt.so" ],
+            
+              [  "usr\/lib64\/libfdt.so.1" ],
+            
+              [  "usr\/lib64\/libslirp.so" ],
+            
+              [  "usr\/lib64\/libslirp.so.0" ],
+            
+              [  "usr\/lib64\/libslirp.so.0.3.1" ],
+            
+              [  "usr\/lib64\/libspice-server.so" ],
+            
+              [  "usr\/lib64\/libspice-server.so.1" ],
+            
+              [  "usr\/lib64\/libspice-server.so.1.14.1" ],
+            
+              [  "usr\/lib64\/libusbredirhost.so" ],
+            
+              [  "usr\/lib64\/libusbredirhost.so.1" ],
+            
+              [  "usr\/lib64\/libusbredirhost.so.1.0.3" ],
+            
+              [  "usr\/lib64\/libusbredirparser.so" ],
+            
+              [  "usr\/lib64\/libusbredirparser.so.1" ],
+            
+              [  "usr\/lib64\/libusbredirparser.so.1.2.0" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libusbredirhost.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libusbredirparser-0.5.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/slirp.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/spice-server.pc" ],
+            
+              [  "usr\/libexec\/qemu-bridge-helper" ],
+            
+              [  "usr\/libexec\/virtfs-proxy-helper" ],
+            
+              [  "usr\/sbin\/usbredirserver" ],
+            
+              [  "usr\/share\/applications\/qemu.desktop" ],
+            
+              [  "usr\/share\/doc\/edk2-ovmf-202105-r2\/README.gentoo.bz2" ],
+            
+              [  "usr\/share\/doc\/libslirp-4.6.1\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/qemu-7.0.0-r1\/MAINTAINERS.bz2" ],
+            
+              [  "usr\/share\/doc\/qemu-7.0.0-r1\/README.gentoo.bz2" ],
+            
+              [  "usr\/share\/doc\/qemu-7.0.0-r1\/README.pc-bios.bz2" ],
+            
+              [  "usr\/share\/doc\/qemu-7.0.0-r1\/pci-ids.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/spice-0.15.0\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/spice-0.15.0\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/spice-0.15.0\/README.gentoo.bz2" ],
+            
+              [  "usr\/share\/doc\/usbredir-0.12.0\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/usbredir-0.12.0\/TODO.bz2" ],
+            
+              [  "usr\/share\/doc\/usbredir-0.12.0\/multi-thread.md.bz2" ],
+            
+              [  "usr\/share\/doc\/usbredir-0.12.0\/usb-redirection-protocol.md.bz2" ],
+            
+              [  "usr\/share\/edk2-ovmf\/EnrollDefaultKeys.efi" ],
+            
+              [  "usr\/share\/edk2-ovmf\/OVMF_CODE.fd" ],
+            
+              [  "usr\/share\/edk2-ovmf\/OVMF_CODE.secboot.fd" ],
+            
+              [  "usr\/share\/edk2-ovmf\/OVMF_VARS.fd" ],
+            
+              [  "usr\/share\/edk2-ovmf\/Shell.efi" ],
+            
+              [  "usr\/share\/edk2-ovmf\/UefiShell.img" ],
+            
+              [  "usr\/share\/icons\/hicolor\/128x128\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/256x256\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/qemu.bmp" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/512x512\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/64x64\/apps\/qemu.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/qemu.svg" ],
+            
+              [  "usr\/share\/ipxe\/10222000.rom" ],
+            
+              [  "usr\/share\/ipxe\/10500940.rom" ],
+            
+              [  "usr\/share\/ipxe\/10ec8139.rom" ],
+            
+              [  "usr\/share\/ipxe\/15ad07b0.rom" ],
+            
+              [  "usr\/share\/ipxe\/1af41000.rom" ],
+            
+              [  "usr\/share\/ipxe\/8086100e.rom" ],
+            
+              [  "usr\/share\/ipxe\/808610de.rom" ],
+            
+              [  "usr\/share\/ipxe\/80861209.rom" ],
+            
+              [  "usr\/share\/ipxe\/ipxe.usb" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/locale\/de_DE\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/locale\/fr_FR\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/qemu.mo" ],
+            
+              [  "usr\/share\/man\/man1\/usbredirect.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/usbredirserver.1.bz2" ],
+            
+              [  "usr\/share\/qemu\/QEMU,cgthree.bin" ],
+            
+              [  "usr\/share\/qemu\/QEMU,tcx.bin" ],
+            
+              [  "usr\/share\/qemu\/bamboo.dtb" ],
+            
+              [  "usr\/share\/qemu\/binfmt.d\/qemu.conf" ],
+            
+              [  "usr\/share\/qemu\/bios-256k.bin" ],
+            
+              [  "usr\/share\/qemu\/bios-microvm.bin" ],
+            
+              [  "usr\/share\/qemu\/bios.bin" ],
+            
+              [  "usr\/share\/qemu\/canyonlands.dtb" ],
+            
+              [  "usr\/share\/qemu\/edk2-aarch64-code.fd" ],
+            
+              [  "usr\/share\/qemu\/edk2-arm-code.fd" ],
+            
+              [  "usr\/share\/qemu\/edk2-arm-vars.fd" ],
+            
+              [  "usr\/share\/qemu\/edk2-i386-code.fd" ],
+            
+              [  "usr\/share\/qemu\/edk2-i386-secure-code.fd" ],
+            
+              [  "usr\/share\/qemu\/edk2-i386-vars.fd" ],
+            
+              [  "usr\/share\/qemu\/edk2-licenses.txt" ],
+            
+              [  "usr\/share\/qemu\/edk2-x86_64-code.fd" ],
+            
+              [  "usr\/share\/qemu\/edk2-x86_64-secure-code.fd" ],
+            
+              [  "usr\/share\/qemu\/efi-e1000.rom" ],
+            
+              [  "usr\/share\/qemu\/efi-e1000e.rom" ],
+            
+              [  "usr\/share\/qemu\/efi-eepro100.rom" ],
+            
+              [  "usr\/share\/qemu\/efi-ne2k_pci.rom" ],
+            
+              [  "usr\/share\/qemu\/efi-pcnet.rom" ],
+            
+              [  "usr\/share\/qemu\/efi-rtl8139.rom" ],
+            
+              [  "usr\/share\/qemu\/efi-virtio.rom" ],
+            
+              [  "usr\/share\/qemu\/efi-vmxnet3.rom" ],
+            
+              [  "usr\/share\/qemu\/firmware\/50-edk2-i386-secure.json" ],
+            
+              [  "usr\/share\/qemu\/firmware\/50-edk2-ovmf-x64-sb.json" ],
+            
+              [  "usr\/share\/qemu\/firmware\/50-edk2-x86_64-secure.json" ],
+            
+              [  "usr\/share\/qemu\/firmware\/60-edk2-aarch64.json" ],
+            
+              [  "usr\/share\/qemu\/firmware\/60-edk2-arm.json" ],
+            
+              [  "usr\/share\/qemu\/firmware\/60-edk2-i386.json" ],
+            
+              [  "usr\/share\/qemu\/firmware\/60-edk2-ovmf-x64.json" ],
+            
+              [  "usr\/share\/qemu\/firmware\/60-edk2-x86_64.json" ],
+            
+              [  "usr\/share\/qemu\/hppa-firmware.img" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/ar" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/bepo" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/cz" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/da" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/de" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/de-ch" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/en-gb" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/en-us" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/es" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/et" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/fi" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/fo" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/fr" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/fr-be" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/fr-ca" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/fr-ch" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/hr" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/hu" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/is" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/it" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/ja" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/lt" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/lv" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/mk" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/nl" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/no" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/pl" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/pt" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/pt-br" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/ru" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/sl" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/sv" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/th" ],
+            
+              [  "usr\/share\/qemu\/keymaps\/tr" ],
+            
+              [  "usr\/share\/qemu\/kvmvapic.bin" ],
+            
+              [  "usr\/share\/qemu\/linuxboot.bin" ],
+            
+              [  "usr\/share\/qemu\/linuxboot_dma.bin" ],
+            
+              [  "usr\/share\/qemu\/multiboot.bin" ],
+            
+              [  "usr\/share\/qemu\/multiboot_dma.bin" ],
+            
+              [  "usr\/share\/qemu\/npcm7xx_bootrom.bin" ],
+            
+              [  "usr\/share\/qemu\/openbios-ppc" ],
+            
+              [  "usr\/share\/qemu\/openbios-sparc32" ],
+            
+              [  "usr\/share\/qemu\/openbios-sparc64" ],
+            
+              [  "usr\/share\/qemu\/opensbi-riscv32-generic-fw_dynamic.bin" ],
+            
+              [  "usr\/share\/qemu\/opensbi-riscv64-generic-fw_dynamic.bin" ],
+            
+              [  "usr\/share\/qemu\/palcode-clipper" ],
+            
+              [  "usr\/share\/qemu\/petalogix-ml605.dtb" ],
+            
+              [  "usr\/share\/qemu\/petalogix-s3adsp1800.dtb" ],
+            
+              [  "usr\/share\/qemu\/pvh.bin" ],
+            
+              [  "usr\/share\/qemu\/pxe-e1000.rom" ],
+            
+              [  "usr\/share\/qemu\/pxe-eepro100.rom" ],
+            
+              [  "usr\/share\/qemu\/pxe-ne2k_pci.rom" ],
+            
+              [  "usr\/share\/qemu\/pxe-pcnet.rom" ],
+            
+              [  "usr\/share\/qemu\/pxe-rtl8139.rom" ],
+            
+              [  "usr\/share\/qemu\/pxe-virtio.rom" ],
+            
+              [  "usr\/share\/qemu\/qboot.rom" ],
+            
+              [  "usr\/share\/qemu\/qemu-nsis.bmp" ],
+            
+              [  "usr\/share\/qemu\/qemu_vga.ndrv" ],
+            
+              [  "usr\/share\/qemu\/s390-ccw.img" ],
+            
+              [  "usr\/share\/qemu\/s390-netboot.img" ],
+            
+              [  "usr\/share\/qemu\/sgabios.bin" ],
+            
+              [  "usr\/share\/qemu\/skiboot.lid" ],
+            
+              [  "usr\/share\/qemu\/slof.bin" ],
+            
+              [  "usr\/share\/qemu\/trace-events-all" ],
+            
+              [  "usr\/share\/qemu\/u-boot-sam460-20100605.bin" ],
+            
+              [  "usr\/share\/qemu\/u-boot.e500" ],
+            
+              [  "usr\/share\/qemu\/vgabios-ati.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios-bochs-display.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios-cirrus.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios-qxl.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios-ramfb.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios-stdvga.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios-virtio.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios-vmware.bin" ],
+            
+              [  "usr\/share\/qemu\/vgabios.bin" ],
+            
+              [  "usr\/share\/qemu\/vof-nvram.bin" ],
+            
+              [  "usr\/share\/qemu\/vof.bin" ],
+            
+              [  "usr\/share\/seabios\/bios-256k.bin" ],
+            
+              [  "usr\/share\/seabios\/bios.bin" ],
+            
+              [  "usr\/share\/seavgabios\/vgabios-cirrus.bin" ],
+            
+              [  "usr\/share\/seavgabios\/vgabios-isavga.bin" ],
+            
+              [  "usr\/share\/seavgabios\/vgabios-qxl.bin" ],
+            
+              [  "usr\/share\/seavgabios\/vgabios-stdvga.bin" ],
+            
+              [  "usr\/share\/seavgabios\/vgabios-virtio.bin" ],
+            
+              [  "usr\/share\/seavgabios\/vgabios-vmware.bin" ],
+            
+              [  "usr\/share\/sgabios\/sgabios.bin" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

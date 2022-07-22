@@ -1,0 +1,2298 @@
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-Q3qGP1uJL/B0sEmu57PKXjCirgPKMbg73OLRbTJ6lfHCVU5zkHqmcTI5EV2fSoPV1MHdKsCBE7m/aS6q0pPjRQ==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-solarizedlight.min.css" integrity="sha512-fibfhB71IpdEKqLKXP/96WuX1cTMmvZioYp7T6I+lTbvJrrjEGeyYdAf09GHpFptF8toQ32woGZ8bw9+HjZc0A==" crossorigin="anonymous" />
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>mocaccino-community Packages</title>
+</head>
+
+
+<body>
+<section class="hero is-mobile">
+  <div class="hero-body">
+    <div class="container ">
+      <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+            <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> mocaccino-community
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+
+              <h2 class="subtitle">
+
+        List packages and versions available in "mocaccino-community" repository
+             </h2>
+        </div>
+        <div class="column is-half">
+                      <a href="https://github.com/mocaccinoOS/community-repository"><span class="icon has-text-dark 	"> <i class="fas fa-code-branch"></i></span> </a>
+        </div>
+     </div>
+    </div>
+  </div>
+</section>
+
+<div class="container is-mobile">
+  <div class="notification is-info">
+    To enable mocaccino-community create /etc/luet/repos.conf.d/mocaccino-community.yaml with the following:
+    <pre><code class="language-yaml">
+    name: "mocaccino-community"
+    type: "docker"
+    enable: true
+    urls:
+    - "quay.io/mocaccino/mocaccino-community"</code></pre>
+  </div>
+
+  <table  data-toggle="table"
+    data-search="true"
+    data-show-columns="true"
+    id="table"  >
+    <thead>
+  
+    <tr>
+        <th data-field="name" ><abbr title="Name">Name</abbr></th>
+        <th data-field="category" >Category</th>
+        <th data-field="version"><abbr title="Version">Version</abbr></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th><abbr title="Name">Name</abbr></th>
+        <th>Category</th>
+        <th><abbr title="Version">Version</abbr></th>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/Config-Simple"> Config-Simple</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/Config-Simple/4.590.0-r2&#43;1">4.590.0-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/File-ReadBackwards"> File-ReadBackwards</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/File-ReadBackwards/1.60.0&#43;1">1.60.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/Gtk3"> Gtk3</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/Gtk3/0.38.0&#43;1">0.38.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/MIME-tools"> MIME-tools</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/MIME-tools/5.509.0-r1&#43;1">5.509.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/R"> R</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/R/4.2.0">4.2.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/Switch"> Switch</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/Switch/2.170.0-r1&#43;1">2.170.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/abiword"> abiword</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/abiword/3.0.5&#43;7">3.0.5&#43;7</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/alacritty"> alacritty</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/alacritty/0.9.0-r1&#43;1">0.9.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/allegro"> allegro</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/allegro/5.2.7.0">5.2.7.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/amd"> amd</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/amd/2.4.6-r1&#43;1">2.4.6-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ant-core"> ant-core</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ant-core/1.10.9-r5">1.10.9-r5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/aopalliance"> aopalliance</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/aopalliance/1.0-r3&#43;1">1.0-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/apcupsd"> apcupsd</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/apcupsd/3.14.14-r3&#43;3">3.14.14-r3&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/argtable"> argtable</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/argtable/2.13-r2">2.13-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/asio"> asio</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/asio/1.22.1">1.22.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/asm"> asm</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/asm/9.3">9.3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/astyle"> astyle</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/astyle/3.1-r2&#43;1">3.1-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/audacious"> audacious</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/audacious/4.1&#43;4">4.1&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/audacity"> audacity</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/audacity/2.4.2-r2&#43;4">2.4.2-r2&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/babl"> babl</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/babl/0.1.92">0.1.92</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/bamf"> bamf</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/bamf/0.5.5">0.5.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/bat"> bat</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/bat/0.20.0">0.20.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/bcrypt"> bcrypt</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/bcrypt/3.2.0&#43;4">3.2.0&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/bleachbit"> bleachbit</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/bleachbit/4.4.2&#43;1">4.4.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/blender"> blender</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/blender/3.2.1">3.2.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/bottom"> bottom</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/bottom/0.6.8&#43;3">0.6.8&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/brasero"> brasero</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/brasero/3.12.3">3.12.3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/brave"> brave</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/brave/1.31.84&#43;17">1.31.84&#43;17</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/c-blosc"> c-blosc</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/c-blosc/1.21.1&#43;5">1.21.1&#43;5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cairo-clock"> cairo-clock</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cairo-clock/0.3.4-r2&#43;1">0.3.4-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cairo-dock"> cairo-dock</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cairo-dock/3.4.1&#43;1">3.4.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/calligra"> calligra</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/calligra/3.2.1-r5&#43;5">3.2.1-r5&#43;5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/calligraplan"> calligraplan</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/calligraplan/3.3.0&#43;2">3.3.0&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/camd"> camd</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/camd/2.4.6-r1&#43;1">2.4.6-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cargo-c"> cargo-c</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cargo-c/0.9.5&#43;1">0.9.5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ccolamd"> ccolamd</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ccolamd/2.9.6&#43;1">2.9.6&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cdrdao"> cdrdao</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cdrdao/1.2.4-r1">1.2.4-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/celestia"> celestia</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/celestia/1.7.0_pre20220120&#43;3">1.7.0_pre20220120&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cfitsio"> cfitsio</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cfitsio/4.0.0">4.0.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cfortran"> cfortran</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cfortran/20110621&#43;1">20110621&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/chardet"> chardet</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/chardet/4.0.0-r1&#43;1">4.0.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cholmod"> cholmod</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cholmod/3.0.14&#43;2">3.0.14&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/chrome-binary-plugins"> chrome-binary-plugins</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/chrome-binary-plugins/103.0.5060.114">103.0.5060.114</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/clamav"> clamav</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/clamav/0.103.6&#43;1">0.103.6&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/clamtk"> clamtk</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/clamtk/6.14&#43;2">6.14&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/clementine"> clementine</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/clementine/1.4.0_rc1&#43;6">1.4.0_rc1&#43;6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cmt-plugins"> cmt-plugins</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/cmt-plugins/1.17-r1&#43;1">1.17-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cmus"> cmus</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cmus/2.9.1-r1&#43;1">2.9.1-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/coin"> coin</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/coin/4.0.0&#43;1">4.0.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/colamd"> colamd</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/colamd/2.9.6&#43;1">2.9.6&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/colorama"> colorama</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/colorama/0.4.4-r1">0.4.4-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/conky"> conky</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/conky/1.12.2&#43;3">1.12.2&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cpu-x"> cpu-x</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cpu-x/4.3.1&#43;2">4.3.1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cuetools"> cuetools</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/cuetools/1.4.1-r1">1.4.1-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/darktable"> darktable</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/darktable/3.8.1-r1&#43;1">3.8.1-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/dcmtk"> dcmtk</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/dcmtk/3.6.5&#43;3">3.6.5&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dcraw"> dcraw</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dcraw/9.28.0-r&#43;1">9.28.0-r&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/dee"> dee</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/dee/1.2.7">1.2.7</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/devil"> devil</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/devil/1.7.8-r4&#43;1">1.7.8-r4&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dia"> dia</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dia/0.97.3-r1&#43;3">0.97.3-r1&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/digikam"> digikam</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/digikam/7.5.0&#43;2">7.5.0&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dmd"> dmd</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dmd/2.094.2&#43;4">2.094.2&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dolphin-plugins-git"> dolphin-plugins-git</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dolphin-plugins-git/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dolphin-plugins-mountiso"> dolphin-plugins-mountiso</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dolphin-plugins-mountiso/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dosbox"> dosbox</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dosbox/0.74.3&#43;2">0.74.3&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/doxygen"> doxygen</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/doxygen/1.9.4-r1">1.9.4-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/dumb"> dumb</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/dumb/2.0.3&#43;2">2.0.3&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dvd-rw-tools"> dvd-rw-tools</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/dvd-rw-tools/7.1-r4&#43;4">7.1-r4&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/easytag"> easytag</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/easytag/2.4.3&#43;r2&#43;3">2.4.3&#43;r2&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/eclipse-ecj"> eclipse-ecj</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/eclipse-ecj/4.22-r1">4.22-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/enblend"> enblend</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/enblend/4.2.0_p20161007-r1&#43;3">4.2.0_p20161007-r1&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/extundelete"> extundelete</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/extundelete/0.2.4-r2">0.2.4-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/farstream"> farstream</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/farstream/0.2.9&#43;1">0.2.9&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ffmpegthumbs"> ffmpegthumbs</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ffmpegthumbs/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/filelight"> filelight</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/filelight/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/filezilla"> filezilla</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/filezilla/3.58.0">3.58.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/fish"> fish</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/fish/3.4.0">3.4.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/flacon"> flacon</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/flacon/9.0.0">9.0.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/flann"> flann</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/flann/1.9.1-r4&#43;1">1.9.1-r4&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/fluidsynth"> fluidsynth</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/fluidsynth/2.2.7">2.2.7</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/font-cursor-misc"> font-cursor-misc</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/font-cursor-misc/1.0.3-r2">1.0.3-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/fontawesome"> fontawesome</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/fontawesome/5.15.1&#43;3">5.15.1&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/fontforge"> fontforge</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/fontforge/20201107&#43;5">20201107&#43;5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/foot"> foot</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/foot/1.12.1&#43;4">1.12.1&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/fotoxx"> fotoxx</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/fotoxx/22.16">22.16</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/frei0r-plugins"> frei0r-plugins</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/frei0r-plugins/1.7.0-r1&#43;2">1.7.0-r1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ftgl"> ftgl</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ftgl/2.1.3_rc5&#43;1">2.1.3_rc5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/game-music-emu"> game-music-emu</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/game-music-emu/0.6.3&#43;1">0.6.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gavl"> gavl</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gavl/1.4.0-r2&#43;1">1.4.0-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gdl"> gdl</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gdl/3.40.0&#43;1">3.40.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/geeqie"> geeqie</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/geeqie/1.6-r1&#43;1">1.6-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gegl"> gegl</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gegl/0.4.36-r1">0.4.36-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gevent"> gevent</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gevent/21.12.0&#43;5">21.12.0&#43;5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gftp"> gftp</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gftp/2.9.1b&#43;1">2.9.1b&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/layers/ghc"> ghc</a></td>
+          <td class="category">layers</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/layers/ghc/8.10.4-r1&#43;14">8.10.4-r1&#43;14</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/buildbase/ghc"> ghc</a></td>
+          <td class="category">buildbase</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/buildbase/ghc/8.10.4-r1&#43;14">8.10.4-r1&#43;14</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/layerbase/ghc"> ghc</a></td>
+          <td class="category">layerbase</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/layerbase/ghc/8.10.4-r1&#43;14">8.10.4-r1&#43;14</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gimp"> gimp</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gimp/2.10.32">2.10.32</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/glfw"> glfw</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/glfw/3.3.5&#43;1">3.3.5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gmime-2"> gmime-2</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gmime-2/2.6.23-r1&#43;1">2.6.23-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gnumeric"> gnumeric</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gnumeric/1.12.52">1.12.52</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/goverlay"> goverlay</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/goverlay/0.8.1&#43;3">0.8.1&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/graphviz"> graphviz</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/graphviz/2.50.0&#43;2">2.50.0&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/greenlet"> greenlet</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/greenlet/1.1.2-r1">1.1.2-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gsl"> gsl</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gsl/2.7.1-r1&#43;1">2.7.1-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gsmartcontrol"> gsmartcontrol</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/gsmartcontrol/1.1.3&#43;1">1.1.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gst-plugins-libnice"> gst-plugins-libnice</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gst-plugins-libnice/0.1.19">0.1.19</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gst-plugins-srtp"> gst-plugins-srtp</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gst-plugins-srtp/1.20.2">1.20.2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gtkglext"> gtkglext</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gtkglext/1.2.0-r5&#43;1">1.2.0-r5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gts"> gts</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gts/20121130&#43;2">20121130&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gupnp-igd"> gupnp-igd</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/gupnp-igd/1.2.0&#43;1">1.2.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/guvcview"> guvcview</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/guvcview/2.0.6-r2&#43;2">2.0.6-r2&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hardinfo"> hardinfo</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hardinfo/0.6_alpha_pre20201116-r1&#43;1">0.6_alpha_pre20201116-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/buildbase/haskell"> haskell</a></td>
+          <td class="category">buildbase</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/buildbase/haskell/0.13">0.13</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/layers/haskell"> haskell</a></td>
+          <td class="category">layers</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/layers/haskell/0.13">0.13</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/layerbase/haskell"> haskell</a></td>
+          <td class="category">layerbase</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/layerbase/haskell/0.13">0.13</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hddtemp"> hddtemp</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hddtemp/0.3_beta15-r29&#43;1">0.3_beta15-r29&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/hdf5"> hdf5</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/hdf5/1.12.2-r2&#43;1">1.12.2-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hexchat"> hexchat</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hexchat/2.16.1">2.16.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/hidapi"> hidapi</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/hidapi/0.11.0">0.11.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/http-parser"> http-parser</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/http-parser/2.9.4-r1&#43;1">2.9.4-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/httrack"> httrack</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/httrack/3.49.2-r2&#43;1">3.49.2-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hugin"> hugin</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hugin/2021.0.0&#43;6">2021.0.0&#43;6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hwinfo"> hwinfo</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/hwinfo/21.80">21.80</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/hwloc"> hwloc</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/hwloc/2.6.0&#43;1">2.6.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/icoutils"> icoutils</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/icoutils/0.32.3&#43;8">0.32.3&#43;8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/id3lib"> id3lib</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/id3lib/3.8.3-r8">3.8.3-r8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/img2pdf"> img2pdf</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/img2pdf/0.4.3&#43;6">0.4.3&#43;6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/inconsolata"> inconsolata</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/inconsolata/20140821&#43;3">20140821&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/inconsolata-hellenic"> inconsolata-hellenic</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/inconsolata-hellenic/1.19&#43;3">1.19&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/indilib"> indilib</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/indilib/1.9.6-r1">1.9.6-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/inkscape"> inkscape</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/inkscape/1.1.2-r1&#43;2">1.1.2-r1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/isomaster"> isomaster</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/isomaster/1.3.16">1.3.16</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ispc"> ispc</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ispc/1.17.0-r2&#43;1">1.17.0-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/javatoolkit"> javatoolkit</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/javatoolkit/0.6.7&#43;1">0.6.7&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/javax-inject"> javax-inject</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/javax-inject/1-r4&#43;1">1-r4&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/jbigkit"> jbigkit</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/jbigkit/2.1&#43;1">2.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/jsr305"> jsr305</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/jsr305/3.0.2-r1">3.0.2-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/k3b"> k3b</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/k3b/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kapptemplate"> kapptemplate</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kapptemplate/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kate"> kate</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kate/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kcharselect"> kcharselect</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kcharselect/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kdenlive"> kdenlive</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kdenlive/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kdevelop"> kdevelop</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kdevelop/21.12.3-r1&#43;3">21.12.3-r1&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kdiff3"> kdiff3</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kdiff3/1.9.5">1.9.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kget"> kget</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kget/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kid3"> kid3</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kid3/3.9.1&#43;2">3.9.1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kompare"> kompare</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kompare/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krename"> krename</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krename/5.0.1-r1&#43;1">5.0.1-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krfb"> krfb</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krfb/21.12.3-r1&#43;2">21.12.3-r1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krita"> krita</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krita/5.0.8&#43;2">5.0.8&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krusader"> krusader</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/krusader/2.7.2&#43;39">2.7.2&#43;39</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ksnip"> ksnip</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ksnip/1.9.2">1.9.2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kstars"> kstars</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/kstars/3.5.9">3.5.9</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ktorrent"> ktorrent</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ktorrent/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ladspa-sdk"> ladspa-sdk</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ladspa-sdk/1.17-r1&#43;1">1.17-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lash"> lash</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lash/0.5.4-r5">0.5.4-r5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lasi"> lasi</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lasi/1.1.3&#43;1">1.1.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/latte-dock"> latte-dock</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/latte-dock/0.10.8">0.10.8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lib3ds"> lib3ds</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lib3ds/2.0.0_rc1-r1&#43;1">2.0.0_rc1-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libao"> libao</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libao/1.2.2-r2&#43;2">1.2.2-r2&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libbs2b"> libbs2b</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libbs2b/3.1.0-r2&#43;1">3.1.0-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libcaca"> libcaca</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libcaca/0.99_beta19-r8&#43;4">0.99_beta19-r8&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libchamplain"> libchamplain</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libchamplain/0.12.20&#43;4">0.12.20&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdca"> libdca</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdca/0.0.7&#43;1">0.0.7&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libde265"> libde265</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libde265/1.0.8&#43;3">1.0.8&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdiscid"> libdiscid</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdiscid/0.6.2&#43;1">0.6.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdv"> libdv</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdv/1.0.0-r4&#43;1">1.0.0-r4&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdvdcss"> libdvdcss</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libdvdcss/1.4.3&#43;1">1.4.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libebur128"> libebur128</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libebur128/1.2.6&#43;1">1.2.6&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libemf"> libemf</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libemf/1.0.13&#43;1">1.0.13&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libfame"> libfame</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libfame/0.9.1-r3&#43;1">0.9.1-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libfpx"> libfpx</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libfpx/1.3.1_p10&#43;1">1.3.1_p10&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libgadu"> libgadu</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libgadu/1.12.2-r1&#43;1">1.12.2-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libgit2"> libgit2</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libgit2/1.4.4">1.4.4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libglade"> libglade</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libglade/2.6.4-r3&#43;1">2.6.4-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libharu"> libharu</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libharu/2.3.0-r2&#43;1">2.3.0-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libheif"> libheif</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libheif/1.12.0-r1&#43;8">1.12.0-r1&#43;8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libircclient"> libircclient</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libircclient/1.10&#43;1">1.10&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libktorrent"> libktorrent</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libktorrent/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/liblqr"> liblqr</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/liblqr/0.4.2-r1&#43;1">0.4.2-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmicrohttpd"> libmicrohttpd</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmicrohttpd/0.9.75">0.9.75</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmikmod"> libmikmod</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmikmod/3.3.11.1&#43;1">3.3.11.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmp4v2"> libmp4v2</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmp4v2/2.0.0-r2&#43;1">2.0.0-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmypaint"> libmypaint</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libmypaint/1.6.1-r1&#43;2">1.6.1-r1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libnice"> libnice</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libnice/0.1.19">0.1.19</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libnova"> libnova</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libnova/0.16.0&#43;1">0.16.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libnsgif"> libnsgif</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libnsgif/0.2.1-r3&#43;1">0.2.1-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libofa"> libofa</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libofa/0.9.3-r2&#43;1">0.9.3-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libopenmpt"> libopenmpt</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libopenmpt/0.5.14&#43;1">0.5.14&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libpano13"> libpano13</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libpano13/2.9.21&#43;1">2.9.21&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/libreoffice"> libreoffice</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/libreoffice/7.3.3.2-r3&#43;1">7.3.3.2-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsbsms"> libsbsms</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsbsms/2.3.0&#43;1">2.3.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libshout"> libshout</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libshout/2.4.6">2.4.6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsidplay"> libsidplay</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsidplay/2.1.1-r5&#43;1">2.1.1-r5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsidplayfp"> libsidplayfp</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsidplayfp/2.3.1&#43;1">2.3.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsoundtouch"> libsoundtouch</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsoundtouch/2.3.1&#43;1">2.3.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libspnav"> libspnav</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libspnav/0.2.3-r1&#43;1">0.2.3-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsrtp"> libsrtp</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libsrtp/2.3.0-r1&#43;1">2.3.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libtomcrypt"> libtomcrypt</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libtomcrypt/1.18.2-r4">1.18.2-r4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libunity"> libunity</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libunity/7.1.4">7.1.4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libvisio"> libvisio</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libvisio/0.1.7&#43;5">0.1.7&#43;5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libwnck"> libwnck</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libwnck/2.31.0-r1&#43;1">2.31.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libxdg-basedir"> libxdg-basedir</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/libxdg-basedir/1.2.3&#43;1">1.2.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lilv"> lilv</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lilv/0.24.14">0.24.14</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/log4cplus"> log4cplus</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/log4cplus/2.0.7&#43;1">2.0.7&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/loudmouth"> loudmouth</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/loudmouth/1.5.3-r3&#43;2">1.5.3-r3&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lpsolve"> lpsolve</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lpsolve/5.5.2.0-r1">5.5.2.0-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/lshw"> lshw</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/lshw/02.19.2b_p20210121-r3&#43;1">02.19.2b_p20210121-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lv2"> lv2</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/lv2/1.18.4">1.18.4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/mac"> mac</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/mac/4.11.4.5.7-r1&#43;1">4.11.4.5.7-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mangohud"> mangohud</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mangohud/0.6.5">0.6.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/marble"> marble</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/marble/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/mbedtls"> mbedtls</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/mbedtls/2.28.0-r1&#43;1">2.28.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mc"> mc</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mc/4.8.28-r1">4.8.28-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/meanwhile"> meanwhile</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/meanwhile/1.0.2-r1&#43;1">1.0.2-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/metis"> metis</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/metis/5.1.0-r5&#43;1">5.1.0-r5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/milkytracker"> milkytracker</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/milkytracker/1.03.00&#43;2">1.03.00&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mkvtoolnix"> mkvtoolnix</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mkvtoolnix/67.0.0">67.0.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/mlt"> mlt</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/mlt/7.8.0">7.8.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/moc"> moc</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/moc/2.6_alpha3-r5&#43;1">2.6_alpha3-r5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mono"> mono</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mono/6.12.0.122&#43;1">6.12.0.122&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mpv"> mpv</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mpv/0.34.1-r1">0.34.1-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mypaint"> mypaint</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mypaint/2.0.1-r2&#43;4">2.0.1-r2&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mypaint-brushes"> mypaint-brushes</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/mypaint-brushes/2.0.2&#43;1">2.0.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/nas"> nas</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/nas/1.9.5&#43;1">1.9.5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/net-snmp"> net-snmp</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/net-snmp/5.9.1-r2">5.9.1-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/netpbm"> netpbm</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/netpbm/10.86.30&#43;1">10.86.30&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/nlohmann_json"> nlohmann_json</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/nlohmann_json/3.10.5">3.10.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nnn"> nnn</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nnn/4.5">4.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nrg2iso"> nrg2iso</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nrg2iso/0.4-r2&#43;1">0.4-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/numactl"> numactl</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/numactl/2.0.14&#43;1">2.0.14&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nut"> nut</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nut/2.7.4-r8&#43;2">2.7.4-r8&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nx"> nx</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/nx/3.5.99.26&#43;5">3.5.99.26&#43;5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ocio-oiio"> ocio-oiio</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ocio-oiio/4.1&#43;1">4.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/layerbase/office-common"> office-common</a></td>
+          <td class="category">layerbase</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/layerbase/office-common/0.8&#43;1">0.8&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/layers/office-common"> office-common</a></td>
+          <td class="category">layers</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/layers/office-common/0.8&#43;1">0.8&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/okteta"> okteta</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/okteta/0.26.9">0.26.9</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/onedrive"> onedrive</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/onedrive/2.4.9&#43;4">2.4.9&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/opencv"> opencv</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/opencv/4.5.5-r2">4.5.5-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/openmpi"> openmpi</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/openmpi/4.1.2&#43;1">4.1.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/openrgb"> openrgb</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/openrgb/0.7&#43;3">0.7&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/openvdb"> openvdb</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/openvdb/8.2.0-r7&#43;3">8.2.0-r7&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/opera"> opera</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/opera/89.0.4447.48">89.0.4447.48</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ossp-uuid"> ossp-uuid</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ossp-uuid/1.6.2-r7">1.6.2-r7</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pandoc"> pandoc</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pandoc/2.9.2.1&#43;7">2.9.2.1&#43;7</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/paramiko"> paramiko</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/paramiko/2.11.0">2.11.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pdfarranger"> pdfarranger</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pdfarranger/1.8.2&#43;6">1.8.2&#43;6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/perl-Tk"> perl-Tk</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/perl-Tk/804.36.0&#43;1">804.36.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/physfs"> physfs</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/physfs/3.0.2-r1&#43;2">3.0.2-r1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pidgin"> pidgin</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pidgin/2.14.10&#43;1">2.14.10&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pidgin-opensteamworks"> pidgin-opensteamworks</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pidgin-opensteamworks/1.7">1.7</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pidgin-sipe"> pidgin-sipe</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pidgin-sipe/1.25.0-r1&#43;4">1.25.0-r1&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pikepdf"> pikepdf</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pikepdf/5.2.0-r1">5.2.0-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pip"> pip</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pip/22.1.2">22.1.2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plank"> plank</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plank/0.11.89_p3&#43;3">0.11.89_p3&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plantuml"> plantuml</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plantuml/1.2022.5">1.2022.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plasma-firewall"> plasma-firewall</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plasma-firewall/5.24.5">5.24.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plasma-sdk"> plasma-sdk</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/plasma-sdk/5.24.5">5.24.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/plotutils"> plotutils</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/plotutils/2.6-r2&#43;2">2.6-r2&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/podofo"> podofo</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/podofo/0.9.6_p20190928-r100&#43;1">0.9.6_p20190928-r100&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/portmidi"> portmidi</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/portmidi/234-r2">234-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/postgresql"> postgresql</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/postgresql/14.2-r1">14.2-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/protobuf-c"> protobuf-c</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/protobuf-c/1.4.0-r1&#43;1">1.4.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/protobuf-python"> protobuf-python</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/protobuf-python/3.19.3-r3">3.19.3-r3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pstoedit"> pstoedit</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pstoedit/3.75&#43;1">3.75&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ptex"> ptex</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/ptex/2.3.2&#43;1">2.3.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pulseaudio-qt"> pulseaudio-qt</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pulseaudio-qt/1.3-r2">1.3-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pyasn1"> pyasn1</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pyasn1/0.4.8-r2">0.4.8-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pybind11"> pybind11</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pybind11/2.9.2-r1">2.9.2-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pycodestyle"> pycodestyle</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pycodestyle/2.8.0-r1">2.8.0-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pyhoca-cli"> pyhoca-cli</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pyhoca-cli/0.6.1.2&#43;4">0.6.1.2&#43;4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pyhoca-gui"> pyhoca-gui</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/pyhoca-gui/0.6.1.1&#43;1">0.6.1.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pynacl"> pynacl</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pynacl/1.5.0-r1">1.5.0-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pystring"> pystring</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/pystring/1.1.3-r1&#43;1">1.1.3-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/python-distutils-extra"> python-distutils-extra</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/python-distutils-extra/2.47">2.47</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/python-x2go"> python-x2go</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/python-x2go/0.6.1.3&#43;3">0.6.1.3&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/q4wine"> q4wine</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/q4wine/1.3.12&#43;8">1.3.12&#43;8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/qcustomplot"> qcustomplot</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/qcustomplot/2.0.1&#43;1">2.0.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/qhexedit2"> qhexedit2</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/qhexedit2/0.8.9_p20210525-r2">0.8.9_p20210525-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/qscintilla"> qscintilla</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/qscintilla/2.13.1">2.13.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/quazip"> quazip</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/quazip/1.2&#43;1">1.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/qutebrowser"> qutebrowser</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/qutebrowser/2.5.2">2.5.2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/rav1e"> rav1e</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/rav1e/0.5.1&#43;1">0.5.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/rawtherapee"> rawtherapee</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/rawtherapee/5.8-r1&#43;1">5.8-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/redshift"> redshift</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/redshift/1.12-r6">1.12-r6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/remmina"> remmina</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/remmina/1.4.25&#43;2">1.4.25&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/rhino"> rhino</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/rhino/1.7.14&#43;1">1.7.14&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/roboto"> roboto</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/roboto/2.138&#43;3">2.138&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/robotomono"> robotomono</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/robotomono/3.000&#43;3">3.000&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/robotoslab"> robotoslab</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/robotoslab/2.000&#43;3">2.000&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/rtl-sdr"> rtl-sdr</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/rtl-sdr/0.6.0_p2020802&#43;1">0.6.0_p2020802&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/rubberband"> rubberband</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/rubberband/2.0.2&#43;121">2.0.2&#43;121</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/scapy"> scapy</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/scapy/2.4.5&#43;1">2.4.5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/scour"> scour</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/scour/0.38.2&#43;1">0.38.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/scribus"> scribus</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/scribus/1.5.8-r1&#43;2">1.5.8-r1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sdl-net"> sdl-net</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sdl-net/1.2.8-r2&#43;1">1.2.8-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sdl-sound"> sdl-sound</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sdl-sound/1.0.3-r2&#43;1">1.0.3-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sdl2-image"> sdl2-image</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sdl2-image/2.0.5_p20210328&#43;1">2.0.5_p20210328&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/serd"> serd</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/serd/0.30.12">0.30.12</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/shntool"> shntool</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/shntool/3.0.10-r1">3.0.10-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/skypeforlinux"> skypeforlinux</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/skypeforlinux/8.85.0.409">8.85.0.409</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/smpeg"> smpeg</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/smpeg/0.4.4-r11&#43;1">0.4.4-r11&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/sndio"> sndio</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/sndio/1.8.0-r1">1.8.0-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sofia-sip"> sofia-sip</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sofia-sip/1.13.8">1.13.8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/solaar"> solaar</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/solaar/1.1.3">1.1.3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sord"> sord</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sord/0.16.10">0.16.10</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/soundconverter"> soundconverter</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/soundconverter/4.0.3">4.0.3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/soundkonverter"> soundkonverter</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/soundkonverter/3.0.1-r2&#43;2">3.0.1-r2&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/spacenavd"> spacenavd</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/spacenavd/0.8&#43;1">0.8&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/spidermonkey"> spidermonkey</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/spidermonkey/60.5.2_p0-r6&#43;1">60.5.2_p0-r6&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/sqlitebrowser"> sqlitebrowser</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/sqlitebrowser/3.12.2&#43;2">3.12.2&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/sqliteman"> sqliteman</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/sqliteman/1.2.2-r5">1.2.2-r5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sratom"> sratom</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/sratom/0.6.10">0.6.10</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/stellarium"> stellarium</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/stellarium/0.22.1">0.22.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/subtitlecomposer"> subtitlecomposer</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/subtitlecomposer/0.7.1&#43;8">0.7.1&#43;8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/suil"> suil</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/suil/0.10.12">0.10.12</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/suitesparseconfig"> suitesparseconfig</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/suitesparseconfig/5.4.0&#43;1">5.4.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/systemdgenie"> systemdgenie</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/systemdgenie/0.99.0&#43;5">0.99.0&#43;5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/t1lib"> t1lib</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/t1lib/5.1.2-r3&#43;1">5.1.2-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tbb"> tbb</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tbb/2021.5.0-r1&#43;3">2021.5.0-r1&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-connection-managers"> telepathy-connection-managers</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-connection-managers/2-r2&#43;2">2-r2&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-farstream"> telepathy-farstream</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-farstream/0.6.2-r1&#43;1">0.6.2-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-idle"> telepathy-idle</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-idle/0.2.2&#43;1">0.2.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-qt"> telepathy-qt</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-qt/0.9.8-r1&#43;1">0.9.8-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-rakia"> telepathy-rakia</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/telepathy-rakia/0.8.0-r1&#43;1">0.8.0-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/testdisk"> testdisk</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/testdisk/7.1-r1&#43;1">7.1-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/texcm-ttf"> texcm-ttf</a></td>
+          <td class="category">fonts</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/fonts/texcm-ttf/1.0">1.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/timidity"> timidity</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/timidity/2.15.0-r3&#43;1">2.15.0-r3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tix"> tix</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tix/8.4.3-r2&#43;1">8.4.3-r2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tk"> tk</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tk/8.6.12&#43;1">8.6.12&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tmux"> tmux</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tmux/3.2a">3.2a</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tokodon"> tokodon</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tokodon/21.12">21.12</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tomsfastmath"> tomsfastmath</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tomsfastmath/0.13.1-r1&#43;1">0.13.1-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/transcode"> transcode</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/transcode/1.1.7-r6&#43;3">1.1.7-r6&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/transmission"> transmission</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/transmission/3.00-r1&#43;1">3.00-r1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tre"> tre</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/tre/0.8.0_p20210321-r1">0.8.0_p20210321-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tree"> tree</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/tree/1.8.0">1.8.0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/twolame"> twolame</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/twolame/0.4.0&#43;1">0.4.0&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ufw"> ufw</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/ufw/0.36-r1">0.36-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/umbrello"> umbrello</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/umbrello/21.12.3&#43;1">21.12.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/umfpack"> umfpack</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/umfpack/5.7.9&#43;1">5.7.9&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/valgrind"> valgrind</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/valgrind/3.18.1&#43;1">3.18.1&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/vamp-plugin-sdk"> vamp-plugin-sdk</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/vamp-plugin-sdk/2.10&#43;1">2.10&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/vc"> vc</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/vc/1.4.2&#43;1">1.4.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/vcdimager"> vcdimager</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/vcdimager/2.0.1&#43;2">2.0.1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/vigra"> vigra</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/vigra/1.11.1-r6&#43;2">1.11.1-r6&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/vivaldi"> vivaldi</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/vivaldi/5.3.2679.61">5.3.2679.61</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/w_scan"> w_scan</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/w_scan/20170107">20170107</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/wacomtablet"> wacomtablet</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/wacomtablet/3.2.0-r2">3.2.0-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/wcslib"> wcslib</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/wcslib/7.3&#43;1">7.3&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/websocketpp"> websocketpp</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/websocketpp/0.8.2&#43;1">0.8.2&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/weechat"> weechat</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/weechat/3.4.1">3.4.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/wine-staging"> wine-staging</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/wine-staging/7.12">7.12</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/wxpython"> wxpython</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/wxpython/4.0.7-r1&#43;2">4.0.7-r1&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/x2goclient"> x2goclient</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/x2goclient/4.1.2.2-r1">4.1.2.2-r1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/x2goserver"> x2goserver</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/x2goserver/4.1.0.3-r1&#43;3">4.1.0.3-r1&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/xine-lib"> xine-lib</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/xine-lib/1.2.12-r2">1.2.12-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/xmlsec"> xmlsec</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/xmlsec/1.2.33&#43;1">1.2.33&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/xmms2"> xmms2</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/xmms2/0.9.1">0.9.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/xwininfo"> xwininfo</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/xwininfo/1.1.5&#43;1">1.1.5&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/zope"> zope</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/zope/0.6">0.6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/apps/zsh"> zsh</a></td>
+          <td class="category">apps</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/apps/zsh/5.8.1-r2">5.8.1-r2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-community/libs/zstandard"> zstandard</a></td>
+          <td class="category">libs</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-community/libs/zstandard/0.17.0-r1&#43;1">0.17.0-r1&#43;1</a></td>
+          </tr>
+      
+    </tbody>
+  </table>
+
+
+</div>
+
+<script type="text/javascript">
+    $("#table").DataTable();
+</script>
+
+</body>
+
+</html>

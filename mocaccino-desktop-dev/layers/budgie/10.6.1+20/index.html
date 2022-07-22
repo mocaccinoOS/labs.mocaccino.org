@@ -1,0 +1,1827 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing layers/budgie-10.6.1&#43;20 in mocaccino-desktop-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> layers/budgie-10.6.1&#43;20
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Desktop Environment based on GNOME 3
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-desktop-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-desktop-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of layers/budgie
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/desktop:budgie-layers-10.6.1-20" target="_blank"> quay.io/mocaccino/desktop:budgie-layers-10.6.1-20 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/desktop:budgie-layers-10.6.1-20/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 10.6.1&#43;20  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 LGPL-2.1 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/gnome">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  gnome &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: gnome-extra/budgie-clipboard-applet gnome-extra/budgie-control-center gnome-extra/budgie-desktop gnome-extra/budgie-desktop-view gnome-extra/budgie-haste-applet gnome-extra/budgie-screensaver gnome-extra/budgie-screenshot-applet
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://getsol.us/categories/budgie" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://getsol.us/categories/budgie </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/gnome-extra/budgie-clipboard-applet">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  budgie-clipboard-applet &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/gnome-extra/budgie-control-center">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  budgie-control-center &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/gnome-extra/budgie-desktop">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  budgie-desktop &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/gnome-extra/budgie-desktop-view">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  budgie-desktop-view &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/gnome-extra/budgie-haste-applet">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  budgie-haste-applet &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/gnome-extra/budgie-screensaver">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  budgie-screensaver &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/gnome-extra/budgie-screenshot-applet">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  budgie-screenshot-applet &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/pam.d\/budgie-screensaver" ],
+            
+              [  "etc\/xdg\/autostart\/budgie-desktop-nm-applet.desktop" ],
+            
+              [  "etc\/xdg\/autostart\/budgie-desktop-screensaver.desktop" ],
+            
+              [  "etc\/xdg\/autostart\/org.buddiesofbudgie.budgie-desktop-view-autostart.desktop" ],
+            
+              [  "lib\/udev\/rules.d\/61-gnome-bluetooth.rules" ],
+            
+              [  "usr\/bin\/bluetooth-sendto" ],
+            
+              [  "usr\/bin\/budgie-control-center" ],
+            
+              [  "usr\/bin\/budgie-daemon" ],
+            
+              [  "usr\/bin\/budgie-desktop" ],
+            
+              [  "usr\/bin\/budgie-desktop-settings" ],
+            
+              [  "usr\/bin\/budgie-panel" ],
+            
+              [  "usr\/bin\/budgie-polkit-dialog" ],
+            
+              [  "usr\/bin\/budgie-run-dialog" ],
+            
+              [  "usr\/bin\/budgie-screensaver" ],
+            
+              [  "usr\/bin\/budgie-screensaver-command" ],
+            
+              [  "usr\/bin\/budgie-wm" ],
+            
+              [  "usr\/bin\/org.buddiesofbudgie.budgie-desktop-view" ],
+            
+              [  "usr\/bin\/xdotool" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/libgvc.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/budgie-haste-applet\/HasteApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/budgie-haste-applet\/libhasteapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/budgie-screenshot-applet\/ScreenshotApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/budgie-screenshot-applet\/libscreenshotapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/com.prateekmedia.clipboardmanager\/ClipboardManager.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/com.prateekmedia.clipboardmanager\/libclipmgr.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.budgie-menu\/BudgieMenu.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.budgie-menu\/libbudgiemenuapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.caffeine\/CaffeineApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.caffeine\/libcaffeineapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.clock\/ClockApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.clock\/libclockapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.icon-tasklist\/IconTasklistApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.icon-tasklist\/libicontasklistapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.keyboard-layout\/KeyboardLayoutApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.keyboard-layout\/libkeyboardlayoutapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.lock-keys\/LockKeysApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.lock-keys\/liblockkeysapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.night-light\/NightLight.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.night-light\/libnightlightapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.notifications\/NotificationsApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.notifications\/libnotificationsapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.places-indicator\/PlacesIndicator.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.places-indicator\/libplacesindicator.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.raven-trigger\/RavenTriggerApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.raven-trigger\/libraventriggerapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.separator\/SeparatorApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.separator\/libseparatorapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.show-desktop\/ShowDesktopApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.show-desktop\/libshowdesktopapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.spacer\/SpacerApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.spacer\/libspacerapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.status\/StatusApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.status\/libstatusapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.tasklist\/TasklistApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.tasklist\/libtasklistapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.tray\/TrayApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.tray\/libtrayapplet.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.user-indicator\/UserIndicator.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.user-indicator\/libuserindicator.so" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.workspaces\/WorkspacesApplet.plugin" ],
+            
+              [  "usr\/lib64\/budgie-desktop\/plugins\/org.budgie-desktop.applet.workspaces\/libworkspacesapplet.so" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/Budgie-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/GnomeBluetooth-1.0.typelib" ],
+            
+              [  "usr\/lib64\/libbudgie-plugin.so" ],
+            
+              [  "usr\/lib64\/libbudgie-plugin.so.0" ],
+            
+              [  "usr\/lib64\/libbudgie-plugin.so.0.0.0" ],
+            
+              [  "usr\/lib64\/libbudgie-private.so" ],
+            
+              [  "usr\/lib64\/libbudgie-private.so.0" ],
+            
+              [  "usr\/lib64\/libbudgie-private.so.0.0.0" ],
+            
+              [  "usr\/lib64\/libbudgietheme.so" ],
+            
+              [  "usr\/lib64\/libbudgietheme.so.0" ],
+            
+              [  "usr\/lib64\/libbudgietheme.so.0.0.0" ],
+            
+              [  "usr\/lib64\/libgnome-bluetooth.so" ],
+            
+              [  "usr\/lib64\/libgnome-bluetooth.so.13" ],
+            
+              [  "usr\/lib64\/libgnome-bluetooth.so.13.1.0" ],
+            
+              [  "usr\/lib64\/libraven.so" ],
+            
+              [  "usr\/lib64\/libraven.so.0" ],
+            
+              [  "usr\/lib64\/libraven.so.0.0.0" ],
+            
+              [  "usr\/lib64\/libxdo.so" ],
+            
+              [  "usr\/lib64\/libxdo.so.3" ],
+            
+              [  "usr\/lib64\/pkgconfig\/budgie-1.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/budgie-theme-1.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/gnome-bluetooth-1.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libxdo.pc" ],
+            
+              [  "usr\/libexec\/budgie-cc-remote-login-helper" ],
+            
+              [  "usr\/libexec\/budgie-control-center-print-renderer" ],
+            
+              [  "usr\/libexec\/budgie-screensaver-dialog" ],
+            
+              [  "usr\/share\/appdata\/com.github.cybre.budgie-screenshot-applet.appdata.xml" ],
+            
+              [  "usr\/share\/applications\/bluetooth-sendto.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-applications-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-background-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-bluetooth-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-camera-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-color-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-control-center.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-daemon.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-datetime-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-default-apps-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-desktop-settings.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-diagnostics-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-display-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-info-overview-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-keyboard-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-location-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-microphone-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-mouse-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-multitasking-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-notifications-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-online-accounts-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-polkit.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-power-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-printers-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-region-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-removable-media-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-screensaver.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-sharing-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-sound-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-thunderbolt-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-universal-access-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-usage-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-user-accounts-panel.desktop" ],
+            
+              [  "usr\/share\/applications\/budgie-wm.desktop" ],
+            
+              [  "usr\/share\/applications\/org.buddiesofbudgie.budgie-desktop-view.desktop" ],
+            
+              [  "usr\/share\/backgrounds\/budgie\/default.jpg" ],
+            
+              [  "usr\/share\/bash-completion\/completions\/budgie-control-center" ],
+            
+              [  "usr\/share\/budgie\/budgie-version.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/keybindings\/00-multimedia.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/keybindings\/01-input-sources.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/keybindings\/01-launchers.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/keybindings\/01-raven.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/keybindings\/01-screenshot.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/keybindings\/01-system.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/keybindings\/50-accessibility.xml" ],
+            
+              [  "usr\/share\/budgie-control-center\/pixmaps\/noise-texture-light.png" ],
+            
+              [  "usr\/share\/dbus-1\/services\/org.buddiesofbudgie.ControlCenter.service" ],
+            
+              [  "usr\/share\/doc\/budgie-clipboard-applet-1.1.0\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/budgie-control-center-1.0.2\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/budgie-desktop-10.6.1\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/budgie-desktop-view-1.2\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/budgie-haste-applet-0.3.0\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/budgie-screensaver-5.0.1\/AUTHORS" ],
+            
+              [  "usr\/share\/doc\/budgie-screensaver-5.0.1\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/budgie-screenshot-applet-0.4.3\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/gnome-bluetooth-3.34.5\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/gnome-bluetooth-3.34.5\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/gnome-bluetooth-3.34.5\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/xdotool-3.20211022.1\/CHANGELIST.bz2" ],
+            
+              [  "usr\/share\/doc\/xdotool-3.20211022.1\/README.md.bz2" ],
+            
+              [  "usr\/share\/gir-1.0\/Budgie-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/GnomeBluetooth-1.0.gir" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/20_solus-project.budgie.wm.gschema.override" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.github.cybre.budgie-haste-applet.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.github.cybre.budgie-screenshot-applet.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.github.cybre.budgie-screenshot-applet.provider.ftp.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.prateekmedia.clipboardmanager.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.budgie-menu.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.budgie-panel.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.budgie.raven.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.budgie.wm.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.clock.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.icon-tasklist.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.places-indicator.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.spacer.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.status.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.tray.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/com.solus-project.workspaces.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/org.buddiesofbudgie.ControlCenter.gschema.xml" ],
+            
+              [  "usr\/share\/glib-2.0\/schemas\/org.buddiesofbudgie.budgie-desktop-view.gschema.xml" ],
+            
+              [  "usr\/share\/gnome-bluetooth\/pin-code-database.xml" ],
+            
+              [  "usr\/share\/gnome-session\/sessions\/budgie-desktop.session" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/bluetooth.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/status\/bluetooth-active.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/status\/bluetooth-disabled.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/status\/bluetooth-paired.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/22x22\/apps\/bluetooth.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/22x22\/status\/bluetooth-active.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/22x22\/status\/bluetooth-disabled.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/22x22\/status\/bluetooth-paired.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/apps\/bluetooth.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/status\/bluetooth-active.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/status\/bluetooth-disabled.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/status\/bluetooth-paired.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/bluetooth.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/status\/bluetooth-active.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/status\/bluetooth-disabled.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/status\/bluetooth-paired.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/apps\/bluetooth.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/status\/bluetooth-active.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/status\/bluetooth-disabled.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/notification-alert-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/notification-disabled-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/pane-hide-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/pane-show-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/system-hibernate-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/system-log-out-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/system-restart-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/actions\/system-suspend-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/bluetooth.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/budgie-desktop-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/clock-applet-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/icon-task-list-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/my-caffeine-on-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/notifications-applet-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-about-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-accessibility-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-appearance-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-applications-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-bluetooth-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-camera-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-color-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-default-apps-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-diagnostics-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-display-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-file-history-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-keyboard-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-location-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-microphone-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-mouse-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-multitasking-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-notifications-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-online-accounts-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-power-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-printers-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-region-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-removable-media-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-sharing-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-sound-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-thunderbolt-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-time-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings-users-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings.Devel.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/org.buddiesofbudgie.Settings.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/separator-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/spacer-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/system-tray-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/task-list-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/workspace-switcher-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/categories\/budgie-slideshow-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/emblems\/budgie-slideshow-emblem.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/status\/bluetooth-paired.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/status\/budgie-caffeine-cup-empty.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/status\/budgie-caffeine-cup-full.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/status\/budgie-info-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/status\/caps-lock-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/status\/num-lock-symbolic.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/symbolic\/apps\/org.buddiesofbudgie.Settings-symbolic.svg" ],
+            
+              [  "usr\/share\/locale\/af\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/af\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/af\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/af\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/am\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/am\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/an\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/an\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/an\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/as\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/as\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/as\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/as\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ast\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ast\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ast\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ast\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/az\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/be\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/be\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/be\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/be\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/be@latin\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/be@latin\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/be_Latn\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/bg_BG\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/bn\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/bn\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/bn\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/bn\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/bn\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/bn_IN\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/bn_IN\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/bn_IN\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/bn_IN\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/br\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/br\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/br\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/bs\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/bs\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/bs\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/bs\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/bs\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ca@valencia\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ca@valencia\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ca@valencia\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ckb\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ckb\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/crh\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/crh\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/crh\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/cy\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/cy\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/cy\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/de_CH\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/dz\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/dz\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/el_GR\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/en\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/en@shaw\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/en@shaw\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/en@shaw\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/en_CA\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/en_CA\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/en_US\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/eo\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/eo\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/eo\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/eo\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/com.prateekmedia.clipboardmanager.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/es_AR\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/es_CL\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/es_MX\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/es_PE\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/es_US\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/fa\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/fa\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/fa\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/fa\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/fr_BE\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/fur\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/fur\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/fur\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/fy\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ga\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ga\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ga\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ga\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/gd\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/gd\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/gd\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/gu\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/gu\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/gu\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/gu\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/he\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/he\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/he\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/he\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/he\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/hr\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/hr\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/hr\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/hr\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/hr\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/hy\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/hy\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/id_ID\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/ilo\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/is\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/is\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/is\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/is\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ja_JP\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ka\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ka\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ka\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ka\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ka\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/kk\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/kk\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/km\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/km\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/km\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/kn\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/kn\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/kn\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/kn\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ku\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ku\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ku\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ku\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ky\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/lo\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/lv\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/lv\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/lv\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/lv\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/lv\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/mai\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/mai\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/mai\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/mai\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/mg\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/mg\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/mjw\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/mjw\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/mk\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/mk\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/mk\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/mk\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ml\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ml\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ml\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ml\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/mn\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/mn\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/mn\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/mr\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/mr\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/mr\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/mr\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ms\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ms\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ms\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ms\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ms_MY\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/my\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/my\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/nb\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/nb\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/nb\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/nb\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/nds\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/nds\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/nds\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ne\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ne\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ne\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ne\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/nl_BE\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/nl_BE\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/nl_BE\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/nl_NL\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/nl_NL\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/no\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/nso\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/oc\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/oc\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/oc\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/oc\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/or\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/or\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/or\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/or\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/pa\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/pa\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/pa\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/pa\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/pa\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/pl_PL\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/ps\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/pt_PT\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ro_RO\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/rw\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/si\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/si\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/si\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/si\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/sq\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/sq\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/sq\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/sq\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/sr\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/sr\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/sr\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/sr\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/sr@latin\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/sr@latin\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/sr@latin\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/sr@latin\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/sr_RS\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/sr_RS\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/sr_RS\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/sr_RS@latin\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/sr_RS@latin\/LC_MESSAGES\/budgie-haste-applet.mo" ],
+            
+              [  "usr\/share\/locale\/sr_RS@latin\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/budgie-screenshot-applet.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ta\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ta\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ta\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ta\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/te\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/te\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/te\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/te\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/tg\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/tg\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/th\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/th\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/th\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/tt\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ug\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/ug\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/ug\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/ur\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/ur\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/ur_PK\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/uz\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/uz@cyrillic\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/vi\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/vi\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/vi\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/vi\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/vi_VN\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/wa\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/xh\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/xh\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/xh\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/zh\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/zh_HK\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/zh_HK\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/zh_HK\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/zh_HK\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/budgie-control-center-2.0-timezones.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/budgie-desktop.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/budgie-screensaver.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/locale\/zu\/LC_MESSAGES\/budgie-control-center-2.0.mo" ],
+            
+              [  "usr\/share\/locale\/zu\/LC_MESSAGES\/gnome-bluetooth2.mo" ],
+            
+              [  "usr\/share\/man\/man1\/bluetooth-sendto.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-control-center.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-daemon.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-desktop-settings.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-desktop.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-panel.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-polkit-dialog.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-run-dialog.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-screensaver-command.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-screensaver.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/budgie-wm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/xdotool.1.bz2" ],
+            
+              [  "usr\/share\/metainfo\/budgie-control-center.appdata.xml" ],
+            
+              [  "usr\/share\/metainfo\/com.github.cybre.budgie-haste-applet.appdata.xml" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/astronaut.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/baseball.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/bicycle.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/book.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/butterfly.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/calculator.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/cat-eye.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/cat.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/chess.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/coffee.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/coffee2.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/dice.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/energy-arc.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/fish.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/flake.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/flower.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/flower2.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/gamepad.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/grapes.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/guitar.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/guitar2.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/headphones.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/hummingbird.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/launch.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/leaf.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/astronaut.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/baseball.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/butterfly.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/cat-eye.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/chess.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/coffee.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/dice.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/energy-arc.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/fish.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/flake.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/flower.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/grapes.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/guitar.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/launch.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/leaf.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/lightning.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/penguin.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/puppy.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/sky.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/soccerball.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/sunflower.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/sunset.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/tennis-ball.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/legacy\/yellow-rose.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/lightning.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/mountain.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/penguin.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/plane.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/puppy.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/sky.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/soccerball.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/sunflower.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/sunset.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/surfer.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/tennis-ball.png" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/tomatoes.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/tree.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-faces\/yellow-rose.jpg" ],
+            
+              [  "usr\/share\/pixmaps\/budgie-logo.png" ],
+            
+              [  "usr\/share\/pixmaps\/clipboard-outline-broken-symbolic.svg" ],
+            
+              [  "usr\/share\/pixmaps\/clipboard-outline-symbolic.svg" ],
+            
+              [  "usr\/share\/pixmaps\/clipboard-text-outline-symbolic.svg" ],
+            
+              [  "usr\/share\/pkgconfig\/budgie-keybindings.pc" ],
+            
+              [  "usr\/share\/polkit-1\/actions\/org.buddiesofbudgie.controlcenter.datetime.policy" ],
+            
+              [  "usr\/share\/polkit-1\/actions\/org.buddiesofbudgie.controlcenter.remote-login-helper.policy" ],
+            
+              [  "usr\/share\/polkit-1\/actions\/org.buddiesofbudgie.controlcenter.user-accounts.policy" ],
+            
+              [  "usr\/share\/polkit-1\/rules.d\/budgie-control-center.rules" ],
+            
+              [  "usr\/share\/sounds\/budgie\/default\/alerts\/bark.ogg" ],
+            
+              [  "usr\/share\/sounds\/budgie\/default\/alerts\/drip.ogg" ],
+            
+              [  "usr\/share\/sounds\/budgie\/default\/alerts\/glass.ogg" ],
+            
+              [  "usr\/share\/sounds\/budgie\/default\/alerts\/sonar.ogg" ],
+            
+              [  "usr\/share\/vala\/vapi\/budgie-1.0.deps" ],
+            
+              [  "usr\/share\/vala\/vapi\/budgie-1.0.vapi" ],
+            
+              [  "usr\/share\/xsessions\/budgie-desktop.desktop" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

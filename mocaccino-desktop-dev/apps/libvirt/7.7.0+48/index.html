@@ -1,0 +1,1811 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/libvirt-7.7.0&#43;48 in mocaccino-desktop-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/libvirt-7.7.0&#43;48
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-desktop-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-desktop-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/libvirt
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/desktop:libvirt-apps-7.7.0-48" target="_blank"> quay.io/mocaccino/desktop:libvirt-apps-7.7.0-48 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/desktop:libvirt-apps-7.7.0-48/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 7.7.0&#43;48  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/apps/qemu">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qemu &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/entity/libvirt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libvirt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/entity/qemu">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qemu &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/entity/radvd">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  radvd &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: app-emulation/libvirt app-emulation/libvirt-glib app-misc/scrub dev-python/libvirt-python net-analyzer/openbsd-netcat net-firewall/ebtables net-misc/ethertypes net-misc/radvd
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/app-emulation/libvirt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libvirt &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/app-emulation/libvirt-glib">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libvirt-glib &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/libvirt-python">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libvirt-python &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/conf.d\/ebtables" ],
+            
+              [  "etc\/conf.d\/libvirt-guests" ],
+            
+              [  "etc\/conf.d\/libvirtd" ],
+            
+              [  "etc\/conf.d\/radvd" ],
+            
+              [  "etc\/ethertypes" ],
+            
+              [  "etc\/init.d\/ebtables" ],
+            
+              [  "etc\/init.d\/libvirt-guests" ],
+            
+              [  "etc\/init.d\/libvirtd" ],
+            
+              [  "etc\/init.d\/radvd" ],
+            
+              [  "etc\/init.d\/virtlockd" ],
+            
+              [  "etc\/init.d\/virtlogd" ],
+            
+              [  "etc\/libvirt\/libvirt-admin.conf" ],
+            
+              [  "etc\/libvirt\/libvirt.conf" ],
+            
+              [  "etc\/libvirt\/libvirtd.conf" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-arp.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-dhcp-server.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-dhcp.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-dhcpv6-server.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-dhcpv6.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-incoming-ipv4.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-incoming-ipv6.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-ipv4.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/allow-ipv6.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/clean-traffic-gateway.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/clean-traffic.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-arp-ip-spoofing.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-arp-mac-spoofing.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-arp-spoofing.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-ip-multicast.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-ip-spoofing.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-ipv6-multicast.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-ipv6-spoofing.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-mac-broadcast.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-mac-spoofing.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-other-l2-traffic.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/no-other-rarp-traffic.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/qemu-announce-self-rarp.xml" ],
+            
+              [  "etc\/libvirt\/nwfilter\/qemu-announce-self.xml" ],
+            
+              [  "etc\/libvirt\/qemu\/networks\/autostart\/default.xml" ],
+            
+              [  "etc\/libvirt\/qemu-lockd.conf" ],
+            
+              [  "etc\/libvirt\/qemu.conf" ],
+            
+              [  "etc\/libvirt\/virt-login-shell.conf" ],
+            
+              [  "etc\/libvirt\/virtchd.conf" ],
+            
+              [  "etc\/libvirt\/virtinterfaced.conf" ],
+            
+              [  "etc\/libvirt\/virtlockd.conf" ],
+            
+              [  "etc\/libvirt\/virtlogd.conf" ],
+            
+              [  "etc\/libvirt\/virtnetworkd.conf" ],
+            
+              [  "etc\/libvirt\/virtnodedevd.conf" ],
+            
+              [  "etc\/libvirt\/virtnwfilterd.conf" ],
+            
+              [  "etc\/libvirt\/virtproxyd.conf" ],
+            
+              [  "etc\/libvirt\/virtqemud.conf" ],
+            
+              [  "etc\/libvirt\/virtsecretd.conf" ],
+            
+              [  "etc\/libvirt\/virtstoraged.conf" ],
+            
+              [  "etc\/logrotate.d\/libvirtd" ],
+            
+              [  "etc\/logrotate.d\/libvirtd.libxl" ],
+            
+              [  "etc\/logrotate.d\/libvirtd.lxc" ],
+            
+              [  "etc\/logrotate.d\/libvirtd.qemu" ],
+            
+              [  "lib\/systemd\/system\/radvd.service" ],
+            
+              [  "lib64\/ebtables\/libebtc.so" ],
+            
+              [  "lib64\/ebtables\/libebtc.so.0" ],
+            
+              [  "lib64\/ebtables\/libebtc.so.0.0.0" ],
+            
+              [  "sbin\/ebtables" ],
+            
+              [  "sbin\/ebtables-legacy" ],
+            
+              [  "sbin\/ebtables-legacy-restore" ],
+            
+              [  "sbin\/ebtables-legacy-save" ],
+            
+              [  "sbin\/ebtables-restore" ],
+            
+              [  "sbin\/ebtables-save" ],
+            
+              [  "sbin\/ebtablesd" ],
+            
+              [  "sbin\/ebtablesu" ],
+            
+              [  "usr\/bin\/nc" ],
+            
+              [  "usr\/bin\/scrub" ],
+            
+              [  "usr\/bin\/virsh" ],
+            
+              [  "usr\/bin\/virt-admin" ],
+            
+              [  "usr\/bin\/virt-host-validate" ],
+            
+              [  "usr\/bin\/virt-login-shell" ],
+            
+              [  "usr\/bin\/virt-pki-query-dn" ],
+            
+              [  "usr\/bin\/virt-pki-validate" ],
+            
+              [  "usr\/bin\/virt-qemu-run" ],
+            
+              [  "usr\/bin\/virt-ssh-helper" ],
+            
+              [  "usr\/bin\/virt-xml-validate" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt_lxc.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt_lxc.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt_lxc.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt_qemu.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt_qemu.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirt_qemu.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirtaio.cpython-310.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirtaio.cpython-310.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/__pycache__\/libvirtaio.cpython-310.pyc" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirt.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirt_lxc.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirt_python-8.2.0-py3.10.egg-info" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirt_qemu.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirtaio.py" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirtmod.cpython-310-x86_64-linux-gnu.so" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirtmod_lxc.cpython-310-x86_64-linux-gnu.so" ],
+            
+              [  "usr\/lib\/python3.10\/site-packages\/libvirtmod_qemu.cpython-310-x86_64-linux-gnu.so" ],
+            
+              [  "usr\/lib\/sysctl.d\/60-libvirtd.conf" ],
+            
+              [  "usr\/lib\/sysctl.d\/60-qemu-postcopy-migration.conf" ],
+            
+              [  "usr\/lib\/systemd\/system\/libvirt-guests.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/libvirtd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/libvirtd-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/libvirtd-tcp.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/libvirtd-tls.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/libvirtd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/libvirtd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virt-guest-shutdown.target" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtchd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtchd-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtchd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtchd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtinterfaced-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtinterfaced-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtinterfaced.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtinterfaced.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtlockd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtlockd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtlockd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtlogd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtlogd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtlogd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnetworkd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnetworkd-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnetworkd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnetworkd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnodedevd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnodedevd-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnodedevd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnodedevd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnwfilterd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnwfilterd-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnwfilterd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtnwfilterd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtproxyd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtproxyd-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtproxyd-tcp.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtproxyd-tls.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtproxyd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtproxyd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtqemud-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtqemud-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtqemud.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtqemud.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtsecretd-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtsecretd-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtsecretd.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtsecretd.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtstoraged-admin.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtstoraged-ro.socket" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtstoraged.service" ],
+            
+              [  "usr\/lib\/systemd\/system\/virtstoraged.socket" ],
+            
+              [  "usr\/lib\/tmpfiles.d\/libvirtd.conf" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/LibvirtGConfig-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/LibvirtGLib-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/LibvirtGObject-1.0.typelib" ],
+            
+              [  "usr\/lib64\/libnss_libvirt.so.2" ],
+            
+              [  "usr\/lib64\/libnss_libvirt_guest.so.2" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_ch.so" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_interface.so" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_network.so" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_nodedev.so" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_nwfilter.so" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_qemu.so" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_secret.so" ],
+            
+              [  "usr\/lib64\/libvirt\/connection-driver\/libvirt_driver_storage.so" ],
+            
+              [  "usr\/lib64\/libvirt\/lock-driver\/lockd.so" ],
+            
+              [  "usr\/lib64\/libvirt\/storage-backend\/libvirt_storage_backend_fs.so" ],
+            
+              [  "usr\/lib64\/libvirt\/storage-backend\/libvirt_storage_backend_logical.so" ],
+            
+              [  "usr\/lib64\/libvirt\/storage-backend\/libvirt_storage_backend_mpath.so" ],
+            
+              [  "usr\/lib64\/libvirt\/storage-backend\/libvirt_storage_backend_scsi.so" ],
+            
+              [  "usr\/lib64\/libvirt\/storage-backend\/libvirt_storage_backend_vstorage.so" ],
+            
+              [  "usr\/lib64\/libvirt\/storage-file\/libvirt_storage_file_fs.so" ],
+            
+              [  "usr\/lib64\/libvirt-admin.so" ],
+            
+              [  "usr\/lib64\/libvirt-admin.so.0" ],
+            
+              [  "usr\/lib64\/libvirt-admin.so.0.8002.0" ],
+            
+              [  "usr\/lib64\/libvirt-gconfig-1.0.so" ],
+            
+              [  "usr\/lib64\/libvirt-gconfig-1.0.so.0" ],
+            
+              [  "usr\/lib64\/libvirt-gconfig-1.0.so.0.4000.0" ],
+            
+              [  "usr\/lib64\/libvirt-glib-1.0.so" ],
+            
+              [  "usr\/lib64\/libvirt-glib-1.0.so.0" ],
+            
+              [  "usr\/lib64\/libvirt-glib-1.0.so.0.4000.0" ],
+            
+              [  "usr\/lib64\/libvirt-gobject-1.0.so" ],
+            
+              [  "usr\/lib64\/libvirt-gobject-1.0.so.0" ],
+            
+              [  "usr\/lib64\/libvirt-gobject-1.0.so.0.4000.0" ],
+            
+              [  "usr\/lib64\/libvirt-lxc.so" ],
+            
+              [  "usr\/lib64\/libvirt-lxc.so.0" ],
+            
+              [  "usr\/lib64\/libvirt-lxc.so.0.8002.0" ],
+            
+              [  "usr\/lib64\/libvirt-qemu.so" ],
+            
+              [  "usr\/lib64\/libvirt-qemu.so.0" ],
+            
+              [  "usr\/lib64\/libvirt-qemu.so.0.8002.0" ],
+            
+              [  "usr\/lib64\/libvirt.so" ],
+            
+              [  "usr\/lib64\/libvirt.so.0" ],
+            
+              [  "usr\/lib64\/libvirt.so.0.8002.0" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libvirt-admin.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libvirt-gconfig-1.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libvirt-glib-1.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libvirt-gobject-1.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libvirt-lxc.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libvirt-qemu.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libvirt.pc" ],
+            
+              [  "usr\/libexec\/libvirt-guests.sh" ],
+            
+              [  "usr\/libexec\/libvirt_iohelper" ],
+            
+              [  "usr\/libexec\/libvirt_leaseshelper" ],
+            
+              [  "usr\/libexec\/virt-login-shell-helper" ],
+            
+              [  "usr\/sbin\/libvirtd" ],
+            
+              [  "usr\/sbin\/radvd" ],
+            
+              [  "usr\/sbin\/radvdump" ],
+            
+              [  "usr\/sbin\/virtchd" ],
+            
+              [  "usr\/sbin\/virtinterfaced" ],
+            
+              [  "usr\/sbin\/virtlockd" ],
+            
+              [  "usr\/sbin\/virtlogd" ],
+            
+              [  "usr\/sbin\/virtnetworkd" ],
+            
+              [  "usr\/sbin\/virtnodedevd" ],
+            
+              [  "usr\/sbin\/virtnwfilterd" ],
+            
+              [  "usr\/sbin\/virtproxyd" ],
+            
+              [  "usr\/sbin\/virtqemud" ],
+            
+              [  "usr\/sbin\/virtsecretd" ],
+            
+              [  "usr\/sbin\/virtstoraged" ],
+            
+              [  "usr\/share\/augeas\/lenses\/libvirt_lockd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/libvirtd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/libvirtd_qemu.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_libvirt_lockd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_libvirtd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_libvirtd_qemu.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtchd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtinterfaced.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtlockd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtlogd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtnetworkd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtnodedevd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtnwfilterd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtproxyd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtqemud.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtsecretd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/tests\/test_virtstoraged.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtchd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtinterfaced.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtlockd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtlogd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtnetworkd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtnodedevd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtnwfilterd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtproxyd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtqemud.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtsecretd.aug" ],
+            
+              [  "usr\/share\/augeas\/lenses\/virtstoraged.aug" ],
+            
+              [  "usr\/share\/bash-completion\/completions\/virsh" ],
+            
+              [  "usr\/share\/bash-completion\/completions\/virt-admin" ],
+            
+              [  "usr\/share\/doc\/ebtables-2.0.11-r3\/ChangeLog.bz2" ],
+            
+              [  "usr\/share\/doc\/ebtables-2.0.11-r3\/THANKS.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/README.gentoo.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/README.rst.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/admin\/client_close.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/admin\/client_info.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/admin\/client_limits.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/admin\/list_clients.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/admin\/list_servers.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/admin\/logging.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/admin\/threadpool_params.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/domain\/dommigrate.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/domain\/domtop.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/domain\/info1.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/domain\/rename.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/domain\/suspend.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/misc\/event-test.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/misc\/hellolibvirt.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/c\/misc\/openauth.c.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/polkit\/libvirt-acl.rules.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/sh\/virt-lxc-convert.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/systemtap\/events.stp.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/systemtap\/lock-debug.stp.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/systemtap\/qemu-monitor.stp.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/systemtap\/rpc-monitor.stp.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/pool-dir.xml" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/pool-fs.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/pool-logical.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/pool-netfs.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/vol-cow.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/vol-qcow.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/vol-qcow2.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/vol-raw.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/vol-sparse.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/storage\/vol-vmdk.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testdev.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testdomfc4.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testdomfv0.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testnetdef.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testnetpriv.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testnode.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testnodeinline.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testpool.xml.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/examples\/xml\/test\/testvol.xml" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/404.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/acl.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/aclpolkit.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/advanced-tests.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/android-chrome-192x192.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/android-chrome-256x256.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/api.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/api_extension.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/apple-touch-icon.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/apps.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/auditlog.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/auth.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/best-practices.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/bindings.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/browserconfig.xml" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/bugs.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/cgroups.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/ci.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/coding-style.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/committer-guidelines.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/compiling.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/contact.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/contribute.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/csharp.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/css\/fonts.css" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/css\/generic.css" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/css\/libvirt.css" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/css\/main.css" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/css\/mobile.css" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/daemons.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/dbus.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/docs.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/downloads.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drivers.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvbhyve.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvch.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvesx.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvhyperv.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvlxc.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvnodedev.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvopenvz.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvqemu.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvremote.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvsecret.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvtest.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvvbox.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvvirtuozzo.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvvmware.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/drvxen.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/errors.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/favicon-16x16.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/favicon-32x32.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/favicon.ico" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/firewall.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/LICENSE.rst" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-bold-italic.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-bold.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-italic.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-light-italic.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-light.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-mono-bold.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-mono-light.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-mono-regular.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-mono-semibold.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/fonts\/overpass-regular.woff" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/format.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatbackup.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatcaps.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatcheckpoint.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatdomain.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatdomaincaps.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatnetwork.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatnetworkport.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatnode.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatnwfilter.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatsecret.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatsnapshot.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatstorage.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatstoragecaps.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/formatstorageencryption.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/glib-adoption.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/go\/libvirt.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/go\/libvirtxml.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/goals.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/governance.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/hacking.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/hooks.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/home.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/index-admin.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/index-lxc.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/index-qemu.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/index.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/left.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-admin.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-common.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-domain-checkpoint.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-domain-snapshot.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-domain.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-event.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-host.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-interface.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-lxc.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-network.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-nodedev.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-nwfilter.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-qemu.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-secret.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-storage.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-libvirt-stream.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/libvirt-virterror.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/right.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/html\/up.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/hvsupport.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/event_loop_simple.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/event_loop_worker.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/libvirt-daemon-arch.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/libvirt-driver-arch.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/libvirt-object-model.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/libvirt-virConnect-example.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/migration-managed-direct.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/migration-managed-p2p.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/migration-native.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/migration-tunnel.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/images\/migration-unmanaged-direct.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/index.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/internals\/command.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/internals\/eventloop.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/internals\/locking.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/internals\/rpc.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/internals.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/java.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/js\/main.js" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/backing_chains.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/debuglogs.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/domainstatecapture.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/incrementalbackupinternals.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/index.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/kvm-realtime.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/launch_security_sev.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/live_full_disk_backup.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/locking-lockd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/locking-sanlock.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/locking.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/memorydevices.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/merging_disk_image_chains.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/migrationinternals.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/qemu-core-dump.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/qemu-passthrough-security.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/rpm-deployment.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/s390_protected_virt.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/secureusage.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/snapshots.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/systemtap.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/kbase\/virtiofs.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/libvirt-go-xml.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/libvirt-go.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logging.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-banner-dark-256.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-banner-dark-800.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-banner-dark.svg" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-banner-light-256.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-banner-light-800.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-banner-light.svg" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-base.svg" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-128.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-192.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-256.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-96.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-powered-128.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-powered-192.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-powered-256.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-powered-96.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square-powered.svg" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-square.svg" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-sticker-hexagon.svg" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/logos\/logo-sticker-square.svg" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/macos.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manifest.json" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/index.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/libvirt-guests.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/libvirtd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-atset1.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-atset2.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-atset3.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-linux.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-osx.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-qnum.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-usb.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-win32.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeycode-xtkbd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeyname-linux.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeyname-osx.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virkeyname-win32.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virsh.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-admin.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-host-validate.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-login-shell.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-pki-query-dn.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-pki-validate.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-qemu-run.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-sanlock-cleanup.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-ssh-helper.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virt-xml-validate.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtbhyved.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtinterfaced.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtlockd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtlogd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtlxcd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtnetworkd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtnodedevd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtnwfilterd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtproxyd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtqemud.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtsecretd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtstoraged.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtvboxd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtvzd.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/manpages\/virtxend.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/migration.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/mstile-150x150.png" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/newreposetup.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/news.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/nss.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/pci-addresses.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/pci-hotplug.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/php.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/platforms.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/programming-languages.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/python.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/remote.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/securityprocess.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/storage.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/strategy.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/styleguide.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/submitting-patches.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/support.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/testapi.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/testsuites.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/testtck.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/tlscerts.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/uri.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-8.2.0\/html\/windows.html" ],
+            
+              [  "usr\/share\/doc\/libvirt-glib-4.0.0\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-glib-4.0.0\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-glib-4.0.0\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-python-8.2.0\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-python-8.2.0\/ChangeLog.bz2" ],
+            
+              [  "usr\/share\/doc\/libvirt-python-8.2.0\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/alta.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/bsh.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/contrib\/ncmeter.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/dist.sh.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/irc.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/iscan.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/ncp.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/probe.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/web.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/webproxy.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/webrelay.bz2" ],
+            
+              [  "usr\/share\/doc\/openbsd-netcat-1.195\/examples\/websearch.bz2" ],
+            
+              [  "usr\/share\/doc\/radvd-2.19-r2\/CHANGES.bz2" ],
+            
+              [  "usr\/share\/doc\/radvd-2.19-r2\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/radvd-2.19-r2\/README.gentoo.bz2" ],
+            
+              [  "usr\/share\/doc\/radvd-2.19-r2\/TODO.bz2" ],
+            
+              [  "usr\/share\/doc\/radvd-2.19-r2\/html\/INTRO.html" ],
+            
+              [  "usr\/share\/doc\/radvd-2.19-r2\/radvd.conf.example.bz2" ],
+            
+              [  "usr\/share\/doc\/scrub-2.6.1\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/scrub-2.6.1\/ChangeLog.bz2" ],
+            
+              [  "usr\/share\/doc\/scrub-2.6.1\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/scrub-2.6.1\/README.bz2" ],
+            
+              [  "usr\/share\/gir-1.0\/LibvirtGConfig-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/LibvirtGLib-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/LibvirtGObject-1.0.gir" ],
+            
+              [  "usr\/share\/libvirt\/api\/libvirt-admin-api.xml" ],
+            
+              [  "usr\/share\/libvirt\/api\/libvirt-api.xml" ],
+            
+              [  "usr\/share\/libvirt\/api\/libvirt-lxc-api.xml" ],
+            
+              [  "usr\/share\/libvirt\/api\/libvirt-qemu-api.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_FT-2000plus.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_Falkor.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_Kunpeng-920.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_Tengyun-S2500.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_ThunderX299xx.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_cortex-a53.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_cortex-a57.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_cortex-a72.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_features.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/arm_vendors.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/index.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/ppc64_POWER6.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/ppc64_POWER7.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/ppc64_POWER8.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/ppc64_POWER9.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/ppc64_POWERPC_e5500.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/ppc64_POWERPC_e6500.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/ppc64_vendors.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_486.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Broadwell-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Broadwell-noTSX-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Broadwell-noTSX.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Broadwell.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Cascadelake-Server-noTSX.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Cascadelake-Server.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Conroe.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Cooperlake.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Dhyana.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_EPYC-IBPB.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_EPYC-Milan.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_EPYC-Rome.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_EPYC.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Haswell-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Haswell-noTSX-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Haswell-noTSX.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Haswell.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Icelake-Client-noTSX.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Icelake-Client.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Icelake-Server-noTSX.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Icelake-Server.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_IvyBridge-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_IvyBridge.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Nehalem-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Nehalem.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Opteron_G1.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Opteron_G2.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Opteron_G3.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Opteron_G4.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Opteron_G5.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Penryn.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_SandyBridge-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_SandyBridge.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Skylake-Client-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Skylake-Client-noTSX-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Skylake-Client.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Skylake-Server-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Skylake-Server-noTSX-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Skylake-Server.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Snowridge.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Westmere-IBRS.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_Westmere.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_athlon.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_core2duo.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_coreduo.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_cpu64-rhel5.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_cpu64-rhel6.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_features.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_kvm32.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_kvm64.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_n270.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_pentium.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_pentium2.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_pentium3.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_pentiumpro.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_phenom.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_qemu32.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_qemu64.xml" ],
+            
+              [  "usr\/share\/libvirt\/cpu_map\/x86_vendors.xml" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/basictypes.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/capability.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/cpu.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/cputypes.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/domain.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/domainbackup.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/domaincaps.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/domaincheckpoint.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/domaincommon.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/domainsnapshot.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/interface.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/network.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/networkcommon.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/networkport.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/nodedev.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/nwfilter.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/nwfilter_params.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/nwfilterbinding.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/secret.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/storagecommon.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/storagepool.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/storagepoolcaps.rng" ],
+            
+              [  "usr\/share\/libvirt\/schemas\/storagevol.rng" ],
+            
+              [  "usr\/share\/libvirt\/test-screenshot.png" ],
+            
+              [  "usr\/share\/locale\/as\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/bn_IN\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/bs\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/gu\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/id\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/kn\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/mk\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/ml\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/mr\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/ms\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/nb\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/or\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/pa\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/si\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/sr\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/sr@latin\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/ta\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/te\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/libvirt-glib.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/vi\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/libvirt.mo" ],
+            
+              [  "usr\/share\/man\/man1\/nc.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/scrub.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virsh.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virt-admin.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virt-host-validate.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virt-login-shell.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virt-pki-query-dn.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virt-pki-validate.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virt-qemu-run.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/virt-xml-validate.1.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/radvd.conf.5.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-atset1.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-atset2.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-atset3.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-linux.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-osx.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-qnum.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-usb.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-win32.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeycode-xtkbd.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeyname-linux.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeyname-osx.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/virkeyname-win32.7.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ebtables-legacy.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ebtables.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/libvirt-guests.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/libvirtd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/radvd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/radvdump.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virt-ssh-helper.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtinterfaced.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtlockd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtlogd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtnetworkd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtnodedevd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtnwfilterd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtproxyd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtqemud.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtsecretd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/virtstoraged.8.bz2" ],
+            
+              [  "usr\/share\/polkit-1\/actions\/org.libvirt.api.policy" ],
+            
+              [  "usr\/share\/polkit-1\/actions\/org.libvirt.unix.policy" ],
+            
+              [  "usr\/share\/polkit-1\/rules.d\/50-libvirt.rules" ],
+            
+              [  "usr\/share\/vala\/vapi\/libvirt-gconfig-1.0.deps" ],
+            
+              [  "usr\/share\/vala\/vapi\/libvirt-gconfig-1.0.vapi" ],
+            
+              [  "usr\/share\/vala\/vapi\/libvirt-glib-1.0.deps" ],
+            
+              [  "usr\/share\/vala\/vapi\/libvirt-glib-1.0.vapi" ],
+            
+              [  "usr\/share\/vala\/vapi\/libvirt-gobject-1.0.deps" ],
+            
+              [  "usr\/share\/vala\/vapi\/libvirt-gobject-1.0.vapi" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

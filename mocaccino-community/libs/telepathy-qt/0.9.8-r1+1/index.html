@@ -1,0 +1,1106 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing libs/telepathy-qt-0.9.8-r1&#43;1 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> libs/telepathy-qt-0.9.8-r1&#43;1
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of libs/telepathy-qt
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:telepathy-qt-libs-0.9.8-r1-1" target="_blank"> quay.io/mocaccino/mocaccino-community:telepathy-qt-libs-0.9.8-r1-1 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:telepathy-qt-libs-0.9.8-r1-1/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 0.9.8-r1&#43;1  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/gnome-common">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  gnome-common &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/telepathy-farstream">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  telepathy-farstream 0.6.2-r1&#43;1 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: net-libs/telepathy-qt
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/net-libs/telepathy-qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  telepathy-qt &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractAdaptor" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractClient" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractClientApprover" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractClientHandler" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractClientObserver" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractDBusServiceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AbstractProtocolInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Account" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountCapabilityFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountFactory" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountInterfaceAddressingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountInterfaceAvatarInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountInterfaceStorageInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountManager" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountManagerInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountPropertyFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AccountSet" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AndFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AuthenticationTLSCertificateInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AvatarData" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/AvatarSpec" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseCall" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseConnection" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseConnectionManager" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseDebug" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseProtocol" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseProtocolAddressingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseProtocolAvatarsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/BaseProtocolPresenceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContent" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentInterfaceAudioControlInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentInterfaceDTMFInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentInterfaceMediaInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentInterfaceVideoControlInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentMediaDescription" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentMediaDescriptionInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentMediaDescriptionInterfaceRTCPExtendedReportsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentMediaDescriptionInterfaceRTCPFeedbackInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallContentMediaDescriptionInterfaceRTPHeaderExtensionsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallStream" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallStreamEndpoint" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallStreamEndpointInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallStreamInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CallStreamInterfaceMediaInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Callbacks" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CapabilitiesBase" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Captcha" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/CaptchaAuthentication" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Channel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelClassFeatures" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelClassSpec" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelClassSpecList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelDispatchOperation" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelDispatchOperationInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelDispatcher" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelDispatcherInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelFactory" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceAnonymityInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceCallStateInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceCaptchaAuthenticationInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceChatStateInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceConferenceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceDTMFInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceDestroyableInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceFileTransferMetadataInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceGroupInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceHoldInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceMediaSignallingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceMessagesInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfacePasswordInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceRoomConfigInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceRoomInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceSASLAuthenticationInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceSMSInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceSecurableInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceServicePointInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceSubjectInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelInterfaceTubeInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelRequest" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelRequestHints" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelRequestInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeCallInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeContactListInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeContactSearchInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeDBusTubeInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeFileTransferInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeRoomListInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeServerAuthenticationInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeServerTLSConnectionInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeStreamTubeInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeStreamedMediaInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeTextInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeTubeInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ChannelTypeTubesInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Client" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ClientApproverInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ClientHandlerInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ClientInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ClientInterfaceRequestsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ClientObserverInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ClientRegistrar" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Connection" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionCapabilities" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionFactory" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceAddressingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceAliasingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceAnonymityInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceAvatarsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceBalanceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceCapabilitiesInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceCellularInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceClientTypesInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceContactBlockingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceContactCapabilitiesInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceContactGroupsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceContactInfoInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceContactListInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceContactsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceLocationInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceMailNotificationInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfacePowerSavingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfacePresenceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceRequestsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceServicePointInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionInterfaceSimplePresenceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionLowlevel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionManager" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionManagerInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ConnectionManagerLowlevel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Constants" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Contact" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ContactCapabilities" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ContactFactory" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ContactManager" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ContactMessenger" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ContactSearchChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBus" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBusDaemonInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBusError" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBusObject" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBusProxy" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBusProxyFactory" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBusService" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DBusTubeChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Debug" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/DebugReceiver" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Farstream\/Channel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Farstream\/Global" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Farstream\/PendingChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Farstream\/channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Farstream\/global.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Feature" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Features" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/FileTransferChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/FileTransferChannelCreationProperties" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Filter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/FixedFeatureFactory" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Functors" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/GenericCapabilityFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/GenericPropertyFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Global" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/HandledChannelNotifier" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/IODevice" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/IncomingDBusTubeChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/IncomingFileTransferChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/IncomingStreamTubeChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/IntrospectableInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/LocationInfo" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/MediaSessionHandler" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/MediaSessionHandlerInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/MediaStreamHandler" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/MediaStreamHandlerInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Message" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/MessageContentPart" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/MessageContentPartList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/MethodInvocationContext" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/NotFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Object" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/OptionalInterfaceFactory" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/OrFilter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/OutgoingDBusTubeChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/OutgoingFileTransferChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/OutgoingStreamTubeChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PeerInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingAccount" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingCallContent" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingCaptchas" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingChannelRequest" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingComposite" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingConnection" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingContactAttributes" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingContactInfo" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingContacts" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingDBusTubeConnection" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingDebugMessageList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingFailure" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingHandles" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingOperation" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingReady" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingSendMessage" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingStreamTubeConnection" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingStreamedMediaStreams" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingString" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingStringList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingSuccess" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingVariant" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingVariantMap" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PendingVoid" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Presence" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PresenceSpec" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PresenceSpecList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Profile" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProfileManager" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Properties" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PropertiesInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/PropertiesInterfaceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolInfo" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolInfoList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolInterfaceAddressingInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolInterfaceAvatarsInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolInterfacePresenceInterface" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolParameter" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ProtocolParameterList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ReadinessHelper" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ReadyObject" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ReceivedMessage" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/RefCounted" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ReferencedHandles" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ReferencedHandlesIterator" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/RequestableChannelClassSpec" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/RequestableChannelClassSpecList" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/RoomListChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ServerAuthenticationChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ServiceTypes" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/SharedPtr" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/SimpleCallObserver" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/SimpleObserver" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/SimpleTextObserver" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/StatefulDBusProxy" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/StatelessDBusProxy" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/StreamTubeChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/StreamTubeClient" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/StreamTubeServer" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/StreamedMediaChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/StreamedMediaStream" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/TextChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/TubeChannel" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Types" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/Utils" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-account-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-account.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-call-content-media-description.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-call-content.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-call-stream-endpoint.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-call-stream.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-channel-dispatch-operation.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-channel-dispatcher.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-channel-request.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-client.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-connection-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-connection.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-dbus.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-debug-receiver.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-media-session-handler.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-media-stream-handler.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-properties.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/cli-tls-certificate.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/constants.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/svc-call.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/svc-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/svc-connection-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/svc-connection.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/_gen\/types.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/abstract-adaptor.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/abstract-client.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/abstract-interface.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/account-capability-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/account-factory.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/account-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/account-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/account-property-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/account-set.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/account.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/and-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/avatar.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/base-call.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/base-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/base-connection-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/base-connection.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/base-debug.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/base-protocol.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/call-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/call-content-media-description.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/call-content.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/call-stream-endpoint.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/call-stream.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/callbacks.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/capabilities-base.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/captcha-authentication.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/captcha.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/channel-class-features.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/channel-class-spec.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/channel-dispatch-operation.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/channel-dispatcher.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/channel-factory.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/channel-request.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/client-registrar.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/client.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/connection-capabilities.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/connection-factory.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/connection-lowlevel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/connection-manager-lowlevel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/connection-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/connection.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/constants.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/contact-capabilities.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/contact-factory.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/contact-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/contact-messenger.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/contact-search-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/contact.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/dbus-error.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/dbus-object.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/dbus-proxy-factory.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/dbus-proxy.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/dbus-service.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/dbus-tube-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/dbus.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/debug-receiver.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/debug.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/feature.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/file-transfer-channel-creation-properties.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/file-transfer-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/fixed-feature-factory.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/functors.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/generic-capability-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/generic-property-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/global.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/handled-channel-notifier.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/incoming-dbus-tube-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/incoming-file-transfer-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/incoming-stream-tube-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/io-device.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/location-info.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/media-session-handler.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/media-stream-handler.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/message-content-part.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/message.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/method-invocation-context.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/not-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/object.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/optional-interface-factory.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/or-filter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/outgoing-dbus-tube-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/outgoing-file-transfer-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/outgoing-stream-tube-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-account.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-captchas.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-channel-request.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-connection.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-contact-attributes.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-contact-info.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-contacts.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-dbus-tube-connection.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-debug-message-list.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-handles.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-operation.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-ready.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-send-message.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-stream-tube-connection.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-string-list.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-string.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-variant-map.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/pending-variant.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/presence.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/profile-manager.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/profile.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/properties.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/protocol-info.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/protocol-parameter.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/readiness-helper.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/ready-object.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/referenced-handles.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/requestable-channel-class-spec.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/room-list-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/server-authentication-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/service-types.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/shared-ptr.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/simple-call-observer.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/simple-observer.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/simple-pending-operations.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/simple-text-observer.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/stream-tube-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/stream-tube-client.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/stream-tube-server.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/streamed-media-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/text-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/tls-certificate.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/tube-channel.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/types.h" ],
+            
+              [  "usr\/include\/telepathy-qt5\/TelepathyQt\/utils.h" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5\/TelepathyQt5Config.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5\/TelepathyQt5ConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5\/TelepathyQt5Targets-gentoo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5\/TelepathyQt5Targets.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5Farstream\/TelepathyQt5FarstreamConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5Farstream\/TelepathyQt5FarstreamConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5Service\/TelepathyQt5ServiceConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/TelepathyQt5Service\/TelepathyQt5ServiceConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5-farstream.so" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5-farstream.so.0" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5-farstream.so.0.0.9.8" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5-service.so" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5-service.so.0.0.9.8" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5-service.so.1" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5.so" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5.so.0" ],
+            
+              [  "usr\/lib64\/libtelepathy-qt5.so.0.0.9.8" ],
+            
+              [  "usr\/lib64\/pkgconfig\/TelepathyQt5.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/TelepathyQt5Farstream.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/TelepathyQt5Service.pc" ],
+            
+              [  "usr\/share\/doc\/telepathy-qt-0.9.8-r1\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/telepathy-qt-0.9.8-r1\/ChangeLog.bz2" ],
+            
+              [  "usr\/share\/doc\/telepathy-qt-0.9.8-r1\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/telepathy-qt-0.9.8-r1\/README.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

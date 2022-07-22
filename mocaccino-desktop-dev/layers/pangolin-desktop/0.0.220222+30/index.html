@@ -1,0 +1,1636 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing layers/pangolin-desktop-0.0.220222&#43;30 in mocaccino-desktop-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> layers/pangolin-desktop-0.0.220222&#43;30
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-desktop-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-desktop-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of layers/pangolin-desktop
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/desktop:pangolin-desktop-layers-0.0.220222-30" target="_blank"> quay.io/mocaccino/desktop:pangolin-desktop-layers-0.0.220222-30 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/desktop:pangolin-desktop-layers-0.0.220222-30/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 0.0.220222&#43;30  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/X">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  X &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "dahlia\/boot-logo.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/AssetManifest.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/FontManifest.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/NOTICES.Z" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/CustomIcons.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/dm-sans\/DMSans-Bold.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/dm-sans\/DMSans-BoldItalic.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/dm-sans\/DMSans-Italic.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/dm-sans\/DMSans-Medium.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/dm-sans\/DMSans-MediumItalic.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/dm-sans\/DMSans-Regular.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/firacode\/FiraCode-Bold.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/firacode\/FiraCode-Light.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/firacode\/FiraCode-Medium.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/firacode\/FiraCode-Retina.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/inter\/Inter-Regular.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-Black.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-BlackItalic.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-Bold.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-BoldItalic.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-Italic.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-Light.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-LightItalic.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-Regular.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/fonts\/lato\/Lato-Thin.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/calculator.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/clock.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/files.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/graft.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/logs.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/notes.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/null.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/photos.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/root.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/settings.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/software.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/store.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/task.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/terminal.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/value_editor.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/web.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/icons\/welcome-info.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/logos\/dahliaOS-logo.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/logos\/dahliaOS-modern.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/logos\/dahliaOS-white.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/logos\/pangolin.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/other\/Desktop.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/other\/about-mask.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/other\/null.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/Bubbles_wallpaper.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/Gradient_logo_wallpaper.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/Mountains_wallpaper.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/Three_Bubbles.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/beach.jpg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/dahliaOS_white_logo_pattern_wallpaper.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/dahliaOS_white_wallpaper.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/forest.jpg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/modern.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/modern_dark.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/mountain.jpg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/images\/wallpapers\/wood.jpg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/json\/visualData.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/textures\/NoiseAsset.txt" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/assets\/textures\/NoiseAsset_256X256_PNG.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/fonts\/MaterialIcons-Regular.otf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/cupertino_icons\/assets\/CupertinoIcons.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/easy_localization\/i18n\/ar-DZ.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/easy_localization\/i18n\/ar.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/easy_localization\/i18n\/en-US.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/easy_localization\/i18n\/en.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/files\/lib\/assets\/icons\/file.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/files\/lib\/assets\/icons\/folder.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ac.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ad.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ae.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/af.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ag.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ai.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/al.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/am.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ao.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/aq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ar.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/as.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/at.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/au.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/aw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ax.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/az.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ba.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/be.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/br.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bs.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/by.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/bz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ca.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ch.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ci.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ck.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/co.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/cz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/de.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/dg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/dj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/dk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/dm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/do.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/dz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ea.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ec.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ee.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/eg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/eh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/er.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/es-ct.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/es-ga.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/es.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/et.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/eu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/fi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/fj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/fk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/fm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/fo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/fr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ga.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gb-eng.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gb-nir.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gb-sct.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gb-wls.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ge.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gs.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/gy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/hk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/hm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/hn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/hr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ht.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/hu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ic.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/id.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ie.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/il.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/im.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/in.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/io.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/iq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ir.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/is.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/it.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/je.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/jm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/jo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/jp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ke.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/kg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/kh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ki.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/km.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/kn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/kp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/kr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/kw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ky.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/kz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/la.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/lb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/lc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/li.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/lk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/lr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ls.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/lt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/lu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/lv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ly.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ma.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/md.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/me.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ml.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ms.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/my.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/mz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/na.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/nc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ne.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/nf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ng.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ni.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/nl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/no.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/np.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/nr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/nu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/nz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/om.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pa.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pe.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ph.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ps.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/pw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/py.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/qa.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/re.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ro.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/rs.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ru.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/rw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sa.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/se.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/si.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/so.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ss.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/st.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/sz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ta.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/td.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/th.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/to.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/tz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ua.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ug.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/um.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/un.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/us.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/uy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/uz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/va.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/vc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ve.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/vg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/vi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/vn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/vu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/wf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ws.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/xk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/xx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/ye.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/yt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/za.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/zm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/1x1\/zw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ac.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ad.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ae.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/af.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ag.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ai.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/al.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/am.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ao.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/aq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ar.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/as.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/at.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/au.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/aw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ax.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/az.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ba.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/be.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/br.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bs.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/by.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/bz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ca.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ch.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ci.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ck.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/co.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/cz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/de.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/dg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/dj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/dk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/dm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/do.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/dz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ea.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ec.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ee.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/eg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/eh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/er.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/es-ct.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/es-ga.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/es.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/et.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/eu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/fi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/fj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/fk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/fm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/fo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/fr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ga.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gb-eng.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gb-nir.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gb-sct.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gb-wls.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ge.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gs.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/gy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/hk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/hm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/hn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/hr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ht.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/hu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ic.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/id.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ie.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/il.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/im.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/in.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/io.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/iq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ir.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/is.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/it.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/je.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/jm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/jo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/jp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ke.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/kg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/kh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ki.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/km.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/kn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/kp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/kr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/kw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ky.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/kz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/la.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/lb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/lc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/li.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/lk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/lr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ls.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/lt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/lu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/lv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ly.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ma.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/md.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/me.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ml.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mo.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mp.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mq.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ms.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/my.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/mz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/na.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/nc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ne.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/nf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ng.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ni.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/nl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/no.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/np.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/nr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/nu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/nz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/om.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pa.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pe.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ph.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ps.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/pw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/py.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/qa.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/re.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ro.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/rs.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ru.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/rw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sa.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sb.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sd.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/se.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sh.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/si.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/so.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ss.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/st.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/sz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ta.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/td.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/th.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tj.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tl.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/to.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tr.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tv.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/tz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ua.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ug.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/um.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/un.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/us.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/uy.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/uz.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/va.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/vc.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ve.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/vg.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/vi.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/vn.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/vu.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/wf.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ws.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/xk.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/xx.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/ye.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/yt.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/za.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/zm.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/flag\/res\/4x3\/zw.svg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/fluent_ui\/assets\/AcrylicNoise.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/fluent_ui\/fonts\/FluentIcons.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/fluentui_system_icons\/fonts\/FluentSystemIcons-Filled.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/fluentui_system_icons\/fonts\/FluentSystemIcons-Regular.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/material_design_icons_flutter\/lib\/fonts\/materialdesignicons-webfont.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/media\/assets\/examples\/example1.mp4" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/media\/assets\/examples\/example2.mp4" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/media\/assets\/examples\/logo.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/Gmail-icon.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/android.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/authenticator.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/calculator.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/clock.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/credits.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/debian.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/developer.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/discord.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/disks.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/facebook.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/files.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/fuchsia.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/github.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/graft.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/grey-drag.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/help.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/instagram.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/logs.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/macos.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/menu.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/messages.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/music.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/note_mobile.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/notes.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/phone.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/photos.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/reddit.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/root.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/settings.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/social.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/software-shared.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/software.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/task.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/telegram.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/terminal.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/theme.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/twitter.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/ubuntu.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/wallpaper.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/web.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/welcome-info.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/task_manager\/assets\/images\/icons\/PNG\/welcome.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/terminal\/fonts\/Source_Code_Pro\/SourceCodePro-Regular.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/unicons\/icons\/UniconsLine.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/unicons\/icons\/UniconsSolid.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/utopia_wm\/fonts\/CustomIcons.ttf" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/Seplx.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/allansrc.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/aoaowangxiao.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/bleonard.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/camden.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/evolutionevotv.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/faust.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/febryardiansyah.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/fristover.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/funeoz.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/goktugvatandas.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/haru.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/hexa.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/horus.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/lars.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/noah.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/nobody.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/null.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/subspace.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/vanzh.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/x7.jpeg" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/credits\/profiles\/xeu100.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/credits.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/discord.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/facebook.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/github.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/instagram.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/messages.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/reddit.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/social.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/software-shared.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/telegram.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/theme.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/twitter.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/icons\/PNG\/welcome-info.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/dahliaOS-modern.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/dahliaOS_logo.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/dahliaOS_logo_drop_shadow.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/dahliaOS_logo_whiteout.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/dahliaOS_logo_with_text.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/dahliaOS_logo_with_text_drop_shadow.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/dahliaOS_logo_with_text_whiteout.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/images\/logos\/dahliaOS\/PNG\/logo-white.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/dahliaOS\/dahliaOS.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/socialmedia\/discord.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/socialmedia\/facebook.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/socialmedia\/github.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/socialmedia\/instagram.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/socialmedia\/reddit.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/socialmedia\/telegram.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/packages\/welcome\/assets\/logos\/socialmedia\/twitter.png" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/flutter_assets\/version.json" ],
+            
+              [  "dahlia\/pangolin_desktop\/data\/icudtl.dat" ],
+            
+              [  "dahlia\/pangolin_desktop\/lib\/libapp.so" ],
+            
+              [  "dahlia\/pangolin_desktop\/lib\/libflutter_linux_gtk.so" ],
+            
+              [  "dahlia\/pangolin_desktop\/lib\/liburl_launcher_linux_plugin.so" ],
+            
+              [  "dahlia\/pangolin_desktop\/lib\/libwindow_size_plugin.so" ],
+            
+              [  "dahlia\/pangolin_desktop\/pangolin_desktop" ],
+            
+              [  "dahlia\/restart.sh" ],
+            
+              [  "dahlia\/restartp.sh" ],
+            
+              [  "dahlia\/run" ],
+            
+              [  "run\/faillock\/root" ],
+            
+              [  "usr\/share\/xsessions\/Pangolin.desktop" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
