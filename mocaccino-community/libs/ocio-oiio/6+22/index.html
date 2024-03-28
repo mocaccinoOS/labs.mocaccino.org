@@ -1,0 +1,524 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing libs/ocio-oiio-6&#43;22 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> libs/ocio-oiio-6&#43;22
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                A library for reading and writing images
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of libs/ocio-oiio
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:ocio-oiio-libs-6-22" target="_blank"> quay.io/mocaccino/mocaccino-community:ocio-oiio-libs-6-22 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:ocio-oiio-libs-6-22/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 6&#43;22  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> BSD </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/dcmtk">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  dcmtk 3.6.7-r1&#43;6 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/libheif">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libheif 1.15.2&#43;2 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/opencv">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  opencv 4.8.1-r1&#43;1 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/openvdb">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openvdb 10.0.1&#43;7 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/ptex">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  ptex 2.4.2&#43;1 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/pystring">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  pystring 1.1.3-r1&#43;3 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/tbb">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  tbb 2021.9.0&#43;1 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 3
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-libs/openimageio media-libs/opencolorio
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://sites.google.com/site/openimageio/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://sites.google.com/site/openimageio/ </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/OpenImageIO" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/OpenImageIO </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://opencolorio.org" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://opencolorio.org </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/AcademySoftwareFoundation/OpenColorIO" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/AcademySoftwareFoundation/OpenColorIO </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/media-libs/opencolorio">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  opencolorio &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/media-libs/openimageio">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openimageio &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/dev-cpp/robin-map">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  robin-map &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/iconvert" ],
+            
+              [  "usr\/bin\/idiff" ],
+            
+              [  "usr\/bin\/igrep" ],
+            
+              [  "usr\/bin\/iinfo" ],
+            
+              [  "usr\/bin\/iv" ],
+            
+              [  "usr\/bin\/maketx" ],
+            
+              [  "usr\/bin\/ociobakelut" ],
+            
+              [  "usr\/bin\/ociocheck" ],
+            
+              [  "usr\/bin\/ociochecklut" ],
+            
+              [  "usr\/bin\/ociomakeclf" ],
+            
+              [  "usr\/bin\/ociowrite" ],
+            
+              [  "usr\/bin\/oiiotool" ],
+            
+              [  "usr\/bin\/testtex" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorABI.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorAppHelpers.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorIO.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorTransforms.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorTypes.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/oglapphelpers\/glsl.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/oglapphelpers\/oglapp.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/Imath.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/argparse.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/array_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/atomic.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/attrdelegate.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/benchmark.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/color.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/dassert.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/deepdata.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/farmhash.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/core.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/format-inl.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/format.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/ostream.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/printf.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/errorhandler.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/export.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/filesystem.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/filter.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/fmath.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/fstream_mingw.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/function_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/half.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/hash.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/image_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagebuf.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagebufalgo.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagebufalgo_util.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagecache.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imageio.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/missing_math.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/oiioversion.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/optparser.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/parallel.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/paramlist.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/platform.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/plugin.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/refcnt.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/simd.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/span.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/strided_ptr.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/string_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/strongparam.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/strutil.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/sysutil.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/texture.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/thread.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/tiffutils.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/timer.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/type_traits.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/typedesc.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/unittest.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/unordered_map_concurrent.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/ustring.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/varyingref.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/vecparam.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/version.h" ],
+            
+              [  "usr\/include\/tsl\/robin_growth_policy.h" ],
+            
+              [  "usr\/include\/tsl\/robin_hash.h" ],
+            
+              [  "usr\/include\/tsl\/robin_map.h" ],
+            
+              [  "usr\/include\/tsl\/robin_set.h" ],
+            
+              [  "usr\/lib\/libyaml-cpp.so.0.7" ],
+            
+              [  "usr\/lib\/libyaml-cpp.so.0.7.0" ],
+            
+              [  "usr\/lib\/python3.11\/site-packages\/OpenImageIO.cpython-311-x86_64-linux-gnu.so" ],
+            
+              [  "usr\/lib\/python3.11\/site-packages\/__init__.py" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOTargets-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOTargets.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOTargets-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOTargets.cmake" ],
+            
+              [  "usr\/lib64\/libOpenColorIO.so" ],
+            
+              [  "usr\/lib64\/libOpenColorIO.so.2.1" ],
+            
+              [  "usr\/lib64\/libOpenColorIO.so.2.1.3" ],
+            
+              [  "usr\/lib64\/libOpenColorIOoglapphelpers.a" ],
+            
+              [  "usr\/lib64\/libOpenImageIO.so" ],
+            
+              [  "usr\/lib64\/libOpenImageIO.so.2.4" ],
+            
+              [  "usr\/lib64\/libOpenImageIO.so.2.4.6" ],
+            
+              [  "usr\/lib64\/libOpenImageIO_Util.so" ],
+            
+              [  "usr\/lib64\/libOpenImageIO_Util.so.2.4" ],
+            
+              [  "usr\/lib64\/libOpenImageIO_Util.so.2.4.6" ],
+            
+              [  "usr\/lib64\/libyaml-cpp.so.0.7" ],
+            
+              [  "usr\/lib64\/libyaml-cpp.so.0.7.0" ],
+            
+              [  "usr\/lib64\/pkgconfig\/OpenColorIO.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/OpenImageIO.pc" ],
+            
+              [  "usr\/lib64\/python3.11\/site-packages\/PyOpenColorIO.so" ],
+            
+              [  "usr\/share\/cmake\/tsl-robin-map\/tsl-robin-mapConfig.cmake" ],
+            
+              [  "usr\/share\/cmake\/tsl-robin-map\/tsl-robin-mapConfigVersion.cmake" ],
+            
+              [  "usr\/share\/cmake\/tsl-robin-map\/tsl-robin-mapTargets.cmake" ],
+            
+              [  "usr\/share\/fonts\/OpenImageIO\/DroidSans-Bold.ttf" ],
+            
+              [  "usr\/share\/fonts\/OpenImageIO\/DroidSans.ttf" ],
+            
+              [  "usr\/share\/fonts\/OpenImageIO\/DroidSansMono.ttf" ],
+            
+              [  "usr\/share\/fonts\/OpenImageIO\/DroidSerif-Bold.ttf" ],
+            
+              [  "usr\/share\/fonts\/OpenImageIO\/DroidSerif-BoldItalic.ttf" ],
+            
+              [  "usr\/share\/fonts\/OpenImageIO\/DroidSerif-Italic.ttf" ],
+            
+              [  "usr\/share\/fonts\/OpenImageIO\/DroidSerif.ttf" ],
+            
+              [  "usr\/share\/ocio\/setup_ocio.sh" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

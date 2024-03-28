@@ -1,0 +1,1086 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/zoom-5.17.11.3835 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/zoom-5.17.11.3835
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Video conferencing and web conferencing service
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/zoom
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:zoom-apps-5.17.11.3835" target="_blank"> quay.io/mocaccino/mocaccino-community:zoom-apps-5.17.11.3835 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:zoom-apps-5.17.11.3835/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 5.17.11.3835  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> all-rights-reserved </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/quazip">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  quazip 1.4-r1&#43;1 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: net-im/zoom
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://zoom.us" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://zoom.us </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/dev-qt/qtdiag">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qtdiag &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/net-im/zoom">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  zoom &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "opt\/zoom\/Beep-intercom.pcm" ],
+            
+              [  "opt\/zoom\/Droplet.pcm" ],
+            
+              [  "opt\/zoom\/Embedded.properties" ],
+            
+              [  "opt\/zoom\/ZoomLauncher" ],
+            
+              [  "opt\/zoom\/aomhost" ],
+            
+              [  "opt\/zoom\/archival.pcm" ],
+            
+              [  "opt\/zoom\/calendar\/closeWebview.js" ],
+            
+              [  "opt\/zoom\/calendar\/favicon.ico" ],
+            
+              [  "opt\/zoom\/calendar\/index.html" ],
+            
+              [  "opt\/zoom\/calendar\/map-5.1.1194.json" ],
+            
+              [  "opt\/zoom\/calendar\/map.js" ],
+            
+              [  "opt\/zoom\/calendar\/map.json" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/app.a3734104.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-010a0db0.0009fd14.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-04c24a96.864efa46.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-1afbcbfe.1d0f186b.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-28a60794.9d60117d.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-2fed8355.05bf2920.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-4080f6e0.2a7cb8a7.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-4d226c98.11dbd815.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-51cef3f0.52994b0b.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-67ea72fe.4f3d5989.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/chunk-vendors.974eca6e.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/vue-route.3e05ebb3.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/css\/zm-tree.bba01dde.css" ],
+            
+              [  "opt\/zoom\/calendar\/static\/fonts\/icozoom.e0d75151.ttf" ],
+            
+              [  "opt\/zoom\/calendar\/static\/img\/sideBgNew.673b12ee.png" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/app.019d343c.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-010a0db0.96de6b4a.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-04c24a96.2281b032.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-1afbcbfe.40a6f905.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-28a60794.f42ebbb7.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-2c7d7502.37217048.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-2d2080c7.7226cfbf.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-2fed8355.cc02d54c.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-4080f6e0.cabf5174.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-4d226c98.d9dfe7f1.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-51cef3f0.c717fe89.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-67ea72fe.2d3f22ae.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/chunk-vendors.e42446a3.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-de-DE.17e67bfb.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-de.a430644d.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-en-US.3f4b679c.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-en.54783a07.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-es-ES.1311d38c.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-es.a93f6eaf.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-fr-FR.99fa5434.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-fr.304d179d.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-id-ID.9453a18d.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-id.3bded653.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-it-IT.a0570128.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-it.f6d22952.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-jp-JP.b522d444.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-jp.66d3c34c.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-ko-KO.eaace81f.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-ko.ba491763.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-nl-NL.50629761.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-nl.0844be20.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-pl-PL.ba782b5b.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-pl.397d312a.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-pt-PT.92f3fdf3.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-pt.0a833896.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-ru-RU.1ed1da16.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-ru.8910ed5c.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-tr-TR.1b641acc.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-tr.29bfc7a8.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-vi-VN.8ad027d2.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-vi.c2a26f0f.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-zh-CN.5abc59f9.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-zh-TW.40423198.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-zhCN.4d6277a4.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/i18n-zhTW.177c52f0.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/vue-route.57711c23.js" ],
+            
+              [  "opt\/zoom\/calendar\/static\/js\/zm-tree.bd77fa13.js" ],
+            
+              [  "opt\/zoom\/calendar\/upgrade.html" ],
+            
+              [  "opt\/zoom\/cef\/chrome-sandbox" ],
+            
+              [  "opt\/zoom\/cef\/chrome_100_percent.pak" ],
+            
+              [  "opt\/zoom\/cef\/chrome_200_percent.pak" ],
+            
+              [  "opt\/zoom\/cef\/icudtl.dat" ],
+            
+              [  "opt\/zoom\/cef\/libEGL.so" ],
+            
+              [  "opt\/zoom\/cef\/libGLESv2.so" ],
+            
+              [  "opt\/zoom\/cef\/libcef.so" ],
+            
+              [  "opt\/zoom\/cef\/libffmpeg.so" ],
+            
+              [  "opt\/zoom\/cef\/libsqlite3.so.0" ],
+            
+              [  "opt\/zoom\/cef\/libvk_swiftshader.so" ],
+            
+              [  "opt\/zoom\/cef\/libvulkan.so.1" ],
+            
+              [  "opt\/zoom\/cef\/locales\/af.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/am.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ar-XB.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ar.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/bg.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/bn.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ca.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/cs.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/da.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/de.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/el.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/en-GB.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/en-US.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/en-XA.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/es-419.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/es.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/et.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/fa.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/fi.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/fil.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/fr.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/gu.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/he.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/hi.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/hr.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/hu.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/id.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/it.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ja.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/kn.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ko.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/lt.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/lv.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ml.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/mr.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ms.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/nb.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/nl.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/pl.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/pt-BR.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/pt-PT.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ro.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ru.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/sk.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/sl.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/sr.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/sv.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/sw.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ta.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/te.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/th.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/tr.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/uk.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/ur.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/vi.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/zh-CN.pak" ],
+            
+              [  "opt\/zoom\/cef\/locales\/zh-TW.pak" ],
+            
+              [  "opt\/zoom\/cef\/resources.pak" ],
+            
+              [  "opt\/zoom\/cef\/snapshot_blob.bin" ],
+            
+              [  "opt\/zoom\/cef\/v8_context_snapshot.bin" ],
+            
+              [  "opt\/zoom\/cef\/vk_swiftshader_icd.json" ],
+            
+              [  "opt\/zoom\/clap-high.pcm" ],
+            
+              [  "opt\/zoom\/clap-medium.pcm" ],
+            
+              [  "opt\/zoom\/dingdong.pcm" ],
+            
+              [  "opt\/zoom\/dingdong1.pcm" ],
+            
+              [  "opt\/zoom\/double_beep.pcm" ],
+            
+              [  "opt\/zoom\/email\/assets\/png\/jpg.png" ],
+            
+              [  "opt\/zoom\/email\/assets\/png\/pdf.png" ],
+            
+              [  "opt\/zoom\/email\/favicon.ico" ],
+            
+              [  "opt\/zoom\/email\/index.html" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/12.190fbf50.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/197.db965d63.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/23.927e449b.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/245.87f9e211.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/275.01770d44.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/305.a0f9323c.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/315.153b631b.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/319.cee95068.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/323.740d4724.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/353.259a5096.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/37.ca91214c.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/406.69ce5f5b.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/484.9575a0db.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/655.da1a12ae.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/689.dd7dff3d.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/703.72b7d11d.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/818.af7bab00.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/856.a61d49b3.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/860.83a154a2.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/902.7872b979.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/910.c9f1b23c.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/936.0603a466.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/app.5a529ef4.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/chunk-vendors.1b58a79f.css" ],
+            
+              [  "opt\/zoom\/email\/static\/css\/package_mail_content_template.1de01374.css" ],
+            
+              [  "opt\/zoom\/email\/static\/fonts\/icozoom.45258ff3.woff" ],
+            
+              [  "opt\/zoom\/email\/static\/fonts\/icozoom.e6a1f19a.ttf" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/alert.163627de.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/blocked_img.846d6b64.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/broken_img.c74a922f.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/chevron-more-info-down.95288da4.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/chevron-more-info-down_dark-mode.e2eb3b0e.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/chevron-more-info-right.e5191152.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/chevron-more-info-right_dark-mode.28cfa86b.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/close-filled.1cf10d59.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/close.1cf10d59.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/external-sender-dark.d0f7a36f.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/external-sender-light.3372d5de.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_archive.3cac3093.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_archive.450f750f.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_audio.7b88d642.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_audio.bafc1a58.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_cad.15cacaf3.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_cad.ac68b579.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_calendar.45806b49.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_calendar.7bc04d7b.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_csv.7bb5b7ca.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_csv.f4ee1a64.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_dat.6da4c976.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_dat.81ae4052.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_document.46129cbf.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_document.f18ad6e6.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ebook.045b0427.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ebook.2fc450ca.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_eml.73744649.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_eml.e4c88271.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_exel.44c68144.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_exel.5a2a0079.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_font.6bf16b2e.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_font.f5b6f436.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_gz.495b3918.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_gz.5ef6d4cd.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_image.01da4cef.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_image.a6504139.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_mail_ellipsis.5cbc6abd.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ms_excel.34a00472.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ms_excel.a5719c87.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ms_onenote.149bc03b.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ms_powerpoint.807749cc.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ms_powerpoint.d4b5f31b.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ms_word.a751102b.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ms_word.bf59f57f.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_p7s.3c2e2417.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_p7s.e0f5d9a8.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_patch.0cd1378e.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_patch.6a396a28.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_pdf.4d34bf8f.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_pdf.91bc698c.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_pgp.bc19844d.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_pgp.e65b2475.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ppt.46e7fc5f.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_ppt.f4da5a13.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_rb.a3e6716c.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_rb.acb90b78.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_vector.06205cee.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_vector.f76eb3f1.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_video.312daa9e.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/icon_video.e36fddbe.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/key-filled.f9e7e9e7.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/key.7a4c058c.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/laptop-filled.555c7756.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/laptop.4e4527be.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/mail-splash.f3f892f9.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/megaphone-darkmode.1ca0e1cd.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/megaphone.eb263bf5.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/placeholder_img.52bc56dc.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/profile-filled.ebb8b46b.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/profile.407b4dc4.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/road-repair.aab593a3.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/search-empty.a0e280a9.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/search-files.4487810a.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/smart-compose-example.29960749.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/splash.77bac1b7.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/sticker-empty.87ac88d6.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/tree_node_expand_arrow.d06fd057.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/img\/tree_node_expand_arrow_active.e529b84e.svg" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/12.a04df1de.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/133.41e9a12b.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/197.35dc4c23.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/205.fb712d07.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/23.f2862249.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/245.fc7701ad.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/275.7f542669.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/305.6cfca2fd.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/315.2ded4265.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/319.935b337f.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/323.ae044a67.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/344.2877d74f.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/353.a68d5f94.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/37.bcf9bedc.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/406.6fe32205.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/484.72c17def.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/500.524dc518.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/572.3da19261.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/689.3c99d235.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/703.27217e9e.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/818.06417256.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/840.681378b1.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/856.617c81e9.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/860.506a49ba.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/902.5ab807f5.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/910.88cd2e25.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/app.f6d1ab65.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/chunk-vendors.28dcc797.js" ],
+            
+              [  "opt\/zoom\/email\/static\/js\/package_mail_content_template.fb130a40.js" ],
+            
+              [  "opt\/zoom\/email\/upgrade.html" ],
+            
+              [  "opt\/zoom\/getbssid.sh" ],
+            
+              [  "opt\/zoom\/json\/countries.json" ],
+            
+              [  "opt\/zoom\/json\/countries_chs.json" ],
+            
+              [  "opt\/zoom\/json\/countries_cht.json" ],
+            
+              [  "opt\/zoom\/json\/countries_fr.json" ],
+            
+              [  "opt\/zoom\/json\/countries_ge.json" ],
+            
+              [  "opt\/zoom\/json\/countries_it.json" ],
+            
+              [  "opt\/zoom\/json\/countries_jp.json" ],
+            
+              [  "opt\/zoom\/json\/countries_ko.json" ],
+            
+              [  "opt\/zoom\/json\/countries_pt.json" ],
+            
+              [  "opt\/zoom\/json\/countries_ru.json" ],
+            
+              [  "opt\/zoom\/json\/countries_sp.json" ],
+            
+              [  "opt\/zoom\/json\/countries_vi.json" ],
+            
+              [  "opt\/zoom\/json\/emoji.json" ],
+            
+              [  "opt\/zoom\/leave.pcm" ],
+            
+              [  "opt\/zoom\/libaomagent.so" ],
+            
+              [  "opt\/zoom\/libavcodec.so.59" ],
+            
+              [  "opt\/zoom\/libavformat.so.59" ],
+            
+              [  "opt\/zoom\/libavutil.so.57" ],
+            
+              [  "opt\/zoom\/libdvf.so" ],
+            
+              [  "opt\/zoom\/libfdkaac2.so" ],
+            
+              [  "opt\/zoom\/libmkldnn.so" ],
+            
+              [  "opt\/zoom\/libmpg123.so" ],
+            
+              [  "opt\/zoom\/libquazip.so" ],
+            
+              [  "opt\/zoom\/libswresample.so.4" ],
+            
+              [  "opt\/zoom\/meeting_chat_chime.pcm" ],
+            
+              [  "opt\/zoom\/meeting_raisehand_chime.pcm" ],
+            
+              [  "opt\/zoom\/record_start.pcm" ],
+            
+              [  "opt\/zoom\/record_stop.pcm" ],
+            
+              [  "opt\/zoom\/ring.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/G Arpeggio.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/G Step.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/Gamelan.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/Pizzicato Strings.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/Reed Organ.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/Silent.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/Ukulele G.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/Ukulele.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/Vibraphone.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/double_beep.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/localization.xml" ],
+            
+              [  "opt\/zoom\/ringtone\/ring.pcm" ],
+            
+              [  "opt\/zoom\/ringtone\/ringtone.xml" ],
+            
+              [  "opt\/zoom\/scheduler\/index.html" ],
+            
+              [  "opt\/zoom\/scheduler\/map-5.17.726.json" ],
+            
+              [  "opt\/zoom\/scheduler\/map.js" ],
+            
+              [  "opt\/zoom\/scheduler\/map.json" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/css\/chunk-0544f2bd.51f67b30.css" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/css\/chunk-60f57e29.372fc12f.css" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/css\/chunk-vendors.5c990af7.css" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/css\/index.1e453f20.css" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/css\/zm-tree.bba01dde.css" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/fonts\/icozoom.0c8360ba.ttf" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/fonts\/icozoom.1d8f0bd8.ttf" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/img\/jpg.f78f809e.png" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/img\/pdf.ca86e40a.png" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-0544f2bd.e27dfbbe.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0a424c.07803335.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0aaf55.57e61a4f.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0b327b.d5f606d8.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0c226a.090cf33d.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0d9fc4.b2bdd5a9.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0de1f1.b97e0439.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0de375.088b5e9d.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0e17df.bf795037.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d0ea113.1d6aa9bf.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d20e7e6.8728d174.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d20f516.033c3a90.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d2167c6.c75dd722.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d21b4fa.e87cfa05.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d21d6ce.21a0f3ee.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d22258b.fd33b6f4.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-2d230459.5c6a1baa.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-60f57e29.d7a91a60.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/chunk-vendors.49875986.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/index.fb66f59e.js" ],
+            
+              [  "opt\/zoom\/scheduler\/static\/js\/zm-tree.2124ab54.js" ],
+            
+              [  "opt\/zoom\/sip\/Hangup.WAV" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_#.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_0.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_1.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_2.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_3.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_4.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_5.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_6.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_7.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_8.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_9.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_a.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_dial.wav" ],
+            
+              [  "opt\/zoom\/sip\/dtmf_star.wav" ],
+            
+              [  "opt\/zoom\/sip\/ring_pstn.wav" ],
+            
+              [  "opt\/zoom\/timezones\/de\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/en\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/es\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/fr\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/id\/timezones.text" ],
+            
+              [  "opt\/zoom\/timezones\/it\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/jp\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/ko\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/ptg\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/ru\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/vi\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/zh_CN\/timezones.txt" ],
+            
+              [  "opt\/zoom\/timezones\/zh_TW\/timezones.txt" ],
+            
+              [  "opt\/zoom\/translations\/de.qm" ],
+            
+              [  "opt\/zoom\/translations\/es.qm" ],
+            
+              [  "opt\/zoom\/translations\/fr.qm" ],
+            
+              [  "opt\/zoom\/translations\/id.qm" ],
+            
+              [  "opt\/zoom\/translations\/it.qm" ],
+            
+              [  "opt\/zoom\/translations\/jp.qm" ],
+            
+              [  "opt\/zoom\/translations\/ko.qm" ],
+            
+              [  "opt\/zoom\/translations\/nl.qm" ],
+            
+              [  "opt\/zoom\/translations\/po.qm" ],
+            
+              [  "opt\/zoom\/translations\/ptg.qm" ],
+            
+              [  "opt\/zoom\/translations\/ru.qm" ],
+            
+              [  "opt\/zoom\/translations\/sv.qm" ],
+            
+              [  "opt\/zoom\/translations\/tk.qm" ],
+            
+              [  "opt\/zoom\/translations\/vi.qm" ],
+            
+              [  "opt\/zoom\/translations\/zh_CN.qm" ],
+            
+              [  "opt\/zoom\/translations\/zh_TW.qm" ],
+            
+              [  "opt\/zoom\/version.txt" ],
+            
+              [  "opt\/zoom\/wr_ding.pcm" ],
+            
+              [  "opt\/zoom\/zoom" ],
+            
+              [  "opt\/zoom\/zopen" ],
+            
+              [  "usr\/bin\/qtdiag5" ],
+            
+              [  "usr\/bin\/zoom" ],
+            
+              [  "usr\/lib64\/qt5\/bin\/qtdiag" ],
+            
+              [  "usr\/share\/applications\/zoom.desktop" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/videoconference-zoom.svg" ],
+            
+              [  "usr\/share\/pixmaps\/videoconference-zoom.svg" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

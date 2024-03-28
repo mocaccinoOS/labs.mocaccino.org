@@ -1,0 +1,1696 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/openrgb-0.9&#43;1 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/openrgb-0.9&#43;1
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Open source RGB lighting control that doesn&#39;t depend on manufacturer software
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/openrgb
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:openrgb-apps-0.9-1" target="_blank"> quay.io/mocaccino/mocaccino-community:openrgb-apps-0.9-1 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:openrgb-apps-0.9-1/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 0.9&#43;1  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/nlohmann_json">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  nlohmann_json 3.11.2-r1&#43;1 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/hidapi">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  hidapi 0.13.1-r1&#43;1 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/mbedtls">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  mbedtls 2.28.71&#43;1 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: app-misc/openrgb app-misc/openrgb-plugin-skin app-misc/openrgb-plugin-effects app-misc/openrgb-plugin-visualmap
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://openrgb.org" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://openrgb.org </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/app-misc/openrgb">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openrgb &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/app-misc/openrgb-plugin-skin">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openrgb-plugin-skin &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/app-misc/openrgb-plugin-effects">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openrgb-plugin-effects &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/app-misc/openrgb-plugin-visualmap">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openrgb-plugin-visualmap &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/dev-libs/mdns">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  mdns &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/dev-cpp/cpp-httplib">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  cpp-httplib &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/openrgb" ],
+            
+              [  "usr\/include\/OpenRGB\/AutoStart\/AutoStart-FreeBSD.h" ],
+            
+              [  "usr\/include\/OpenRGB\/AutoStart\/AutoStart-Linux.h" ],
+            
+              [  "usr\/include\/OpenRGB\/AutoStart\/AutoStart-MacOS.h" ],
+            
+              [  "usr\/include\/OpenRGB\/AutoStart\/AutoStart-Windows.h" ],
+            
+              [  "usr\/include\/OpenRGB\/AutoStart\/AutoStart.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Colors.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/A4TechController\/BloodyMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/A4TechController\/RGBController_BloodyMouse.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AMDWraithPrismController\/AMDWraithPrismController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AMDWraithPrismController\/RGBController_AMDWraithPrism.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AOCKeyboardController\/AOCKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AOCKeyboardController\/RGBController_AOCKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AOCMouseController\/AOCMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AOCMouseController\/RGBController_AOCMouse.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AOCMousematController\/AOCMousematController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AOCMousematController\/RGBController_AOCMousemat.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockPolychromeUSBController\/ASRockPolychromeUSBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockPolychromeUSBController\/RGBController_ASRockPolychromeUSB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockSMBusController\/ASRockASRRGBSMBusController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockSMBusController\/ASRockPolychromeV1SMBusController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockSMBusController\/ASRockPolychromeV2SMBusController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockSMBusController\/RGBController_ASRockASRRGBSMBus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockSMBusController\/RGBController_ASRockPolychromeV1SMBus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ASRockSMBusController\/RGBController_ASRockPolychromeV2SMBus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AlienwareController\/AlienwareController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AlienwareController\/RGBController_Alienware.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AlienwareKeyboardController\/AlienwareAW510KController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AlienwareKeyboardController\/RGBController_AlienwareAW510K.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AnnePro2Controller\/AnnePro2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AnnePro2Controller\/RGBController_AnnePro2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraCoreController\/AsusAuraCoreController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraCoreController\/AsusAuraCoreLaptopController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraCoreController\/RGBController_AsusAuraCore.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraCoreController\/RGBController_AsusAuraCoreLaptop.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraGPUController\/AsusAuraGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraGPUController\/RGBController_AsusAuraGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraAddressableController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraHeadsetStandController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraMainboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraMonitorController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraMouseDevices.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraMousematController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraRyuoAIOController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraStrixEvolveController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraTUFKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraTUFKeyboardLayouts.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusAuraUSBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/AsusROGAllyController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraHeadsetStand.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraMonitor.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraMouse.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraMousemat.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraRyuoAIO.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraStrixEvolve.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraTUFKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusAuraUSB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_AsusROGAlly.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/RGBController_ROGStrixLC_Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusAuraUSBController\/ROGStrixLC_Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusLegacyUSBController\/AsusCerberusKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusLegacyUSBController\/AsusStrixClawController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusLegacyUSBController\/RGBController_AsusCerberusKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusLegacyUSBController\/RGBController_AsusStrixClaw.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusTUFLaptopController\/AsusTUFLaptopController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusTUFLaptopController\/AsusTUFLaptopLinuxController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusTUFLaptopController\/RGBController_AsusTUFLaptopLinux.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/AsusTUFLaptopController\/RGBController_AsusTUFLaptopWMI.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/BlinkyTapeController\/BlinkyTapeController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/BlinkyTapeController\/RGBController_BlinkyTape.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CherryKeyboardController\/CherryKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CherryKeyboardController\/RGBController_CherryKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ColorfulGPUController\/ColorfulGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ColorfulGPUController\/RGBController_ColorfulGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ColorfulTuringGPUController\/ColorfulTuringGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ColorfulTuringGPUController\/RGBController_ColorfulTuringGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMARGBGen2A1controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMARGBcontroller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMMKController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMMM711Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMMMController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMMP750Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMR6000Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMRGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/CMSmallARGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMARGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMARGBGen2A1Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMMKController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMMM711Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMMMController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMMP750Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMR6000Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMRGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CoolerMasterController\/RGBController_CMSmallARGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairCommanderCoreController\/CorsairCommanderCoreController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairCommanderCoreController\/RGBController_CorsairCommanderCore.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairDominatorPlatinumController\/CorsairDominatorPlatinumController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairDominatorPlatinumController\/RGBController_CorsairDominatorPlatinum.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairHydro2Controller\/CorsairHydro2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairHydro2Controller\/RGBController_CorsairHydro2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairHydroController\/CorsairHydroController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairHydroController\/RGBController_CorsairHydro.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairHydroPlatinumController\/CorsairHydroPlatinumController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairHydroPlatinumController\/RGBController_CorsairHydroPlatinum.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairLightingNodeController\/CorsairLightingNodeController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairLightingNodeController\/RGBController_CorsairLightingNode.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/CorsairK100Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/CorsairK55RGBPROXTController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/CorsairK65MiniController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/CorsairK95PlatinumXTController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/CorsairPeripheralController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/RGBController_CorsairK100.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/RGBController_CorsairK55RGBPROXT.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/RGBController_CorsairK65Mini.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/RGBController_CorsairK95PlatinumXT.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralController\/RGBController_CorsairPeripheral.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralV2Controller\/CorsairPeripheralV2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralV2Controller\/CorsairPeripheralV2Devices.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralV2Controller\/CorsairPeripheralV2HardwareController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralV2Controller\/CorsairPeripheralV2SoftwareController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralV2Controller\/RGBController_CorsairV2Hardware.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairPeripheralV2Controller\/RGBController_CorsairV2Software.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairVengeanceController\/CorsairVengeanceController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairVengeanceController\/RGBController_CorsairVengeance.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairVengeanceProController\/CorsairVengeanceProController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairVengeanceProController\/RGBController_CorsairVengeancePro.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairWirelessController\/CorsairWirelessController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CorsairWirelessController\/RGBController_CorsairWireless.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CougarController\/CougarKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CougarController\/CougarRevengerSTController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CougarController\/RGBController_CougarKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CougarController\/RGBController_CougarRevengerST.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CreativeController\/CreativeSoundBlasterXG6Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CreativeController\/RGBController_CreativeSoundBlasterXG6.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CrucialController\/CrucialController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CrucialController\/RGBController_Crucial.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CryorigH7QuadLumiController\/CryorigH7QuadLumiController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/CryorigH7QuadLumiController\/RGBController_CryorigH7QuadLumi.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DMXController\/RGBController_DMX.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DarkProject\/DarkProjectKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DarkProject\/RGBController_DarkProjectKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DasKeyboardController\/DasKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DasKeyboardController\/RGBController_DasKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DebugController\/RGBController_Debug.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DuckyKeyboardController\/DuckyKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DuckyKeyboardController\/RGBController_DuckyKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DygmaRaiseController\/DygmaRaiseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/DygmaRaiseController\/RGBController_DygmaRaise.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/E131Controller\/RGBController_E131.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EKController\/EKController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EKController\/RGBController_EKController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ENESMBusController\/ENESMBusController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ENESMBusController\/ENESMBusInterface\/ENESMBusInterface.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ENESMBusController\/ENESMBusInterface\/ENESMBusInterface_SpectrixS40G.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ENESMBusController\/ENESMBusInterface\/ENESMBusInterface_SpectrixS40G_Windows.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ENESMBusController\/ENESMBusInterface\/ENESMBusInterface_i2c_smbus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ENESMBusController\/RGBController_ENESMBus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAAmpereGPUController\/EVGAGPUv3Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAAmpereGPUController\/RGBController_EVGAGPUv3.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAGP102GPUController\/EVGAGP102Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAGP102GPUController\/RGBController_EVGAGP102.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAPascalGPUController\/EVGAGPUv1Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAPascalGPUController\/RGBController_EVGAGPUv1.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGATuringGPUController\/EVGAGPUv2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGATuringGPUController\/RGBController_EVGAGPUv2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAUSBController\/EVGAKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAUSBController\/EVGAMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAUSBController\/RGBController_EVGAKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVGAUSBController\/RGBController_EVGAMouse.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVisionKeyboardController\/EVisionKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EVisionKeyboardController\/RGBController_EVisionKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ElgatoKeyLightController\/ElgatoKeyLightController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ElgatoKeyLightController\/RGBController_ElgatoKeyLight.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EpomakerController\/EpomakerController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EpomakerController\/RGBController_EpomakerController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EspurnaController\/EspurnaController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/EspurnaController\/RGBController_Espurna.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/FanBusController\/FanBusController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/FanBusController\/FanBusInterface.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/FanBusController\/RGBController_FanBus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/FaustusController\/RGBController_Faustus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GaiZongGaiKeyboardController\/GaiZhongGaiController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GaiZongGaiKeyboardController\/RGBController_GaiZhongGai.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GainwardGPUController\/GainwardGPUv1Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GainwardGPUController\/GainwardGPUv2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GainwardGPUController\/RGBController_GainwardGPUv1.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GainwardGPUController\/RGBController_GainwardGPUv2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GalaxGPUController\/GalaxGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GalaxGPUController\/RGBController_GalaxGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteAorusCPUCoolerController\/ATC800Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteAorusCPUCoolerController\/RGBController_AorusATC800.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteAorusMouseController\/GigabyteAorusMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteAorusMouseController\/RGBController_GigabyteAorusMouse.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2DRAMController\/GigabyteRGBFusion2DRAMController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2DRAMController\/RGBController_GigabyteRGBFusion2DRAM.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2GPUController\/GigabyteRGBFusion2GPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2GPUController\/RGBController_GigabyteRGBFusion2GPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2SMBusController\/GigabyteRGBFusion2SMBusController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2SMBusController\/RGBController_GigabyteRGBFusion2SMBus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2USBController\/GigabyteRGBFusion2USBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusion2USBController\/RGBController_GigabyteRGBFusion2USB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusionController\/GigabyteRGBFusionController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusionController\/RGBController_GigabyteRGBFusion.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusionGPUController\/GigabyteRGBFusionGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteRGBFusionGPUController\/RGBController_GigabyteRGBFusionGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteSuperIORGBController\/GigabyteSuperIORGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/GigabyteSuperIORGBController\/RGBController_GigabyteSuperIORGB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HPOmen30LController\/HPOmen30LController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HPOmen30LController\/RGBController_HPOmen30L.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HoltekController\/HoltekA070Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HoltekController\/HoltekA1FAController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HoltekController\/RGBController_HoltekA070.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HoltekController\/RGBController_HoltekA1FA.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXDRAMController\/HyperXDRAMController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXDRAMController\/RGBController_HyperXDRAM.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/HyperXAlloyElite2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/HyperXAlloyEliteController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/HyperXAlloyFPSController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/HyperXAlloyOrigins60and65Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/HyperXAlloyOriginsController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/HyperXAlloyOriginsCoreController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/RGBController_HyperXAlloyElite.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/RGBController_HyperXAlloyElite2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/RGBController_HyperXAlloyFPS.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/RGBController_HyperXAlloyOrigins.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/RGBController_HyperXAlloyOrigins60and65.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXKeyboardController\/RGBController_HyperXAlloyOriginsCore.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMicrophoneController\/HyperXMicrophoneController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMicrophoneController\/RGBController_HyperXMicrophone.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/HyperXPulsefireDartController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/HyperXPulsefireFPSProController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/HyperXPulsefireHasteController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/HyperXPulsefireRaidController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/HyperXPulsefireSurgeController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/RGBController_HyperXPulsefireDart.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/RGBController_HyperXPulsefireFPSPro.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/RGBController_HyperXPulsefireHaste.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/RGBController_HyperXPulsefireRaid.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMouseController\/RGBController_HyperXPulsefireSurge.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMousematController\/HyperXMousematController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/HyperXMousematController\/RGBController_HyperXMousemat.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/IntelArcA770LEController\/IntelArcA770LEController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/IntelArcA770LEController\/RGBController_IntelArcA770LE.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/IonicoController\/IonicoController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/IonicoController\/RGBController_Ionico.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/KasaSmartController\/KasaSmartController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/KasaSmartController\/RGBController_KasaSmart.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/KeychronKeyboardController\/KeychronKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/KeychronKeyboardController\/RGBController_KeychronKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LEDStripController\/LEDStripController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LEDStripController\/RGBController_LEDStrip.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LIFXController\/LIFXController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LIFXController\/RGBController_LIFX.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LegoDimensionsToypadBaseController\/LegoDimensionsToypadBaseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LegoDimensionsToypadBaseController\/RGBController_LegoDimensionsToypadBase.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoControllers\/Lenovo4ZoneUSBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoControllers\/LenovoDevices.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoControllers\/LenovoDevices4Zone.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoControllers\/LenovoUSBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoControllers\/RGBController_Lenovo4ZoneUSB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoControllers\/RGBController_LenovoUSB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoMotherboardController\/LenovoMotherboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LenovoMotherboardController\/RGBController_LenovoMotherboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LexipMouseController\/LexipMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LexipMouseController\/RGBController_LexipMouse.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/LianLiUniHubALController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/LianLiUniHubController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/LianLiUniHubSLV2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/LianLiUniHub_AL10Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/RGBController_LianLiUniHub.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/RGBController_LianLiUniHubAL.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/RGBController_LianLiUniHubSLV2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/RGBController_LianLiUniHub_AL10.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/RGBController_StrimerLConnect.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LianLiController\/StrimerLConnectController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LinuxLEDController\/LinuxLEDController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LinuxLEDController\/RGBController_LinuxLED.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG203LController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG213Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG560Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG810Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG815Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG910Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG915Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechG933Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechGLightsyncController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechGProKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechLightspeedController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechProtocolCommon.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/LogitechX56Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG203L.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG213.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG560.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG810.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG815.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG910.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG915.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechG933.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechGLightsync.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechGLightsync1zone.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechGPowerPlay.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechGProKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechLightspeed.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/LogitechController\/RGBController_LogitechX56.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSI3ZoneController\/MSI3ZoneController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSI3ZoneController\/RGBController_MSI3Zone.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIGPUController\/MSIGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIGPUController\/MSIGPUv2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIGPUController\/RGBController_MSIGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIGPUController\/RGBController_MSIGPUv2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/MSIMysticLight112Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/MSIMysticLight162Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/MSIMysticLight185Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/MSIMysticLight64Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/MSIMysticLightCommon.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/RGBController_MSIMysticLight112.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/RGBController_MSIMysticLight162.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/RGBController_MSIMysticLight185.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIMysticLightController\/RGBController_MSIMysticLight64.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIOptixController\/MSIOptixController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIOptixController\/RGBController_MSIOptix.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIRGBController\/MSIRGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIRGBController\/RGBController_MSIRGB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIVigorController\/MSIVigorGK30Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MSIVigorController\/RGBController_MSIVigorGK30.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MountainKeyboardController\/MountainKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/MountainKeyboardController\/RGBController_MountainKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/N5312AController\/N5312AController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/N5312AController\/RGBController_N5312A.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NVIDIAIlluminationController\/NVIDIAIlluminationV1Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NVIDIAIlluminationController\/RGBController_NVIDIAIllumination.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NVIDIAIlluminationController\/nvapi_accessor.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTHue1Controller\/NZXTHue1Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTHue1Controller\/RGBController_NZXTHue1.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTHue2Controller\/NZXTHue2Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTHue2Controller\/RGBController_NZXTHue2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTHuePlusController\/NZXTHuePlusController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTHuePlusController\/RGBController_NZXTHuePlus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTKrakenController\/NZXTKrakenController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NZXTKrakenController\/RGBController_NZXTKraken.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NanoleafController\/NanoleafController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NanoleafController\/RGBController_Nanoleaf.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NollieController\/NollieController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NollieController\/RGBController_Nollie.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NvidiaESAController\/NvidiaESAController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/NvidiaESAController\/RGBController_NvidiaESA.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/OKSController\/OKSKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/OKSController\/RGBController_OKSKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/OpenRazerController\/OpenRazerDevices.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/OpenRazerController\/RGBController_OpenRazer.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/OpenRazerController\/RGBController_OpenRazerWindows.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PNYGPUController\/PNYGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PNYGPUController\/RGBController_PNYGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PalitGPUController\/PalitGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PalitGPUController\/RGBController_PalitGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PatriotViperController\/PatriotViperController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PatriotViperController\/RGBController_PatriotViper.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PatriotViperSteelController\/PatriotViperSteelController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PatriotViperSteelController\/RGBController_PatriotViperSteel.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PhilipsHueController\/PhilipsHueController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PhilipsHueController\/PhilipsHueEntertainmentController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PhilipsHueController\/RGBController_PhilipsHue.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PhilipsHueController\/RGBController_PhilipsHueEntertainment.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PhilipsWizController\/PhilipsWizController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/PhilipsWizController\/RGBController_PhilipsWiz.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/QMKOpenRGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/QMKOpenRGBRev9Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/QMKOpenRGBRevBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/QMKOpenRGBRevDController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/RGBController_QMKOpenRGBRev9.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/RGBController_QMKOpenRGBRevB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/RGBController_QMKOpenRGBRevD.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/QMKOpenRGBController\/RGBController_QMKOpenRGBRevE.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RazerController\/RGBController_Razer.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RazerController\/RGBController_RazerAddressable.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RazerController\/RGBController_RazerKraken.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RazerController\/RazerController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RazerController\/RazerDevices.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RazerController\/RazerKrakenController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RedSquareKeyroxController\/RGBController_RedSquareKeyrox.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RedSquareKeyroxController\/RGBController_RedSquareKeyroxTKLClassic.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RedSquareKeyroxController\/RedSquareKeyroxController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RedSquareKeyroxController\/RedSquareKeyroxTKLClassicController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RedragonController\/RGBController_RedragonMouse.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RedragonController\/RedragonMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RGBController_RoccatBurst.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RGBController_RoccatElo.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RGBController_RoccatHordeAimo.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RGBController_RoccatKoneAimo.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RGBController_RoccatKova.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RGBController_RoccatVulcanAimo.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RoccatBurstController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RoccatEloController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RoccatHordeAimoController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RoccatKoneAimoController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RoccatKovaController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RoccatVulcanAimoController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/RoccatController\/RoccatVulcanAimoLayouts.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SRGBmodsController\/RGBController_SRGBmodsLEDControllerV1.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SRGBmodsController\/RGBController_SRGBmodsPico.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SRGBmodsController\/SRGBmodsLEDControllerV1.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SRGBmodsController\/SRGBmodsPicoController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SapphireGPUController\/RGBController_SapphireNitroGlowV1.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SapphireGPUController\/RGBController_SapphireNitroGlowV3.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SapphireGPUController\/SapphireNitroGlowV1Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SapphireGPUController\/SapphireNitroGlowV3Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/RGBController_Sinowealth.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/RGBController_Sinowealth1007.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/RGBController_SinowealthGMOW.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/RGBController_SinowealthKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/RGBController_SinowealthKeyboard16.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/RGBController_SinowealthKeyboard90.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/SinowealthController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/SinowealthController1007.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/SinowealthGMOWController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/SinowealthKeyboard16Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/SinowealthKeyboard90Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SinowealthController\/SinowealthKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SonyGamepadController\/RGBController_SonyDS4.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SonyGamepadController\/RGBController_SonyDualSense.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SonyGamepadController\/SonyDS4Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SonyGamepadController\/SonyDualSenseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesApex.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesApex3.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesArctis5.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesOldApex.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesQCKMat.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesRival.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesRival3.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesSensei.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/RGBController_SteelSeriesSiberia.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesAerox3Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesAerox9Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesApex3Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesApex8ZoneController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesApexBaseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesApexController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesApexMController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesApexRegions.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesApexTZoneController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesArctis5Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesGeneric.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesMouseController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesOldApexController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesQCKMatController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesRival3Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesRivalController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesSenseiController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/SteelSeriesSiberiaController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/SteelSeriesController\/color32.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/TecknetController\/RGBController_Tecknet.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/TecknetController\/TecknetController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThermaltakePoseidonZRGBController\/RGBController_ThermaltakePoseidonZRGB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThermaltakePoseidonZRGBController\/ThermaltakePoseidonZRGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThermaltakeRiingController\/RGBController_ThermaltakeRiing.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThermaltakeRiingController\/RGBController_ThermaltakeRiingQuad.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThermaltakeRiingController\/ThermaltakeRiingController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThermaltakeRiingController\/ThermaltakeRiingQuadController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThingMController\/BlinkController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ThingMController\/RGBController_BlinkController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/TrustController\/RGBController_TrustGXT114.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/TrustController\/RGBController_TrustGXT180.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/TrustController\/TrustGXT114Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/TrustController\/TrustGXT180Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ViewSonicController\/RGBController_XG270QG.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ViewSonicController\/VS_XG270QG_Controller.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/WootingKeyboardController\/RGBController_WootingKeyboard.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/WootingKeyboardController\/WootingKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/WootingKeyboardController\/WootingOneKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/WootingKeyboardController\/WootingTwoKeyboardController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/WushiController\/RGBController_WushiL50USB.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/WushiController\/WushiL50USBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/YeelightController\/RGBController_Yeelight.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/YeelightController\/YeelightController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZETEdgeAirProController\/RGBController_ZETEdgeAirPro.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZETEdgeAirProController\/ZETEdgeAirProController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZETKeyboardController\/RGBController_ZETBladeOptical.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZETKeyboardController\/ZETBladeOpticalController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZalmanZSyncController\/RGBController_ZalmanZSync.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZalmanZSyncController\/ZalmanZSyncController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZotacTuringGPUController\/RGBController_ZotacTuringGPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZotacTuringGPUController\/ZotacTuringGPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZotacV2GPUController\/RGBController_ZotacV2GPU.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Controllers\/ZotacV2GPUController\/ZotacV2GPUController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/Detector.h" ],
+            
+              [  "usr\/include\/OpenRGB\/DeviceDetector.h" ],
+            
+              [  "usr\/include\/OpenRGB\/KeyboardLayoutManager\/KeyboardLayoutManager.h" ],
+            
+              [  "usr\/include\/OpenRGB\/LogManager.h" ],
+            
+              [  "usr\/include\/OpenRGB\/NetworkClient.h" ],
+            
+              [  "usr\/include\/OpenRGB\/NetworkProtocol.h" ],
+            
+              [  "usr\/include\/OpenRGB\/NetworkServer.h" ],
+            
+              [  "usr\/include\/OpenRGB\/OpenRGBPluginInterface.h" ],
+            
+              [  "usr\/include\/OpenRGB\/PluginManager.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ProfileManager.h" ],
+            
+              [  "usr\/include\/OpenRGB\/RGBController\/RGBController.h" ],
+            
+              [  "usr\/include\/OpenRGB\/RGBController\/RGBControllerKeyNames.h" ],
+            
+              [  "usr\/include\/OpenRGB\/RGBController\/RGBController_Dummy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/RGBController\/RGBController_Network.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ResourceManager.h" ],
+            
+              [  "usr\/include\/OpenRGB\/SettingsManager.h" ],
+            
+              [  "usr\/include\/OpenRGB\/StringUtils.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/CRCpp\/CRC.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/ColorWheel\/ColorWheel.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/NVFC\/nvapi.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/Swatches\/swatches.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/display-library\/include\/adl_defines.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/display-library\/include\/adl_sdk.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/display-library\/include\/adl_structures.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/dmiinfo.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/APICache.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Action.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/BaseDevice.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/BaseHttpHandler.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Bridge.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/BridgeConfig.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/BrightnessStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/CLIPSensors.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ColorHueStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ColorTemperatureStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ColorUnits.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Condition.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/EntertainmentMode.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ExtendedColorHueStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ExtendedColorTemperatureStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Group.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/HueCommandAPI.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/HueDeviceTypes.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/HueException.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/HueExceptionMacro.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/IHttpHandler.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/LibConfig.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Light.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/LinHttpHandler.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ModelPictures.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/NewDeviceList.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ResourceList.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Rule.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Scene.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Schedule.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Sensor.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/SensorList.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/SimpleBrightnessStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/SimpleColorHueStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/SimpleColorTemperatureStrategy.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/StateTransaction.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/TimePattern.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/UPnP.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/Utils.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/WinHttpHandler.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/include\/hueplusplus\/ZLLSensors.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/test\/TestTransaction.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/test\/mocks\/mock_BaseHttpHandler.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/test\/mocks\/mock_HttpHandler.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/test\/mocks\/mock_Light.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/hueplusplus-1.0.0\/test\/testhelper.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/include\/libcmmk\/libcmmk.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/ansi\/mk750.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/ansi\/pro_l.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/ansi\/pro_s.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/ansi\/sk630.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/ansi\/sk650.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/iso\/mk750.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/iso\/pro_l.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/iso\/pro_s.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/iso\/sk630.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libcmmk\/src\/mappings\/iso\/sk650.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/libe131\/src\/e131.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/macUSPCIO\/macUSPCIOAccess.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/dmi.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/hid.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/init.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/kernel.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/module.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/random.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/slab.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/openrazer-win32\/linux\/usb\/input.h" ],
+            
+              [  "usr\/include\/OpenRGB\/dependencies\/winring0\/include\/OlsApi.h" ],
+            
+              [  "usr\/include\/OpenRGB\/filesystem.h" ],
+            
+              [  "usr\/include\/OpenRGB\/hidapi_wrapper\/hidapi_wrapper.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_smbus\/i2c_smbus.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_smbus\/i2c_smbus_amdadl.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_smbus\/i2c_smbus_i801.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_smbus\/i2c_smbus_linux.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_smbus\/i2c_smbus_nct6775.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_smbus\/i2c_smbus_nvapi.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_smbus\/i2c_smbus_piix4.h" ],
+            
+              [  "usr\/include\/OpenRGB\/i2c_tools\/i2c_tools.h" ],
+            
+              [  "usr\/include\/OpenRGB\/moc_predefs.h" ],
+            
+              [  "usr\/include\/OpenRGB\/net_port\/net_port.h" ],
+            
+              [  "usr\/include\/OpenRGB\/pci_ids\/pci_ids.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/DetectorTableModel.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/DeviceView.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBClientInfoPage\/OpenRGBClientInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBClientInfoPage\/OpenRGBConsolePage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBConsolePage\/OpenRGBConsolePage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBDMXSettingsPage\/OpenRGBDMXSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBDMXSettingsPage\/OpenRGBDMXSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBDeviceInfoPage\/OpenRGBDeviceInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBDevicePage\/OpenRGBDevicePage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBDialog\/OpenRGBDialog.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBDialog2\/OpenRGBDialog2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBE131SettingsPage\/OpenRGBE131SettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBE131SettingsPage\/OpenRGBE131SettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBElgatoKeyLightSettingsPage\/OpenRGBElgatoKeyLightSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBElgatoKeyLightSettingsPage\/OpenRGBElgatoKeyLightSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBFont.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBHardwareIDsDialog\/OpenRGBHardwareIDsDialog.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBKasaSmartSettingsPage\/OpenRGBKasaSmartSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBKasaSmartSettingsPage\/OpenRGBKasaSmartSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBLIFXSettingsPage\/OpenRGBLIFXSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBLIFXSettingsPage\/OpenRGBLIFXSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBNanoleafSettingsPage\/OpenRGBNanoleafScanningThread.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBNanoleafSettingsPage\/OpenRGBNanoleafSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBNanoleafSettingsPage\/OpenRGBNanoleafSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPhilipsHueSettingsPage\/OpenRGBPhilipsHueSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPhilipsHueSettingsPage\/OpenRGBPhilipsHueSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPhilipsWizSettingsPage\/OpenRGBPhilipsWizSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPhilipsWizSettingsPage\/OpenRGBPhilipsWizSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPluginContainer\/OpenRGBPluginContainer.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPluginsPage\/OpenRGBPluginsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPluginsPage\/OpenRGBPluginsList.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBPluginsPage\/OpenRGBPluginsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBProfileSaveDialog\/OpenRGBProfileSaveDialog.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBQMKORGBSettingsPage\/OpenRGBQMKORGBSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBQMKORGBSettingsPage\/OpenRGBQMKORGBSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBSerialSettingsPage\/OpenRGBSerialSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBSerialSettingsPage\/OpenRGBSerialSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBServerInfoPage\/OpenRGBServerInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBSettingsPage\/OpenRGBSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBSoftwareInfoPage\/OpenRGBSoftwareInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBSupportedDevicesPage\/OpenRGBSupportedDevicesPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBSystemInfoPage\/OpenRGBSystemInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBThemeManager.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBYeelightSettingsPage\/OpenRGBYeelightSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBYeelightSettingsPage\/OpenRGBYeelightSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBZoneResizeDialog\/OpenRGBZoneResizeDialog.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/OpenRGBZonesBulkResizer\/OpenRGBZonesBulkResizer.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/QTooltipedSlider.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/TabLabel.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/hsv.h" ],
+            
+              [  "usr\/include\/OpenRGB\/qt\/macutils.h" ],
+            
+              [  "usr\/include\/OpenRGB\/serial_port\/find_usb_serial_port.h" ],
+            
+              [  "usr\/include\/OpenRGB\/serial_port\/serial_port.h" ],
+            
+              [  "usr\/include\/OpenRGB\/super_io\/super_io.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBClientInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBConsolePage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBDMXSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBDMXSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBDeviceInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBDevicePage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBDialog2.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBE131SettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBE131SettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBElgatoKeyLightSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBElgatoKeyLightSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBHardwareIDsDialog.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBKasaSmartSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBKasaSmartSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBLIFXSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBLIFXSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBNanoleafSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBNanoleafSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBPhilipsHueSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBPhilipsHueSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBPhilipsWizSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBPhilipsWizSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBPluginContainer.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBPluginsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBPluginsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBProfileSaveDialog.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBQMKORGBSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBQMKORGBSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBSerialSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBSerialSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBServerInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBSoftwareInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBSupportedDevicesPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBSystemInfoPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBYeelightSettingsEntry.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBYeelightSettingsPage.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBZoneResizeDialog.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_OpenRGBZonesBulkResizer.h" ],
+            
+              [  "usr\/include\/OpenRGB\/ui_TabLabel.h" ],
+            
+              [  "usr\/include\/OpenRGB\/wmi\/wmi.h" ],
+            
+              [  "usr\/include\/httplib.h" ],
+            
+              [  "usr\/include\/mdns.h" ],
+            
+              [  "usr\/lib\/cmake\/httplib\/FindBrotli.cmake" ],
+            
+              [  "usr\/lib\/cmake\/httplib\/httplibConfig.cmake" ],
+            
+              [  "usr\/lib\/cmake\/httplib\/httplibConfigVersion.cmake" ],
+            
+              [  "usr\/lib\/cmake\/httplib\/httplibTargets-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib\/cmake\/httplib\/httplibTargets.cmake" ],
+            
+              [  "usr\/lib\/libhttplib.so" ],
+            
+              [  "usr\/lib\/libhttplib.so.0.14" ],
+            
+              [  "usr\/lib\/libhttplib.so.0.14.1" ],
+            
+              [  "usr\/lib\/udev\/rules.d\/60-openrgb.rules" ],
+            
+              [  "usr\/lib64\/OpenRGB\/plugins\/libOpenRGBEffectsPlugin.so.1.0.0" ],
+            
+              [  "usr\/lib64\/OpenRGB\/plugins\/libOpenRGBSkinPlugin.so.1.0.0" ],
+            
+              [  "usr\/lib64\/OpenRGB\/plugins\/libOpenRGBVisualMapPlugin.so.1.0.0" ],
+            
+              [  "usr\/lib64\/cmake\/httplib\/FindBrotli.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/httplib\/httplibConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/httplib\/httplibConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/httplib\/httplibTargets-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/httplib\/httplibTargets.cmake" ],
+            
+              [  "usr\/lib64\/libhttplib.so" ],
+            
+              [  "usr\/lib64\/libhttplib.so.0.14" ],
+            
+              [  "usr\/lib64\/libhttplib.so.0.14.1" ],
+            
+              [  "usr\/share\/applications\/OpenRGB.desktop" ],
+            
+              [  "usr\/share\/cmake\/mdns\/mdnsConfig.cmake" ],
+            
+              [  "usr\/share\/cmake\/mdns\/mdnsConfigVersion.cmake" ],
+            
+              [  "usr\/share\/cmake\/mdns\/mdnsTargets.cmake" ],
+            
+              [  "usr\/share\/icons\/hicolor\/128x128\/apps\/OpenRGB.png" ],
+            
+              [  "usr\/share\/metainfo\/org.openrgb.OpenRGB.metainfo.xml" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

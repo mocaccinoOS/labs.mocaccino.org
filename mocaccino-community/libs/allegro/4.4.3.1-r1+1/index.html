@@ -1,0 +1,2427 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing libs/allegro-4.4.3.1-r1&#43;1 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> libs/allegro-4.4.3.1-r1&#43;1
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Cross-platform library aimed at video game and multimedia programming
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of libs/allegro
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:allegro-libs-4.4.3.1-r1-1" target="_blank"> quay.io/mocaccino/mocaccino-community:allegro-libs-4.4.3.1-r1-1 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:allegro-libs-4.4.3.1-r1-1/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 4.4.3.1-r1&#43;1  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> BSD ZLIB </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/X">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  X &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/physfs">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  physfs 3.0.2-r1&#43;3 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/dumb">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  dumb 2.0.3&#43;3 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-libs/allegro:0
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://liballeg.org/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://liballeg.org/ </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/media-libs/allegro">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  allegro &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/allegro-config" ],
+            
+              [  "usr\/bin\/allegro-setup" ],
+            
+              [  "usr\/bin\/colormap" ],
+            
+              [  "usr\/bin\/dat" ],
+            
+              [  "usr\/bin\/dat2c" ],
+            
+              [  "usr\/bin\/dat2s" ],
+            
+              [  "usr\/bin\/exedat" ],
+            
+              [  "usr\/bin\/grabber" ],
+            
+              [  "usr\/bin\/pack" ],
+            
+              [  "usr\/bin\/pat2dat" ],
+            
+              [  "usr\/bin\/rgbmap" ],
+            
+              [  "usr\/bin\/textconv" ],
+            
+              [  "usr\/include\/alleggl.h" ],
+            
+              [  "usr\/include\/allegro\/3d.h" ],
+            
+              [  "usr\/include\/allegro\/3dmaths.h" ],
+            
+              [  "usr\/include\/allegro\/alcompat.h" ],
+            
+              [  "usr\/include\/allegro\/alinline.h" ],
+            
+              [  "usr\/include\/allegro\/base.h" ],
+            
+              [  "usr\/include\/allegro\/color.h" ],
+            
+              [  "usr\/include\/allegro\/compiled.h" ],
+            
+              [  "usr\/include\/allegro\/config.h" ],
+            
+              [  "usr\/include\/allegro\/datafile.h" ],
+            
+              [  "usr\/include\/allegro\/debug.h" ],
+            
+              [  "usr\/include\/allegro\/digi.h" ],
+            
+              [  "usr\/include\/allegro\/draw.h" ],
+            
+              [  "usr\/include\/allegro\/file.h" ],
+            
+              [  "usr\/include\/allegro\/fix.h" ],
+            
+              [  "usr\/include\/allegro\/fixed.h" ],
+            
+              [  "usr\/include\/allegro\/fli.h" ],
+            
+              [  "usr\/include\/allegro\/fmaths.h" ],
+            
+              [  "usr\/include\/allegro\/font.h" ],
+            
+              [  "usr\/include\/allegro\/gfx.h" ],
+            
+              [  "usr\/include\/allegro\/graphics.h" ],
+            
+              [  "usr\/include\/allegro\/gui.h" ],
+            
+              [  "usr\/include\/allegro\/inline\/3dmaths.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/asm.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/color.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/draw.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/fix.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/fmaths.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/gfx.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/matrix.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/rle.inl" ],
+            
+              [  "usr\/include\/allegro\/inline\/system.inl" ],
+            
+              [  "usr\/include\/allegro\/internal\/aintern.h" ],
+            
+              [  "usr\/include\/allegro\/internal\/aintvga.h" ],
+            
+              [  "usr\/include\/allegro\/internal\/alconfig.h" ],
+            
+              [  "usr\/include\/allegro\/joystick.h" ],
+            
+              [  "usr\/include\/allegro\/keyboard.h" ],
+            
+              [  "usr\/include\/allegro\/lzss.h" ],
+            
+              [  "usr\/include\/allegro\/matrix.h" ],
+            
+              [  "usr\/include\/allegro\/midi.h" ],
+            
+              [  "usr\/include\/allegro\/mouse.h" ],
+            
+              [  "usr\/include\/allegro\/palette.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintbeos.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintdos.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintlnx.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintmac.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintosx.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintpsp.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintqnx.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintunix.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aintwin.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/al386gcc.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/al386vc.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/al386wat.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/albcc32.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/albecfg.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/albeos.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aldjgpp.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aldmc.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/aldos.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/almac.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/almaccfg.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/almngw32.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/almsvc.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alosx.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alosxcfg.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alplatf.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alpsp.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alpspcfg.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alqnx.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alqnxcfg.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alucfg.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alunix.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alunixac.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alwatcom.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/alwin.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/astdint.h" ],
+            
+              [  "usr\/include\/allegro\/platform\/macdef.h" ],
+            
+              [  "usr\/include\/allegro\/quat.h" ],
+            
+              [  "usr\/include\/allegro\/rle.h" ],
+            
+              [  "usr\/include\/allegro\/sound.h" ],
+            
+              [  "usr\/include\/allegro\/stream.h" ],
+            
+              [  "usr\/include\/allegro\/system.h" ],
+            
+              [  "usr\/include\/allegro\/text.h" ],
+            
+              [  "usr\/include\/allegro\/timer.h" ],
+            
+              [  "usr\/include\/allegro\/unicode.h" ],
+            
+              [  "usr\/include\/allegro.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/gl_ext_alias.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/gl_ext_api.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/gl_ext_defs.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/gl_ext_list.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/glx_ext_alias.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/glx_ext_api.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/glx_ext_defs.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/glx_ext_list.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/wgl_ext_alias.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/wgl_ext_api.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/wgl_ext_defs.h" ],
+            
+              [  "usr\/include\/allegrogl\/GLext\/wgl_ext_list.h" ],
+            
+              [  "usr\/include\/allegrogl\/alleggl_config.h" ],
+            
+              [  "usr\/include\/allegrogl\/gl_ext.h" ],
+            
+              [  "usr\/include\/allegrogl\/gl_header_detect.h" ],
+            
+              [  "usr\/include\/jpgalleg.h" ],
+            
+              [  "usr\/include\/loadpng.h" ],
+            
+              [  "usr\/include\/logg.h" ],
+            
+              [  "usr\/include\/xalleg.h" ],
+            
+              [  "usr\/lib\/allegro\/4.4.3\/alleg-alsadigi.so" ],
+            
+              [  "usr\/lib\/allegro\/4.4.3\/alleg-alsamidi.so" ],
+            
+              [  "usr\/lib\/allegro\/4.4.3\/alleg-dga2.so" ],
+            
+              [  "usr\/lib\/allegro\/4.4.3\/modules.lst" ],
+            
+              [  "usr\/lib\/liballeg.so" ],
+            
+              [  "usr\/lib\/liballeg.so.4.4" ],
+            
+              [  "usr\/lib\/liballeg.so.4.4.3" ],
+            
+              [  "usr\/lib\/liballeggl.so" ],
+            
+              [  "usr\/lib\/liballeggl.so.4.4" ],
+            
+              [  "usr\/lib\/liballeggl.so.4.4.3" ],
+            
+              [  "usr\/lib\/libjpgalleg.so" ],
+            
+              [  "usr\/lib\/libjpgalleg.so.4.4" ],
+            
+              [  "usr\/lib\/libjpgalleg.so.4.4.3" ],
+            
+              [  "usr\/lib\/libloadpng.so" ],
+            
+              [  "usr\/lib\/libloadpng.so.4.4" ],
+            
+              [  "usr\/lib\/libloadpng.so.4.4.3" ],
+            
+              [  "usr\/lib\/liblogg.so" ],
+            
+              [  "usr\/lib\/liblogg.so.4.4" ],
+            
+              [  "usr\/lib\/liblogg.so.4.4.3" ],
+            
+              [  "usr\/lib\/pkgconfig\/allegro.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/allegrogl.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/jpgalleg.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/loadpng.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/logg.pc" ],
+            
+              [  "usr\/lib64\/allegro\/4.4.3\/alleg-alsadigi.so" ],
+            
+              [  "usr\/lib64\/allegro\/4.4.3\/alleg-alsamidi.so" ],
+            
+              [  "usr\/lib64\/allegro\/4.4.3\/alleg-dga2.so" ],
+            
+              [  "usr\/lib64\/allegro\/4.4.3\/modules.lst" ],
+            
+              [  "usr\/lib64\/liballeg.so" ],
+            
+              [  "usr\/lib64\/liballeg.so.4.4" ],
+            
+              [  "usr\/lib64\/liballeg.so.4.4.3" ],
+            
+              [  "usr\/lib64\/liballeggl.so" ],
+            
+              [  "usr\/lib64\/liballeggl.so.4.4" ],
+            
+              [  "usr\/lib64\/liballeggl.so.4.4.3" ],
+            
+              [  "usr\/lib64\/libjpgalleg.so" ],
+            
+              [  "usr\/lib64\/libjpgalleg.so.4.4" ],
+            
+              [  "usr\/lib64\/libjpgalleg.so.4.4.3" ],
+            
+              [  "usr\/lib64\/libloadpng.so" ],
+            
+              [  "usr\/lib64\/libloadpng.so.4.4" ],
+            
+              [  "usr\/lib64\/libloadpng.so.4.4.3" ],
+            
+              [  "usr\/lib64\/liblogg.so" ],
+            
+              [  "usr\/lib64\/liblogg.so.4.4" ],
+            
+              [  "usr\/lib64\/liblogg.so.4.4.3" ],
+            
+              [  "usr\/lib64\/pkgconfig\/allegro.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/allegrogl.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/jpgalleg.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/loadpng.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/logg.pc" ],
+            
+              [  "usr\/share\/allegro\/keyboard.dat" ],
+            
+              [  "usr\/share\/allegro\/language.dat" ],
+            
+              [  "usr\/share\/allegro\/setup.dat" ],
+            
+              [  "usr\/share\/applications\/allegro-setup-allegro.desktop" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ALLEGRO_DATE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ALLEGRO_DATE_STR.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ALLEGRO_SUB_VERSION.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ALLEGRO_VERSION.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ALLEGRO_VERSION_STR.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ALLEGRO_WIP_VERSION.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-AL_ID.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ASSERT.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-AUDIOSTREAM.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-BITMAP.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-COLOR_MAP.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-COMPILED_SPRITE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-DATAFILE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-DAT_ID.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-DIALOG.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-DIALOG_PLAYER.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-END_OF_FUNCTION.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-END_OF_MAIN.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-FONT.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-GFX_MODE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-GFX_MODE_LIST.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-JOYSTICK_AXIS_INFO.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-JOYSTICK_BUTTON_INFO.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-JOYSTICK_INFO.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-JOYSTICK_STICK_INFO.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-LOCK_FUNCTION.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-LOCK_VARIABLE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-LZSS_PACK_DATA.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-LZSS_UNPACK_DATA.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MAKE_VERSION.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MASK_COLOR_15.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MASK_COLOR_16.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MASK_COLOR_24.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MASK_COLOR_32.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MASK_COLOR_8.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MATRIX.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MATRIX_f.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MENU.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MENU_PLAYER.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-MIDI.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-PACKFILE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-PACKFILE_VTABLE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-PALETTE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-PAL_SIZE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_ATEX.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_ATEX_LIT.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_ATEX_MASK.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_ATEX_MASK_LIT.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_ATEX_MASK_TRANS.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_ATEX_TRANS.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_FLAT.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_GCOL.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_GRGB.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_PTEX.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_PTEX_LIT.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_PTEX_MASK.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_PTEX_MASK_LIT.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_PTEX_MASK_TRANS.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-POLYTYPE_PTEX_TRANS.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-QUAT.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-RGB.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-RGB_MAP.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-RLE_SPRITE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-SAMPLE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-SCREEN_H.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-SCREEN_W.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-TRACE.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-V3D.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-V3D_f.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-VIRTUAL_H.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-VIRTUAL_W.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ZBUFFER.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_getpixel.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_getpixel15.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_getpixel16.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_getpixel24.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_getpixel32.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_putpixel.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_putpixel15.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_putpixel16.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_putpixel24.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_putpixel32.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_set_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-_ustrdup.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-acquire_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-acquire_screen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-active_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-active_menu.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-add_clip_rect.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-adjust_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-al_assert.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-al_ffblk.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-al_ffblk_get_size.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-al_findclose.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-al_findfirst.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-al_findnext.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-al_trace.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-alert.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-alert3.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allegro_404_char.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allegro_error.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allegro_exit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allegro_icon.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allegro_id.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allegro_init.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allegro_message.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-allocate_voice.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-append_filename.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-apply_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-apply_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-apply_quat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-arc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-bestfit_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-bitmap_color_depth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-bitmap_mask_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-black_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-blit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-bmp_read_line.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-bmp_unwrite_line.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-bmp_write_line.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-broadcast_dialog_message.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-calc_spline.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-calibrate_joystick.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-calibrate_joystick_name.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-canonicalize_filename.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-centre_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-check_cpu.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-circle.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-circlefill.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-clear_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-clear_keybuf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-clear_scene.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-clear_to_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-clear_zbuffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-clip3d.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-clip3d_f.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-close_fli.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-color_map.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-config_is_hooked.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-cpu_capabilities.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-cpu_family.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-cpu_model.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-cpu_vendor.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_bitmap_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_blender_table.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_color_table.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_datafile_index.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_light_table.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_lzss_pack_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_lzss_unpack_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_rgb_table.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_scene.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_sub_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_sub_zbuffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_system_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_trans_table.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_video_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-create_zbuffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-cross_product.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-cross_product_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_bitmap_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_box_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_button_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_check_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_clear_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_ctext_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_edit_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_icon_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_keyboard_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_list_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_menu_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_radio_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_rtext_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_shadow_box_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_slider_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_text_list_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_text_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_textbox_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-d_yield_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-deallocate_voice.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-default_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-delete_file.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-desktop_color_depth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-desktop_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_compiled_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_datafile_index.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_gfx_mode_list.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_midi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_rle_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_scene.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-destroy_zbuffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-detect_digi_driver.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-detect_midi_driver.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-dialog_message.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-digi_recorder.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-disable_hardware_cursor.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-do_arc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-do_circle.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-do_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-do_ellipse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-do_line.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-do_menu.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-do_uconvert.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-dot_product.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-dot_product_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_character_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_compiled_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_gouraud_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_lit_rle_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_lit_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_rle_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_sprite_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_sprite_h_flip.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_sprite_v_flip.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_sprite_vh_flip.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_trans_rle_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-draw_trans_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-drawing_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ellipse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ellipsefill.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-empty_string.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-enable_hardware_cursor.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-enable_triple_buffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ex12bit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ex3buf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ex3d.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exaccel.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exalpha.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exbitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exblend.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-excamera.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-excolmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exconfig.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-excustom.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exdata.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exdbuf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exexedat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exfixed.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exflame.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exflip.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exfont.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exgui.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exhello.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exists.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exjoy.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exkeys.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exlights.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exmem.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exmidi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exmouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-expackf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-expal.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-expat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exquat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exrgbhsv.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exrotscl.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exsample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exscale.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exscn3d.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exscroll.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exshade.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exspline.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exsprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exstars.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exstream.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exswitch.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exsyscur.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-extimer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-extract_font_range.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-extrans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-extrans2.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-extruec.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exunicod.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exupdate.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exxfade.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-exzbuf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fade_from.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fade_from_range.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fade_in.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fade_in_range.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fade_interpolate.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fade_out.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fade_out_range.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fastline.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-file_exists.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-file_select_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-file_size_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-file_time.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-find_allegro_resource.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-find_datafile_object.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-find_dialog_focus.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fix_filename_case.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fix_filename_slashes.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixacos.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixadd.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixasin.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixatan.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixatan2.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixceil.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixcos.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixdiv.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixed.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixfloor.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixhypot.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixmul.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixsin.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixsqrt.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixsub.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixtan.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixtof.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixtoi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixtorad_r.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fixup_datafile.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_bmp_dirty_from.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_bmp_dirty_to.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_frame.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_pal_dirty_from.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_pal_dirty_to.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-fli_timer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-floodfill.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-flush_config_file.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-font_has_alpha.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-for_each_file_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-free_audio_stream_buffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-free_config_entries.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-free_lzss_pack_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-free_lzss_unpack_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-freeze_mouse_flag.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ftofix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-generate_332_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-generate_optimized_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_align_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_align_matrix_f.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_audio_stream_buffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_camera_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_camera_matrix_f.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_clip_rect.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_clip_state.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_color_conversion.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_color_depth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_compiled_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_config_argv.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_config_float.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_config_hex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_config_id.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_config_int.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_config_string.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_config_text.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_datafile_property.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_desktop_resolution.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_display_switch_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_executable_name.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_extension.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_filename.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_filename_encoding.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_font_range_begin.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_font_range_end.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_font_ranges.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_gfx_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_gfx_mode_list.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_gfx_mode_type.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_hardware_volume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_midi_length.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_mixer_bits.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_mixer_buffer_length.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_mixer_channels.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_mixer_frequency.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_mixer_quality.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_mixer_voices.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_mouse_mickeys.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_palette_range.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_refresh_rate.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_rle_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_rotation_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_rotation_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_rotation_quat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_scaling_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_scaling_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_sound_input_cap_bits.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_sound_input_cap_parm.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_sound_input_cap_rate.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_sound_input_cap_stereo.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_transformation_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_transformation_matrix_f.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_translation_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_translation_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_uformat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_vector_rotation_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_vector_rotation_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_vector_rotation_quat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_volume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_x_rotate_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_x_rotate_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_x_rotate_quat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_y_rotate_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_y_rotate_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_y_rotate_quat.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_z_rotate_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_z_rotate_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-get_z_rotate_quat.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-geta.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-geta32.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-geta_depth.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getb.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getb15.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getb16.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getb24.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getb32.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getb8.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getb_depth.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getg.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getg15.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getg16.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getg24.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getg32.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getg8.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getg_depth.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getpixel.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getr.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getr15.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getr16.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getr24.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getr32.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getr8.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-getr_depth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gfx_capabilities.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gfx_mode_select.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gfx_mode_select_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gfx_mode_select_filter.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-grab_font_from_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_bg_color.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_button_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_ctext_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_edit_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_fg_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_font_baseline.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_get_screen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_list_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_menu_draw_menu.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_menu_draw_menu_item.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_mg_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_mouse_b.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_mouse_focus.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_mouse_x.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_mouse_y.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_mouse_z.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_set_screen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_shadow_box_proc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_strlen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_text_list_proc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-gui_textout_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-hline.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-hook_config_section.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-hsv_to_rgb.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-identity_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-identity_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-identity_quat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-init_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-init_menu.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-initialise_joystick.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_allegro.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_int.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_int_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_joystick.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_keyboard.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_keyboard_hooks.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_mouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_param_int.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_param_int_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_sound.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_sound_input.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-install_timer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_color_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_compatible_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_inside_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_linear_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_memory_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_mono_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_planar_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_relative_filename.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_same_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_screen_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_sub_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_system_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_trans_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_video_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-is_windowed_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-itofix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-joy.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-key.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-key_led_flag.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-key_shifts.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-keyboard_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-keyboard_lowlevel_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-keyboard_needs_poll.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-keyboard_ucallback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-keypressed.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-line.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-list_config_entries.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-list_config_sections.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_bios_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_bitmap_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_bmp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_bmp_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_dat_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_datafile.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_datafile_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_datafile_object.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_datafile_object_indexed.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_grx_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_grx_or_bios_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_ibk.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_joystick_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_lbm.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_midi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_midi_patches.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_pcx.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_pcx_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_tga.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_tga_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_txt_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_voc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_voc_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_wav.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-load_wav_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-lock_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-lock_midi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-lock_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-lzss_read.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-lzss_write.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-make_absolute_filename.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-make_relative_filename.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-make_trans_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makeacol.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makeacol32.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makeacol_depth.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol15.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol15_dither.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol16.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol16_dither.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol24.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol32.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol8.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-makecol_depth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-masked_blit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-masked_stretch_blit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-matrix_mul.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-matrix_mul_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-matrix_to_quat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-merge_fonts.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_loop_end.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_loop_start.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_meta_callback.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_msg_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_out.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_pause.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_pos.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_recorder.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_resume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_seek.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_sysex_callback.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-midi_time.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_b.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_needs_poll.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_on_screen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_pos.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_w.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_x.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_x_focus.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_y.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_y_focus.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-mouse_z.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-need_uconvert.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-next_fli_frame.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-normalize_vector.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-normalize_vector_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-num_joysticks.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-object_message.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-offer_focus.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-open_fli.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-open_memory_fli.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-os_multitasking.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-os_revision.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-os_type.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-os_version.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-override_config_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-override_config_file.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fclose.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fclose_chunk.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_feof.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_ferror.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fgets.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fopen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fopen_chunk.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fopen_vtable.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fputs.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fread.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fseek.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_fwrite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_getc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_igetl.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_igetw.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_iputl.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_iputw.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_mgetl.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_mgetw.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_mputl.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_mputw.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_putc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pack_ungetc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-packfile_password.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-palette_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-persp_project.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-persp_project_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_scaled_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_scaled_sprite_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_scaled_sprite_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_scaled_sprite_v_flip.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_scaled_sprite_v_flip_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_scaled_sprite_v_flip_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_sprite_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_sprite_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_sprite_v_flip.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_sprite_v_flip_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pivot_sprite_v_flip_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-play_audio_stream.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-play_fli.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-play_looped_midi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-play_memory_fli.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-play_midi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-play_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-poll_joystick.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-poll_keyboard.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-poll_mouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-poll_scroll.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-polygon.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-polygon3d.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-polygon3d_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-polygon_z_normal.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-polygon_z_normal_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-pop_config_state.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-popup_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-position_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-position_mouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-position_mouse_w.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-position_mouse_z.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-push_config_state.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-put_backslash.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-putpixel.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-qnx_get_window.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-qscale_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-qscale_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-qtranslate_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-qtranslate_matrix_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-quad3d.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-quad3d_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-quat_interpolate.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-quat_mul.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-quat_slerp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-quat_to_matrix.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-radtofix_r.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-read_sound_input.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-readkey.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-reallocate_voice.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rect.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rectfill.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-register_assert_handler.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-register_bitmap_file_type.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-register_datafile_object.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-register_font_file_type.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-register_sample_file_type.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-register_trace_handler.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-register_uformat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-release_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-release_screen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-release_voice.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-reload_config_texts.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_display_switch_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_int.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_joystick.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_keyboard.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_mouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_param_int.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_sound.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_sound_input.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-remove_timer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-render_scene.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-replace_extension.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-replace_filename.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-request_refresh_rate.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-request_scroll.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-request_video_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-reserve_voices.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-reset_fli_variables.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rest.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rest_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-retrace_count.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rgb_map.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rgb_to_hsv.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_scaled_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_scaled_sprite_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_scaled_sprite_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_scaled_sprite_v_flip.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_scaled_sprite_v_flip_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_scaled_sprite_v_flip_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_sprite_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_sprite_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_sprite_v_flip.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_sprite_v_flip_lit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-rotate_sprite_v_flip_trans.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_bmp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_bmp_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_joystick_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_pcx.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_pcx_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_tga.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-save_tga_pf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scancode_to_ascii.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scancode_to_name.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scare_mouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scare_mouse_area.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scene_gap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scene_polygon3d.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scene_polygon3d_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-screen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-scroll_screen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-select_mouse_cursor.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-select_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_add_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_allegro_resource_path.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_alpha_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_blender_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_blender_mode_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_burn_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_clip_rect.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_clip_state.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_close_button_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_color_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_color_conversion.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_color_depth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_config_data.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_config_file.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_config_float.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_config_hex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_config_id.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_config_int.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_config_string.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_dialog_color.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_difference_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_display_switch_callback.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_display_switch_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_dissolve_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_dodge_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_filename_encoding.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_gfx_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_hardware_volume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_hue_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_invert_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_keyboard_rate.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_leds.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_luminance_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_mixer_quality.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_mouse_cursor_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_mouse_range.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_mouse_speed.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_mouse_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_mouse_sprite_focus.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_multiply_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_palette_range.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_projection_viewport.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_saturation_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_screen_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_sound_input_source.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_trans_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_ucodepage.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_uformat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_volume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_volume_per_voice.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_window_title.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_write_alpha_blender.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-set_zbuffer.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-show_mouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-show_os_cursor.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-show_video_bitmap.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-shutdown_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-shutdown_menu.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-simulate_keypress.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-simulate_ukeypress.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-solid_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-spline.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-start_sound_input.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-stop_audio_stream.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-stop_midi.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-stop_sample.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-stop_sound_input.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-stretch_blit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-stretch_sprite.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-text_height.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-text_length.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textout_centre_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textout_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textout_justify_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textout_right_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textprintf_centre_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textprintf_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textprintf_justify_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-textprintf_right_ex.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-three_finger_flag.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-transpose_font.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-triangle.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-triangle3d.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-triangle3d_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uatof.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uconvert.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uconvert_ascii.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uconvert_size.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uconvert_toascii.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ucwidth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ugetat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ugetc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ugetx.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ugetxc.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uinsert.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uisdigit.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uisok.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uisspace.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-unload_datafile.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-unload_datafile_object.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-unscare_mouse.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-unselect_palette.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uoffset.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-update_dialog.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-update_menu.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ureadkey.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uremove.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-usetat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-usetc.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-usprintf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrcat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrchr.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrcmp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrcpy.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrdup.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrerror.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustricmp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrlen.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrlwr.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrncat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrncmp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrncpy.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrnicmp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrpbrk.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrrchr.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrsize.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrsizez.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrstr.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrtod.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrtok.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrtok_r.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrtol.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrupr.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrzcat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrzcpy.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrzncat.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-ustrzncpy.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uszprintf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-utolower.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-utoupper.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uvsprintf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uvszprintf.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uwidth.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-uwidth_max.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-vector_length.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-vector_length_f.3" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-vline.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_check.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_get_frequency.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_get_pan.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_get_position.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_get_volume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_ramp_volume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_echo.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_frequency.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_pan.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_playmode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_position.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_priority.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_tremolo.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_vibrato.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_set_volume.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_start.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_stop.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_stop_frequency_sweep.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_stop_pan_sweep.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_stop_volumeramp.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_sweep_frequency.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-voice_sweep_pan.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-vsync.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-xor_mode.3.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/allegro-xwin_set_window_name.3.bz2" ],
+            
+              [  "usr\/share\/pixmaps\/allegro.png" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

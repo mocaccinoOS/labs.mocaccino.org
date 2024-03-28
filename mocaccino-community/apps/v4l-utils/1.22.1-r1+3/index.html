@@ -1,0 +1,630 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/v4l-utils-1.22.1-r1&#43;3 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/v4l-utils-1.22.1-r1&#43;3
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Separate utilities ebuild from upstream v4l-utils package
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/v4l-utils
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:v4l-utils-apps-1.22.1-r1-3" target="_blank"> quay.io/mocaccino/mocaccino-community:v4l-utils-apps-1.22.1-r1-3 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:v4l-utils-apps-1.22.1-r1-3/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.22.1-r1&#43;3  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2&#43; LGPL-2.1&#43; </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/libbpf">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libbpf 1.3.0&#43;1 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-tv/v4l-utils
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://git.linuxtv.org/v4l-utils.git" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://git.linuxtv.org/v4l-utils.git </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/media-tv/v4l-utils">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  v4l-utils &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/rc_maps.cfg" ],
+            
+              [  "usr\/bin\/cec-compliance" ],
+            
+              [  "usr\/bin\/cec-ctl" ],
+            
+              [  "usr\/bin\/cec-follower" ],
+            
+              [  "usr\/bin\/cx18-ctl" ],
+            
+              [  "usr\/bin\/decode_tm6000" ],
+            
+              [  "usr\/bin\/ir-ctl" ],
+            
+              [  "usr\/bin\/ir-keytable" ],
+            
+              [  "usr\/bin\/ivtv-ctl" ],
+            
+              [  "usr\/bin\/media-ctl" ],
+            
+              [  "usr\/bin\/qv4l2" ],
+            
+              [  "usr\/bin\/qvidcap" ],
+            
+              [  "usr\/bin\/rds-ctl" ],
+            
+              [  "usr\/bin\/v4l2-compliance" ],
+            
+              [  "usr\/bin\/v4l2-ctl" ],
+            
+              [  "usr\/bin\/v4l2-dbg" ],
+            
+              [  "usr\/bin\/v4l2-sysfs-path" ],
+            
+              [  "usr\/lib\/systemd\/system\/systemd-udevd.service.d\/50-rc_keymap.conf" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/adstech_dvb_t_pci.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/af9005.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/alink_dtu_m.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/allwinner_ba10_tv_box.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/allwinner_i12_a20_tv_box.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/anysee.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/apac_viewcomp.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/astrometa_t2hybrid.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/asus_pc39.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/asus_ps3_100.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/ati_tv_wonder_hd_600.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/ati_x10.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avermedia.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avermedia_a16d.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avermedia_cardbus.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avermedia_dvbt.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avermedia_m135a.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avermedia_m733a_rm_k6.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avermedia_rm_ks.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/avertv_303.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/az6027.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/azurewave_ad_tu700.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/beelink_gs1.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/behold.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/behold_columbus.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/budget_ci_old.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/cec.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/cinergy.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/cinergy_1400.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/cinergyt2.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/d680_dmb.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/delock_61959.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dib0700_nec.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dib0700_rc5.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dibusb.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/digitalnow_tinytwin.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/digittrade.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/digitv.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dish_network.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dm1105_nec.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dntv_live_dvb_t.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dntv_live_dvbt_pro.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dtt200u.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dvbsky.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dvico_mce.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/dvico_portable.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/em_terratec.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/encore_enltv.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/encore_enltv2.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/encore_enltv_fm53.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/evga_indtube.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/eztv.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/flydvb.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/flyvideo.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/fusionhdtv_mce.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/gadmei_rm008z.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/geekbox.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/genius_tvgo_a11mce.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/gotview7135.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/haupp.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/hauppauge.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/hisi_poplar.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/hisi_tv_demo.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/imon_mce.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/imon_pad.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/imon_rsc.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/iodata_bctv7e.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/it913x_v1.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/it913x_v2.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/kaiomy.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/khadas.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/khamsin.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/kii_pro.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/kworld_315u.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/kworld_pc150u.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/kworld_plus_tv_analog.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/leadtek_y04g0051.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/lme2510.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/manli.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/mce_keyboard.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/medion_x10.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/medion_x10_digitainer.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/medion_x10_or2x.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/megasky.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/minix_neo.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/msi_digivox_ii.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/msi_digivox_iii.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/msi_tvanywhere.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/msi_tvanywhere_plus.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/nebula.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/nec_terratec_cinergy_xs.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/norwood.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/npgtech.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/odroid.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/opera1.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pctv_sedna.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pine64.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pinnacle310e.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pinnacle_color.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pinnacle_grey.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pinnacle_pctv_hd.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pixelview.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pixelview_002t.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pixelview_mk12.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pixelview_new.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/powercolor_real_angel.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/proteus_2309.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/grundig.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/imon_rsc.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/manchester.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/pulse_distance.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/pulse_length.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/raw.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/rc_mm.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/samsung36.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/protocols\/xbox-dvd.o" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/purpletv.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/pv951.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/rc6_mce.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/real_audio_220_32_keys.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/reddo.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/samsung_ak59_00125a.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/snapstream_firefly.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/streamzap.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/su3000.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/tanix_tx3mini.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/tanix_tx5max.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/tbs_nec.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/technisat_ts35.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/technisat_usb2.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/terratec_cinergy_c_pci.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/terratec_cinergy_s2_hd.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/terratec_cinergy_xs.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/terratec_slim.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/terratec_slim_2.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/tevii_nec.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/tivo.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/total_media_in_hand.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/total_media_in_hand_02.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/trekstor.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/tt_1500.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/tvwalkertwin.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/twinhan_dtv_cab_ci.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/twinhan_vp1027_dvbs.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/vega_s9x.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/videomate_k100.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/videomate_s350.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/videomate_tv_pvr.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/vp702x.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/wetek_hub.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/wetek_play2.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/winfast.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/winfast_usbii_deluxe.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/wobo_i5.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/x96max.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/xbox_dvd.toml" ],
+            
+              [  "usr\/lib\/udev\/rc_keymaps\/zx_irdec.toml" ],
+            
+              [  "usr\/lib\/udev\/rules.d\/70-infrared.rules" ],
+            
+              [  "usr\/share\/applications\/qv4l2.desktop" ],
+            
+              [  "usr\/share\/applications\/qvidcap.desktop" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/qv4l2.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/qvidcap.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/apps\/qv4l2.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/apps\/qvidcap.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/qv4l2.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/qvidcap.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/64x64\/apps\/qv4l2.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/64x64\/apps\/qvidcap.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/qv4l2.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/qvidcap.svg" ],
+            
+              [  "usr\/share\/man\/man1\/cec-compliance.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/cec-ctl.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/cec-follower.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/ir-ctl.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/ir-keytable.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/qv4l2.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/qvidcap.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/v4l2-compliance.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/v4l2-ctl.1.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/rc_keymap.5.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

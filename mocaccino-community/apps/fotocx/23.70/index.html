@@ -1,0 +1,989 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/fotocx-23.70 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/fotocx-23.70
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Program for improving image files made with a digital camera
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/fotocx
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:fotocx-apps-23.70" target="_blank"> quay.io/mocaccino/mocaccino-community:fotocx-apps-23.70 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:fotocx-apps-23.70/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 23.70  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-3&#43; </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/gnome-common">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  gnome-common &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/apps/dcraw">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  dcraw 9.28.0-r4&#43;1 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/libchamplain">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libchamplain 0.12.21&#43;1 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-gfx/fotocx
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://kornelix.net/fotocx/fotocx.html" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://kornelix.net/fotocx/fotocx.html </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/media-gfx/fotocx">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  fotocx &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/fotoxx" ],
+            
+              [  "usr\/share\/applications\/fotoxx.desktop" ],
+            
+              [  "usr\/share\/fotoxx\/data\/KB_shortcuts_E" ],
+            
+              [  "usr\/share\/fotoxx\/data\/README" ],
+            
+              [  "usr\/share\/fotoxx\/data\/colorwheel.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/blur5" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/brighten3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/color lines 3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/color lines 5" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/colors3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/darken3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/denoise3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/emboss3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/emboss3-B\u0026W" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/emboss5" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/emboss5\u002bcolor" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/last-used" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/outlines3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/outlines5" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/shake3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/sharpen3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/sharpen5" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_kernel\/sketch3" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_menu" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_scripts\/brightness and white point" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_scripts\/cartoon-emboss" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_scripts\/denoise-sharpen" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_scripts\/emboss-test" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_scripts\/line-drawing-emboss" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_scripts\/painting-texture" ],
+            
+              [  "usr\/share\/fotoxx\/data\/custom_scripts\/sketch-cartoon-emboss" ],
+            
+              [  "usr\/share\/fotoxx\/data\/meta_picklist_E" ],
+            
+              [  "usr\/share\/fotoxx\/data\/netmap_locations" ],
+            
+              [  "usr\/share\/fotoxx\/data\/palettes\/Golden Heavy Body Acrylics.gpl" ],
+            
+              [  "usr\/share\/fotoxx\/data\/palettes\/Liquitex Heavy Body Artist colors.gpl" ],
+            
+              [  "usr\/share\/fotoxx\/data\/palettes\/Rembrandt Extra Fine.gpl" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/aqua.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/bathroom.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/blocks.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/brick_wall.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/bulging.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/burlap.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/canvas2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/canvas_blue.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/cheese.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/confetti.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/fluffy.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/fuzzy-blue.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/fuzzy-darkgrey.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/geometry2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/geometry3.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/gregre.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/grypaws.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/imitation_leather.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/lawn-artificial.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/lawn.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/lightblue-wet.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/linen-fine.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/liquid-blue.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/marble.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/mazes.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/notes.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/pattern.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/pattern_114.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/pattern_117.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/pattern_131.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/pebble-light.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/pool.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/purple.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/rings-green.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/sand.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/soft-structure_grey.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/space.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/stone.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/structure_darkgreen.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/wall-grey.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/wet-turquoise.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/patterns\/wood.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/data\/plugins" ],
+            
+              [  "usr\/share\/fotoxx\/data\/popup_text" ],
+            
+              [  "usr\/share\/fotoxx\/data\/raw_loader_commands" ],
+            
+              [  "usr\/share\/fotoxx\/data\/slideshow-tone.oga" ],
+            
+              [  "usr\/share\/fotoxx\/data\/tags_defined" ],
+            
+              [  "usr\/share\/fotoxx\/data\/userguide" ],
+            
+              [  "usr\/share\/fotoxx\/data\/widgets.css" ],
+            
+              [  "usr\/share\/fotoxx\/data\/worldcities.txt" ],
+            
+              [  "usr\/share\/fotoxx\/icons\/fotoxx.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/HDF-paint.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/HDF.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/HDR-adjust.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/HDR.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/KB-shortcuts.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/KB-shortcuts2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/RGB-dist.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/add-meta-items.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/add-motionblur1.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/add-motionblur2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/add-noise.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/add-subfolder.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/adjust-HSL.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/adjust-RGB.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/album-mass-update.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/album-replace-file.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/alien-colors1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/alien-colors2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/anti-alias.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/area-blend.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/area-blend2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/area-rescale.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/area-rescale2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-change-meta.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-convert.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-copy-move.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-delete-trash.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-geotags.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-move-meta.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-overlay.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-photo-date1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-photo-date2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-raw.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-rename-tags.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-report-meta.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-tags.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch-upright.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/batch.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/blackball.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/blank-image.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/blueball.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/blur.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/bookmarks.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/brightness-steps.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/brite-ramp1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/brite-ramp2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/broken.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/calibrate-printer.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/cartoon.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/change-alpha.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/choose-captions.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/chromatic1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/chromatic1A.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/chromatic2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/chromatic2A.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/color-depth1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/color-depth2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/color-mode.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/color-mode2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/color-negative.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/combine.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/copy-from-image.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/copy-from-image2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/copy-in-image.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/copy-move.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/copy-paste-colors.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/copy-prior-edit.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/crop-buttons.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/crop.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/custom-kernel.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/custom-widgets.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/custom.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/defog.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/defog2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/delete-trash.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/denoise.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/devmenu.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/dither1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/dither2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/dither3.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/draw-box.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/draw-line.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/draw-oval.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/draw-text.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/drawing.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/edit-any-metadata.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/edit-bookmarks.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/edit-dist.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/edit-metadata.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/edit.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/effects.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/emboss.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/emboss2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/engrave.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/engrave2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/escher-spiral.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/escher-spiralA.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/export-file-list.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/export-files.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/file-save-as.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/file-save.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/file.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/find-dups.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/first-index.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/fix-motion-blur.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/fix-motion-blur1.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/flatten-photo1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/flatten-photo2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/flatten1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/flatten2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/folder-tree.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/folder.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/fotoxx-views.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/fotoxx.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/gallery-screen.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/gallery-sort.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/gallery-view.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/gallery.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/global-retx.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/global-retx2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/gradients.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/gradients2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/greenball.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/grid-lines.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/help.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/image-array.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/image-diffs.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/image-locations.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/image-management.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/index-files1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/index-files2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/inside-out1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/inside-out2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/interpolation.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/jpeg-artifacts.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/jpeg-artifacts1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/jpeg-quality.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/local-retx.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/local-retx2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/localcon.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/localcon2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/localcon3.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/magnify-image.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/make-waves1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/make-waves2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/manage-albums.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/manage-tags.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/map-click.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/maps.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/margins.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/markup.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup3.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup4.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup5.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup6.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mashup7.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/match-colors.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/measure-image.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/menu-summary.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/meta-view.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/metadata.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/moncolor-small.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/moncolor.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mosaic1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/mosaic2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/netmap-locs.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/nonlinear slider.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/number-keys.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/outboard-programs.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/paint-edits.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/paint-image.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/paint-transp.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/paint-transp2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/painting1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/painting2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/pano-adjust.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/pano-align1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/pano-align2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/pattern1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/pattern2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/permissions.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/perspective1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/perspective2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/plugins-edit.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/plugins.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/prev-next.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/print-margins.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/print-setup.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/printer-cal-study.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/printer-calibrate-chart.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/printer-calibrate.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/quit.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/red-eyes1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/red-eyes2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/redball.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/refine.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/remove-dust.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/remove-dust2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/remove-halo.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/remove-halo2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/rename-folder.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/rename.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/repair.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/rescale.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/retouch.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/rotate-left.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/rotate-right.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/rotate.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/saturation.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/save.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/search-images-metadata.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/search-images.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/select-area-finish.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/select-area.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/select-image-files.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/select.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/settings.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/sharpen.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/shift-colors.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/show-RGB.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/sketch.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/slide-show.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/smart-erase.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/smart-erase2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/soft-focus.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/soft-focus2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/sphere.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/sphere2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stack-layer.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stack-noise.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stack-noise2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stack-paint.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stack-paint2.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stack-split.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stack-split2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/stretch.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/texture.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/texture2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/tiles2a.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/tiles2b.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/timeline-report.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/tiny-planet.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/tools.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/top-panel.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/twist1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/twist2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-batch.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-combine.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-custom.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-edit.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-effects.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-file.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-gallery.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-help.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-maps.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-metadata.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-refine.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-repair.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-select.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-tools.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-undo-redo.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-warp.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/ug-zoom.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unbend horz curved.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unbend horz linear.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unbend vert curved.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unbend vert linear.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unbend1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unbend2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/undo-redo.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unwarp-closeup1.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/unwarp-closeup2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/upscale\u002bsharpen.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/userguide.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/view-metadata.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/vignette.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/vignette2.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/vignette3.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/warning.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/warp.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/warps4.jpg" ],
+            
+              [  "usr\/share\/fotoxx\/images\/whiteball.png" ],
+            
+              [  "usr\/share\/fotoxx\/images\/zoom.png" ],
+            
+              [  "usr\/share\/man\/man1\/fotoxx.1.bz2" ],
+            
+              [  "usr\/share\/metainfo\/kornelix.fotoxx.metainfo.xml" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1074 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/musescore-3.6.2-r1&#43;2 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/musescore-3.6.2-r1&#43;2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                WYSIWYG Music Score Typesetter
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/musescore
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:musescore-apps-3.6.2-r1-2" target="_blank"> quay.io/mocaccino/mocaccino-community:musescore-apps-3.6.2-r1-2 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:musescore-apps-3.6.2-r1-2/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 3.6.2-r1&#43;2  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/kde-common">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  kde-common &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/apps/designer">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  designer 5.15.12&#43;1 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-sound/musescore
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://musescore.org/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://musescore.org/ </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/media-sound/musescore">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  musescore &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/QtWebEngineProcess" ],
+            
+              [  "usr\/bin\/mscore" ],
+            
+              [  "usr\/bin\/musescore" ],
+            
+              [  "usr\/lib\/qt5\/resources\/qtwebengine_devtools_resources.pak" ],
+            
+              [  "usr\/lib\/qt5\/resources\/qtwebengine_resources.pak" ],
+            
+              [  "usr\/lib\/qt5\/resources\/qtwebengine_resources_100p.pak" ],
+            
+              [  "usr\/lib\/qt5\/resources\/qtwebengine_resources_200p.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/am.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ar.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/bg.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/bn.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ca.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/cs.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/da.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/de.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/el.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/en-GB.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/en-US.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/es-419.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/es.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/et.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/fa.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/fi.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/fil.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/fr.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/gu.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/he.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/hi.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/hr.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/hu.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/id.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/it.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ja.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/kn.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ko.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/lt.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/lv.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ml.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/mr.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ms.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/nb.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/nl.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/pl.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/pt-BR.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/pt-PT.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ro.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ru.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/sk.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/sl.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/sr.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/sv.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/sw.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/ta.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/te.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/th.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/tr.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/uk.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/vi.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/zh-CN.pak" ],
+            
+              [  "usr\/lib\/qt5\/translations\/qtwebengine_locales\/zh-TW.pak" ],
+            
+              [  "usr\/share\/applications\/mscore.desktop" ],
+            
+              [  "usr\/share\/icons\/hicolor\/128x128\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/mimetypes\/application-vnd.recordare.musicxml\u002bxml.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/mimetypes\/application-vnd.recordare.musicxml.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/mimetypes\/application-x-musescore\u002bxml.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/mimetypes\/application-x-musescore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/512x512\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/64x64\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/96x96\/apps\/mscore.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/mscore.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/mimetypes\/application-vnd.recordare.musicxml\u002bxml.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/mimetypes\/application-vnd.recordare.musicxml.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/mimetypes\/application-x-musescore\u002bxml.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/mimetypes\/application-x-musescore.svg" ],
+            
+              [  "usr\/share\/man\/man1\/mscore.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/musescore.1.bz2" ],
+            
+              [  "usr\/share\/metainfo\/org.musescore.MuseScore.appdata.xml" ],
+            
+              [  "usr\/share\/mime\/application\/vnd.recordare.musicxml\u002bxml.xml" ],
+            
+              [  "usr\/share\/mime\/application\/vnd.recordare.musicxml.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-biab.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-bww.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-capella.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-musedata.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-musescore\u002bxml.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-musescore.drumset\u002bxml.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-musescore.palette.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-musescore.style\u002bxml.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-musescore.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-overture.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-sf2.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-sf3.xml" ],
+            
+              [  "usr\/share\/mime\/application\/x-sfz.xml" ],
+            
+              [  "usr\/share\/mime\/audio\/x-gtp.xml" ],
+            
+              [  "usr\/share\/mime\/audio\/x-ptb.xml" ],
+            
+              [  "usr\/share\/mime\/packages\/musescore.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/demos\/Brassed_Up.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/demos\/Dawn.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/demos\/Dynamic_Strings.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/demos\/Fugue_1.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/demos\/Reunion.mscz" ],
+            
+              [  "usr\/share\/mscore-3.6\/demos\/Unclaimed_Gift.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/instruments\/instruments.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/instruments\/orders.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_af.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ar.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ar_DZ.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ar_EG.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ar_SD.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ast.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_be.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_bg.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_br.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ca.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ca@valencia.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_cs.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_cy.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_da.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_de.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_el.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_en_GB.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_en_US.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_eo.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_es.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_et.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_eu.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_fa.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_fi.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_fil.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_fo.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_fr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ga.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_gd.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_gl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_he.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_hi_IN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_hr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_hu.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_hy.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_id.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ig.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_it.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ja.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ka.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_kab.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ko.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_lt.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_lv.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ml.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_mn_MN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_nb.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_nl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_nn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_pl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_pt.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_pt_BR.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ro.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_ru.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_scn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_sk.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_sl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_sr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_sr_RS.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_sv.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_th.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_tr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_uk.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_uz@Latn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_vi.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_zh_CN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_zh_HK.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/instruments_zh_TW.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/languages.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_af.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ar.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ar_DZ.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ar_EG.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ar_SD.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ast.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_be.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_bg.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_br.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ca.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ca@valencia.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_cs.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_cy.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_da.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_de.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_el.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_en_GB.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_en_US.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_eo.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_es.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_et.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_eu.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_fa.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_fi.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_fil.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_fo.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_fr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ga.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_gd.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_gl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_he.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_hi_IN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_hr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_hu.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_hy.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_id.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ig.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_it.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ja.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ka.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_kab.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ko.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_lt.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_lv.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ml.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_mn_MN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_nb.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_nl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_nn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_pl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_pt.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_pt_BR.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ro.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_ru.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_scn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_sk.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_sl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_sr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_sr_RS.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_sv.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_th.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_tr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_uk.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_uz@Latn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_vi.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_zh_CN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_zh_HK.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/mscore_zh_TW.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_bg.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_el.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_eu.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_gd.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_id.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_lv.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_nb.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_nl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_nl_BE.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_pt_BR.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_ro.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_tr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/qt_vi.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_af.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ar.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ar_DZ.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ar_EG.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ar_SD.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ast.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_be.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_bg.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_br.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ca.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ca@valencia.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_cs.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_cy.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_da.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_de.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_el.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_en_GB.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_en_US.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_eo.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_es.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_et.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_eu.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_fa.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_fi.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_fil.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_fo.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_fr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ga.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_gd.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_gl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_he.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_hi_IN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_hr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_hu.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_hy.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_id.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ig.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_it.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ja.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ka.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_kab.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ko.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_lt.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_lv.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ml.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_mn_MN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_nb.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_nl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_nn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_pl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_pt.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_pt_BR.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ro.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_ru.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_scn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_sk.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_sl.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_sr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_sr_RS.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_sv.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_th.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_tr.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_uk.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_uz@Latn.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_vi.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_zh_CN.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_zh_HK.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/locale\/tours_zh_TW.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/abc_import.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/colornotes.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/createscore.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/helloqml\/helloqml.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/helloqml\/translations\/locale_de.qm" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/helloqml\/translations\/locale_de.ts" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/notenames-interactive.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/notenames.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/panel.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/random.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/random2.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/run.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/scorelist.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/view.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/plugins\/walk.qml" ],
+            
+              [  "usr\/share\/mscore-3.6\/sound\/MuseScore_General.sf3" ],
+            
+              [  "usr\/share\/mscore-3.6\/sound\/MuseScore_General_License.md" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/Leland.mss" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/MuseJazz.mss" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/cchords_muse.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/cchords_nrb.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/cchords_rb.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/cchords_sym.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/chords.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/chords_jazz.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/chords_std.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/jazzchords.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/legacy-style-defaults-v1.mss" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/legacy-style-defaults-v2.mss" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/legacy-style-defaults-v3.mss" ],
+            
+              [  "usr\/share\/mscore-3.6\/styles\/stdchords.xml" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/01-General\/00-Blank.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/01-General\/01-Treble_Clef.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/01-General\/02-Bass_Clef.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/01-General\/03-Grand_Staff.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/01-SATB.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/02-SATB_\u002b_Organ.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/03-SATB_\u002b_Piano.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/04-SATB_Closed_Score.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/05-SATB_Closed_Score_\u002b_Organ.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/06-SATB_Closed_Score_\u002b_Piano.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/07-Voice_\u002b_Piano.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/08-Barbershop_Quartet_(Men).mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/09-Barbershop_Quartet_(Women).mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/10-Liturgical_Unmetrical.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/02-Choral\/11-Liturgical_Unmetrical_\u002b_Organ.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/03-Chamber_Music\/01-String_Quartet.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/03-Chamber_Music\/02-Wind_Quartet.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/03-Chamber_Music\/03-Wind_Quintet.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/03-Chamber_Music\/04-Saxophone_Quartet.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/03-Chamber_Music\/05-Brass_Quartet.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/03-Chamber_Music\/06-Brass_Quintet.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/04-Solo\/01-Guitar.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/04-Solo\/02-Guitar_\u002b_Tablature.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/04-Solo\/03-Guitar_Tablature.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/04-Solo\/04-Piano.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/05-Jazz\/01-Jazz_Lead_Sheet.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/05-Jazz\/02-Big_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/05-Jazz\/03-Jazz_Combo.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/06-Popular\/01-Rock_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/06-Popular\/02-Bluegrass_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/01-Concert_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/02-Small_Concert_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/03-Brass_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/04-Marching_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/05-Small_Marching_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/06-Battery_Percussion.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/07-Large_Pit_Percussion.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/08-Small_Pit_Percussion.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/07-Band_and_Percussion\/09-European_Concert_Band.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/08-Orchestral\/01-Classical_Orchestra.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/08-Orchestral\/02-Symphony_Orchestra.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/08-Orchestral\/03-String_Orchestra.mscx" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/drumset_fr.drm" ],
+            
+              [  "usr\/share\/mscore-3.6\/templates\/orchestral.drm" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/autoplace.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/inspector.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/mmrest.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/navigate.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/noteinput.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/palette.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/select.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/spanner-drop-apply.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/timeline.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/tours\/welcome.tour" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/background1.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/paper1.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/paper2.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/paper3.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/paper4.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/paper5.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/paper6.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/wallpaper\/paper7.png" ],
+            
+              [  "usr\/share\/mscore-3.6\/workspaces\/Advanced.workspace" ],
+            
+              [  "usr\/share\/mscore-3.6\/workspaces\/Basic.workspace" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
