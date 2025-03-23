@@ -3,7 +3,7 @@ repositories:
   url: "quay.io/mocaccino/desktop"
   type: "docker"
   github: "https://github.com/mocaccinoOS/desktop"
-- name: "mocaccino-community"
+- name: "mocaccino-community-dev"
   url: "quay.io/mocaccino/mocaccino-community"
   type: "docker"
   github: "https://github.com/mocaccinoOS/community-repository"
