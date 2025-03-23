@@ -15,10 +15,10 @@ repositories:
   type: "docker"
   url: "quay.io/mocaccino/musl-universe"
   github: "https://github.com/mocaccinoOS/mocaccino-musl-universe"
-- name: "kernel-dev"
-  type: "docker"
-  url: "quay.io/mocaccino/kernel"
-  github: "https://github.com/mocaccinoOS/kernel-repo"
+# - name: "kernel-dev"
+#   type: "docker"
+#   url: "quay.io/mocaccino/kernel"
+#   github: "https://github.com/mocaccinoOS/kernel-repo"
 
 
 BaseUrl: "https://labs.mocaccino.org"
