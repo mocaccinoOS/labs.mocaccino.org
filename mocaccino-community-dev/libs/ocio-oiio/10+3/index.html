@@ -1,0 +1,3399 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing libs/ocio-oiio-10&#43;3 in mocaccino-community-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> libs/ocio-oiio-10&#43;3
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Color management framework for visual effects and animation
+A library for reading and writing images
+C&#43;&#43; functions matching the interface and behavior of python string methods
+C&#43;&#43; fast hash map and hash set using robin hood hashing
+Per-Face Texture Mapping for Production Rendering
+The DICOM Toolkit
+Fork of the popular zip manipulation library found in the zlib distribution
+Fork of the zlib data compression library
+
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of libs/ocio-oiio
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:ocio-oiio-libs-10-3" target="_blank"> quay.io/mocaccino/mocaccino-community:ocio-oiio-libs-10-3 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:ocio-oiio-libs-10-3/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 10&#43;3  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> metapackage </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/qt">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qt &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/openvdb">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openvdb 11.0.0&#43;4 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 3
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-libs/openimageio media-libs/opencolorio
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://opencolorio.org" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://opencolorio.org </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://sites.google.com/site/openimageio/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://sites.google.com/site/openimageio/ </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/OpenImageIO" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/OpenImageIO </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/AcademySoftwareFoundation/OpenColorIO" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/AcademySoftwareFoundation/OpenColorIO </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/imageworks/pystring" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/imageworks/pystring </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/Tessil/robin-map" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/Tessil/robin-map </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/zlib-ng/minizip-ng" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/zlib-ng/minizip-ng </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://dicom.offis.de/dcmtk.php.en" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://dicom.offis.de/dcmtk.php.en </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/zlib-ng/zlib-ng" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/zlib-ng/zlib-ng </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-libs/opencolorio">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  opencolorio &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-libs/openimageio">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openimageio &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/dev-cpp/pystring">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  pystring &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/dev-cpp/robin-map">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  robin-map &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-libs/ptex">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  ptex &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/sci-libs/dcmtk">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  dcmtk &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/sys-libs/minizip-ng">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  minizip-ng &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/sys-libs/zlib-ng">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  zlib-ng &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/consolog.cfg" ],
+            
+              [  "etc\/dcmpstat.cfg" ],
+            
+              [  "etc\/dcmqrprf.cfg" ],
+            
+              [  "etc\/dcmqrscp.cfg" ],
+            
+              [  "etc\/filelog.cfg" ],
+            
+              [  "etc\/logger.cfg" ],
+            
+              [  "etc\/printers.cfg" ],
+            
+              [  "etc\/storescp.cfg" ],
+            
+              [  "etc\/storescu.cfg" ],
+            
+              [  "usr\/bin\/cda2dcm" ],
+            
+              [  "usr\/bin\/dcm2cda" ],
+            
+              [  "usr\/bin\/dcm2img" ],
+            
+              [  "usr\/bin\/dcm2json" ],
+            
+              [  "usr\/bin\/dcm2pdf" ],
+            
+              [  "usr\/bin\/dcm2pnm" ],
+            
+              [  "usr\/bin\/dcm2xml" ],
+            
+              [  "usr\/bin\/dcmcjpeg" ],
+            
+              [  "usr\/bin\/dcmcjpls" ],
+            
+              [  "usr\/bin\/dcmconv" ],
+            
+              [  "usr\/bin\/dcmcrle" ],
+            
+              [  "usr\/bin\/dcmdjpeg" ],
+            
+              [  "usr\/bin\/dcmdjpls" ],
+            
+              [  "usr\/bin\/dcmdrle" ],
+            
+              [  "usr\/bin\/dcmdspfn" ],
+            
+              [  "usr\/bin\/dcmdump" ],
+            
+              [  "usr\/bin\/dcmftest" ],
+            
+              [  "usr\/bin\/dcmgpdir" ],
+            
+              [  "usr\/bin\/dcmicmp" ],
+            
+              [  "usr\/bin\/dcmj2pnm" ],
+            
+              [  "usr\/bin\/dcml2pnm" ],
+            
+              [  "usr\/bin\/dcmmkcrv" ],
+            
+              [  "usr\/bin\/dcmmkdir" ],
+            
+              [  "usr\/bin\/dcmmklut" ],
+            
+              [  "usr\/bin\/dcmodify" ],
+            
+              [  "usr\/bin\/dcmp2pgm" ],
+            
+              [  "usr\/bin\/dcmprscp" ],
+            
+              [  "usr\/bin\/dcmprscu" ],
+            
+              [  "usr\/bin\/dcmpschk" ],
+            
+              [  "usr\/bin\/dcmpsmk" ],
+            
+              [  "usr\/bin\/dcmpsprt" ],
+            
+              [  "usr\/bin\/dcmpsrcv" ],
+            
+              [  "usr\/bin\/dcmpssnd" ],
+            
+              [  "usr\/bin\/dcmqridx" ],
+            
+              [  "usr\/bin\/dcmqrscp" ],
+            
+              [  "usr\/bin\/dcmqrti" ],
+            
+              [  "usr\/bin\/dcmquant" ],
+            
+              [  "usr\/bin\/dcmrecv" ],
+            
+              [  "usr\/bin\/dcmscale" ],
+            
+              [  "usr\/bin\/dcmsend" ],
+            
+              [  "usr\/bin\/dcmsign" ],
+            
+              [  "usr\/bin\/dcod2lum" ],
+            
+              [  "usr\/bin\/dconvlum" ],
+            
+              [  "usr\/bin\/drtdump" ],
+            
+              [  "usr\/bin\/dsr2html" ],
+            
+              [  "usr\/bin\/dsr2xml" ],
+            
+              [  "usr\/bin\/dsrdump" ],
+            
+              [  "usr\/bin\/dump2dcm" ],
+            
+              [  "usr\/bin\/echoscu" ],
+            
+              [  "usr\/bin\/findscu" ],
+            
+              [  "usr\/bin\/getscu" ],
+            
+              [  "usr\/bin\/iconvert" ],
+            
+              [  "usr\/bin\/idiff" ],
+            
+              [  "usr\/bin\/igrep" ],
+            
+              [  "usr\/bin\/iinfo" ],
+            
+              [  "usr\/bin\/img2dcm" ],
+            
+              [  "usr\/bin\/maketx" ],
+            
+              [  "usr\/bin\/mkcsmapper" ],
+            
+              [  "usr\/bin\/mkesdb" ],
+            
+              [  "usr\/bin\/movescu" ],
+            
+              [  "usr\/bin\/oiiotool" ],
+            
+              [  "usr\/bin\/pdf2dcm" ],
+            
+              [  "usr\/bin\/ptxinfo" ],
+            
+              [  "usr\/bin\/stl2dcm" ],
+            
+              [  "usr\/bin\/storescp" ],
+            
+              [  "usr\/bin\/storescu" ],
+            
+              [  "usr\/bin\/termscu" ],
+            
+              [  "usr\/bin\/testtex" ],
+            
+              [  "usr\/bin\/wlmscpfs" ],
+            
+              [  "usr\/bin\/xml2dcm" ],
+            
+              [  "usr\/bin\/xml2dsr" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorABI.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorAppHelpers.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorIO.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorTransforms.h" ],
+            
+              [  "usr\/include\/OpenColorIO\/OpenColorTypes.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/Imath.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/argparse.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/array_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/atomic.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/attrdelegate.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/benchmark.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/color.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/dassert.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/deepdata.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/farmhash.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/format.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/ostream.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/printf.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt\/std.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/detail\/fmt.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/errorhandler.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/export.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/filesystem.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/filter.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/fmath.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/fstream_mingw.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/function_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/half.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/hash.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/image_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagebuf.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagebufalgo.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagebufalgo_util.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imagecache.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/imageio.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/missing_math.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/oiioversion.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/optparser.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/parallel.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/paramlist.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/platform.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/plugin.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/refcnt.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/simd.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/span.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/strided_ptr.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/string_view.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/strongparam.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/strutil.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/sysutil.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/texture.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/thread.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/tiffutils.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/timer.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/type_traits.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/typedesc.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/unittest.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/unordered_map_concurrent.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/ustring.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/varyingref.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/vecparam.h" ],
+            
+              [  "usr\/include\/OpenImageIO\/version.h" ],
+            
+              [  "usr\/include\/PtexExports.h" ],
+            
+              [  "usr\/include\/PtexHalf.h" ],
+            
+              [  "usr\/include\/PtexInt.h" ],
+            
+              [  "usr\/include\/PtexPlatform.h" ],
+            
+              [  "usr\/include\/PtexUtils.h" ],
+            
+              [  "usr\/include\/PtexVersion.h" ],
+            
+              [  "usr\/include\/Ptexture.h" ],
+            
+              [  "usr\/include\/dcmtk\/config\/osconfig.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/cmdlnarg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcbytstr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcchrstr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dccodec.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdatset.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdatutl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcddirif.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdeftag.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdicdir.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdicent.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdict.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcdirrec.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcelem.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcencdoc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcerror.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcfcache.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcfilefo.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcfilter.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dchashdi.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcistrma.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcistrmb.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcistrmf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcistrms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcistrmz.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcitem.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcjson.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dclist.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcmatch.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcmetinf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcmxml\/dcxmldf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcmxml\/xml2dcm.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcobject.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcofsetl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcostrma.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcostrmb.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcostrmf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcostrms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcostrmz.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcovlay.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcpath.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcpcache.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcpixel.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcpixseq.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcpxitem.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrleccd.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrlecce.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrlecp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrledec.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrledrg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrleenc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrleerg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcrlerp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcsequen.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcspchrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcstack.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcswap.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dctag.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dctagkey.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dctk.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dctypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcuid.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrae.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvras.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrda.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrdt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrfd.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrfl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvris.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrlo.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrlt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrobow.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrod.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrof.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrol.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrov.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrpn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrpobw.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrsh.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrsl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrst.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrsv.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrtm.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvruc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrui.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrul.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrulup.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrur.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrus.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvrut.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcvruv.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcwcache.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/dcxfer.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2d.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2dbmps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2define.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2dimgs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2djpgs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2doutpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2dplnsc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2dplop.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2dplsc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/libi2d\/i2dplvlp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmdata\/vrscan.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmect\/def.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmect\/enhanced_ct.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmect\/types.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/concatenationcreator.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/concatenationloader.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgbase.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctacquisitiondetails.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctacquisitiontype.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctadditionalxraysource.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctexposure.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctgeometry.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctimageframetype.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctposition.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctreconstruction.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgcttabledynamics.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgctxraydetails.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgdefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgderimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgfact.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgfracon.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgframeanatomy.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgframevoilut.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgimagedatatype.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fginterface.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgirradiationeventid.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgparametricmapframetype.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgpixeltransform.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgpixmsr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgplanor.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgplanorvol.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgplanpo.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgplanposvol.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgrealworldvaluemapping.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgseg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgtemporalposition.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgtypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/fgusimagedescription.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/stack.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmfg\/stackinterface.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dcmicmph.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diargimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diargpxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicdefin.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicmyimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicmypxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicocpt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicoflt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicoimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicomot.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicoopx.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicoopxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicopx.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicopxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicorot.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dicosct.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dihsvimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dihsvpxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dilogger.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dipalimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dipalpxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dipipng.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dipitiff.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqtcmap.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqtctab.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqtfs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqthash.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqthitl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqthitm.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqtid.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqtpbox.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqtpix.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqtstab.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diqttype.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diquant.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diregist.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dirgbimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/dirgbpxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diybrimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diybrpxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diyf2img.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diyf2pxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diyp2img.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimage\/diyp2pxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dcmimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dibaslut.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diciefn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dicielut.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dicrvfit.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/didefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/didislut.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/didispfn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/didocu.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diflipt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/digsdfn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/digsdlut.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diinpx.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diinpxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diluptab.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimo1img.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimo2img.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimocpt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimoflt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimoimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimoipxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimomod.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimoopx.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimoopxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimopx.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimopxt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimorot.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dimosct.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diobjcou.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diovdat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diovlay.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diovlimg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diovpln.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dipixel.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diplugin.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dipxrept.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diregbas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/dirotat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/discalet.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/displint.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/ditranst.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmimgle\/diutils.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/cielabutil.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodcommn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodcontentitemmacro.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/ioddef.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodmacro.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodreferences.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodrules.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodtypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/iodutil.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modacquisitioncontext.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modbase.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modcommoninstanceref.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modenhequipment.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modenhusimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modenhusseries.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modequipment.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modfloatingpointimagepixel.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modfor.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modgeneralimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modgeneralseries.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modgeneralstudy.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modhelp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modimagepixel.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modimagepixelbase.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modimagepixelvariant.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modmultiframedimension.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modmultiframefg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modpatient.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modpatientstudy.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modsegmentationseries.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modsopcommon.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modsynchronization.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmiod\/modusfor.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/ddpiimpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/dipijpeg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djcodecd.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djcodece.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djcparam.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdecabs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdecbas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdecext.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdeclol.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdecode.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdecpro.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdecsps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdecsv1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdijg12.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdijg16.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djdijg8.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djeijg12.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djeijg16.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djeijg8.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djencabs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djencbas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djencext.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djenclol.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djencode.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djencpro.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djencsps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djencsv1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djrplol.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djrploss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpeg\/djutils.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/dipijpls.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/djcodecd.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/djcodece.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/djcparam.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/djdecode.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/djencode.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/djlsutil.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/djrparam.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmjpls\/dldefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/assoc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/cond.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dcasccff.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dcasccfg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dccfenmp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dccfpcmp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dccfprmp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dccfrsmp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dccftsmp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dccfuidh.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dcmlayer.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dcmsmap.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dcmtrans.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dcompat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dcuserid.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dfindscu.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dicom.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dimse.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/diutil.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dndefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dntypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dstorscp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dstorscu.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dul.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/dulstruc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/extneg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/helpers.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/lst.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/scp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/scpcfg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/scppool.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/scpthrd.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmnet\/scu.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpmap\/dpmdef.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpmap\/dpmmodparametricmapimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpmap\/dpmmodparametricmapseries.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpmap\/dpmparametricmapbase.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpmap\/dpmparametricmapiod.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpmap\/dpmtypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dcmpstat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dpdefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvcache.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dviface.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsab.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsabl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsal.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsall.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpscf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpscu.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpscul.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsda.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsdal.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsdef.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsfs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsga.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsgal.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsgl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsgll.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsgr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsgrl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpshlp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsib.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsibl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsmsg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsov.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsovl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpspl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpspll.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpspr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsprt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsri.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsril.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsrsl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpssp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsspl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpssv.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpssvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpstat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpstx.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpstxl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpstyp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsvll.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsvw.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvpsvwl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmpstat\/dvsighdl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrcbf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrcbg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrcbm.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrcbs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrcnf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrdba.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrdbi.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrdbs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqridx.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqropt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrptb.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrsrv.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/dcmqrtis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmqrdb\/qrdefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drmdose.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drmimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drmplan.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drmsrch.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drmstrct.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drtdose.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drtimage.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drtionpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drtiontr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drtplan.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drtstrct.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drttreat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/drttypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtaadcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtadcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtads.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtafcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtafs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtags.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtajcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtancs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtarms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtars.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtas1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtas2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtas3.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtas4.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtass.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbads.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbcps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbl1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbl2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbldls.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbldps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtblds1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtblds2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbldts.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbrcss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbrdrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtbvcps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcbars.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtccs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcctus.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcdrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtces.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcgis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtchs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcims.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcncs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcpas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcpis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcsas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcshs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcsis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcsrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcttcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcvcss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcvdas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtcvis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdccs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdcvs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdddps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtddps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdfss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdias.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdimcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdimrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdirs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdspcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdtcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdvhs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtdvrrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drteas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drteblds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drteblos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtecs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtecvis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtecvs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtfbdds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtfds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtfes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtfgs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtfgss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtfms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtfsss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgas1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgas2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgas3.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgas4.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgas5.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgas6.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgmcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtgpis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drthsdrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtiais.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtians.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtiblds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtibls.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtibs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drticpds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drticps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtics.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtidcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtiis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtipiqs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtircs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtiseis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtitts.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtiwps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtiws.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtlsds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtlsds1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtlsds2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmacds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmdrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmls.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmris.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmttcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtmucs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtnmas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtoas.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtois.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtopis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtosirs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpasms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpass.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpbcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpbdds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpbdos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpcxs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpdecs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpdeds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpfms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpics.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtplos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtporcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtporis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtppcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpros.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtprsis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpscs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpsics.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpsss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtpvis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtqds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtras.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbas1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbas2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbdgs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbls.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbos1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbos2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbos3.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbs1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbs2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbs3.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrbss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrcdrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrcos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrcps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrdais.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrdcks.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrdps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrdrs1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrdrs2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrdrs3.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrdsis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrecs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrfgs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrfors.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrics.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrims.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtris.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrlsds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrmdrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrmss1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrmss2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrpcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrpis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrppcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrpphs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrpprs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrpps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrppss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrris1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrris2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrris3.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrrms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrros.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrrpcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrrros.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrrshs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrscs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrsers.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrses.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrshs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrshs1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrshs2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrsis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrsns.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrsos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrsrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrsss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrsts.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrtps1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrtps2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrtps3.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrtps4.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrtrs1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrtrs2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrvcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrvis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrws.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtrwvms.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtscris.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtscs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtscvs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsdcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtshds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsins.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsns.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtspccs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtspcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtspgis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsppcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsptcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtssrcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtssrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtsss.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttms1.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttms2.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttrccs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttrtcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttscds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttscs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttsibs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttsmds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtttrcs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drttts.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtudis.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtvls.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtwps.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtwrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtwrsrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtws.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmrt\/seq\/drtxrs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmseg\/segdef.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmseg\/segdoc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmseg\/segment.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmseg\/segtypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmseg\/segutils.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/dcsighlp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/dcsignat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sialgo.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/siautopr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sibrsapr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sicert.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sicertvf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sicreapr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sidefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/siexit.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/simac.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/simaccon.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/simdmac.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sinullpr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sipkey.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/siprivat.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sipurpos.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sisprof.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sisrpr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sisrvpr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sitsfs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sitstamp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsign\/sitypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid100.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid10013.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid10013e.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid10033.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid10033e.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid11.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid218.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid218e.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid244.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid244e.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid247.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid29.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid29e.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid4020.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid4021.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid4031.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid4031e.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid42.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid5000.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid5001.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid6147.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7021.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7181.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7445.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7452.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7453.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7464.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7469.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/cid7551.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/define.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/init.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/logger.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/srnumvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/srnumvlu.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid1001.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid1204.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid1411.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid1419m.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid1500.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid1501.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid15def.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid1600.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid300.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/cmr\/tid4019.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/codes\/dcm.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/codes\/ncit.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/codes\/sct.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/codes\/srt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/codes\/ucum.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/codes\/umls.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsdefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsracqcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrbascc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrc3dcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrchecc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcitem.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcodtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcodvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcolcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcomcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcomtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcomvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcontn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrcsidl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrctpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrctxgr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdattn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdncsr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdnflt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdoc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdocst.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdoctn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdoctr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrdtitn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrenhcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrimgfr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrimgse.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrimgtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrimgvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrimpcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsriodcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsritcsr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrkeycc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrmaccc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrmamcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrnumtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrnumvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrpficc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrplicc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrpnmtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrposcn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrprdcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrprocc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrrefin.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrreftn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrrrdcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrrsdcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrrtpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrsaecc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrsc3gr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrsc3tn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrsc3vl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrscogr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrscotn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrscovl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrsoprf.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrspecc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrstpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrstrvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtcodt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtcosp.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtcotn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtcoto.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtcovl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtextn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtimtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtlist.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtnant.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtncsr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtpltn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtree.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrtypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsruidtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrwancc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrwavch.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrwavtn.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrwavvl.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrxmlc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrxmld.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmsr\/dsrxrdcc.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtls\/tlsciphr.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtls\/tlscond.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtls\/tlsdefin.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtls\/tlslayer.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtls\/tlsopt.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtls\/tlsscu.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtls\/tlstrans.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trcdef.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trcmeasurement.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trcmodtractresults.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trcstatistic.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trctrack.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trctrackset.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trctractographyresults.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmtract\/trctypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmwlm\/wldefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmwlm\/wlds.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmwlm\/wldsfs.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmwlm\/wlfsim.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmwlm\/wlmactmg.h" ],
+            
+              [  "usr\/include\/dcmtk\/dcmwlm\/wltypdef.h" ],
+            
+              [  "usr\/include\/dcmtk\/oficonv\/iconv.h" ],
+            
+              [  "usr\/include\/dcmtk\/oficonv\/oidefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/oficonv\/queue.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/appender.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/asyncap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/clfsap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/clogger.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/config\/defines.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/config\/macosx.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/config\/win32.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/config\/windowsh.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/config.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/configrt.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/consap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/fileap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/fstreams.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/apndimpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/fileinfo.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/lloguser.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/lockfile.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/loglog.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/pointer.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/property.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/queue.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/sleep.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/snprintf.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/sockbuff.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/socket.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/strhelp.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/threadcf.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/helpers\/timehelp.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/hierarchy.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/hierlock.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/internal\/cygwin32.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/internal\/env.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/internal\/internal.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/internal\/socket.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/layout.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/log4judp.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/logger.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/loglevel.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/logmacro.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/mdc.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/ndc.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/ntelogap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/nullap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/oflog.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/socketap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/apndatch.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/factory.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/filter.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/logevent.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/logfact.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/logimpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/objreg.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/spi\/rootlog.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/streams.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/syslogap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/tchar.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/impl\/syncimpl.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/impl\/syncpmsm.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/impl\/syncpthr.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/impl\/syncwin.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/impl\/thredimp.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/impl\/tls.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/syncprim.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/syncpub.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/thread\/threads.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/tracelog.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/tstring.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/version.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/winconap.h" ],
+            
+              [  "usr\/include\/dcmtk\/oflog\/windebap.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/arrybnds.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/asincond.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/cnvrsn.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/constexp.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/ignrattr.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/memacces.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/mmtag.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/nsdfti.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/overflow.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/pessmove.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/piof.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/pop.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/push.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/restrict.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/shadow.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/signcmp.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/slfassov.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/stralias.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/stringop.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/unarymin.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/unreachb.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/unrefprm.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/useafree.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/vsdeclpd.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/vsobjdes.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/diag\/vsprfw.def" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofalgo.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofalign.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofassert.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofbmanip.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofcast.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofchrenc.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofcmdln.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofconapp.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofcond.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofconfig.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofconsol.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofcrc32.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofdate.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofdatime.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofdefine.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofdeprec.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofdiag.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oferror.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofexbl.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofexit.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofexport.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/offile.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/offilsys.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/offname.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofglobal.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofgrp.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofipc.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oflimits.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oflist.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofmap.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofmath.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofmem.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofoption.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofoset.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofpwd.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofrand.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofset.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofsetit.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofsockad.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofstack.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofstd.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofstdinc.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofstream.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofstring.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofstrutl.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofstub.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oftempf.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oftest.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofthread.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oftime.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oftimer.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oftraits.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oftuple.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/oftypes.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofuoset.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofutil.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofuuid.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofvector.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofvriant.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofwhere.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/ofxml.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/variadic\/helpers.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/variadic\/tuple.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/variadic\/tuplefrd.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/variadic\/tuplefwd.h" ],
+            
+              [  "usr\/include\/dcmtk\/ofstd\/variadic\/variant.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_crypt.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_os.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm_buf.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm_bzip.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm_mem.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm_os.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm_pkcrypt.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm_split.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_strm_zlib.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_zip.h" ],
+            
+              [  "usr\/include\/minizip-ng\/mz_zip_rw.h" ],
+            
+              [  "usr\/include\/pystring\/pystring.h" ],
+            
+              [  "usr\/include\/tsl\/robin_growth_policy.h" ],
+            
+              [  "usr\/include\/tsl\/robin_hash.h" ],
+            
+              [  "usr\/include\/tsl\/robin_map.h" ],
+            
+              [  "usr\/include\/tsl\/robin_set.h" ],
+            
+              [  "usr\/include\/zconf-ng.h" ],
+            
+              [  "usr\/include\/zlib-ng.h" ],
+            
+              [  "usr\/include\/zlib_name_mangling-ng.h" ],
+            
+              [  "usr\/lib\/cmake\/minizip-ng\/minizip-ng-config-version.cmake" ],
+            
+              [  "usr\/lib\/cmake\/minizip-ng\/minizip-ng-config.cmake" ],
+            
+              [  "usr\/lib\/cmake\/minizip-ng\/minizip-ng-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib\/cmake\/minizip-ng\/minizip-ng.cmake" ],
+            
+              [  "usr\/lib\/cmake\/zlib-ng\/zlib-ng-config-version.cmake" ],
+            
+              [  "usr\/lib\/cmake\/zlib-ng\/zlib-ng-config.cmake" ],
+            
+              [  "usr\/lib\/cmake\/zlib-ng\/zlib-ng-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib\/cmake\/zlib-ng\/zlib-ng.cmake" ],
+            
+              [  "usr\/lib\/libminizip-ng.so" ],
+            
+              [  "usr\/lib\/libminizip-ng.so.4" ],
+            
+              [  "usr\/lib\/libminizip-ng.so.4.0.8" ],
+            
+              [  "usr\/lib\/libz-ng.so" ],
+            
+              [  "usr\/lib\/libz-ng.so.2" ],
+            
+              [  "usr\/lib\/libz-ng.so.2.2.3" ],
+            
+              [  "usr\/lib\/pkgconfig\/minizip-ng.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/zlib-ng.pc" ],
+            
+              [  "usr\/lib\/python3.12\/site-packages\/OpenImageIO.cpython-312-x86_64-linux-gnu.so" ],
+            
+              [  "usr\/lib\/python3.12\/site-packages\/PyOpenColorIO\/PyOpenColorIO.so" ],
+            
+              [  "usr\/lib\/python3.12\/site-packages\/PyOpenColorIO\/__init__.py" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOTargets-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenColorIO\/OpenColorIOTargets.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOTargets-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/OpenImageIO\/OpenImageIOTargets.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/dcmtk\/DCMTKConfig.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/dcmtk\/DCMTKConfigVersion.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/dcmtk\/DCMTKTargets-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/dcmtk\/DCMTKTargets.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/minizip-ng\/minizip-ng-config-version.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/minizip-ng\/minizip-ng-config.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/minizip-ng\/minizip-ng-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/minizip-ng\/minizip-ng.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/zlib-ng\/zlib-ng-config-version.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/zlib-ng\/zlib-ng-config.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/zlib-ng\/zlib-ng-relwithdebinfo.cmake" ],
+            
+              [  "usr\/lib64\/cmake\/zlib-ng\/zlib-ng.cmake" ],
+            
+              [  "usr\/lib64\/libOpenColorIO.so" ],
+            
+              [  "usr\/lib64\/libOpenColorIO.so.2.4" ],
+            
+              [  "usr\/lib64\/libOpenColorIO.so.2.4.1" ],
+            
+              [  "usr\/lib64\/libOpenImageIO.so" ],
+            
+              [  "usr\/lib64\/libOpenImageIO.so.2.5" ],
+            
+              [  "usr\/lib64\/libOpenImageIO.so.2.5.13" ],
+            
+              [  "usr\/lib64\/libOpenImageIO_Util.so" ],
+            
+              [  "usr\/lib64\/libOpenImageIO_Util.so.2.5" ],
+            
+              [  "usr\/lib64\/libOpenImageIO_Util.so.2.5.13" ],
+            
+              [  "usr\/lib64\/libPtex.so" ],
+            
+              [  "usr\/lib64\/libPtex.so.2.4" ],
+            
+              [  "usr\/lib64\/libcmr.so" ],
+            
+              [  "usr\/lib64\/libcmr.so.19" ],
+            
+              [  "usr\/lib64\/libcmr.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmdata.so" ],
+            
+              [  "usr\/lib64\/libdcmdata.so.19" ],
+            
+              [  "usr\/lib64\/libdcmdata.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmdsig.so" ],
+            
+              [  "usr\/lib64\/libdcmdsig.so.19" ],
+            
+              [  "usr\/lib64\/libdcmdsig.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmect.so" ],
+            
+              [  "usr\/lib64\/libdcmect.so.19" ],
+            
+              [  "usr\/lib64\/libdcmect.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmfg.so" ],
+            
+              [  "usr\/lib64\/libdcmfg.so.19" ],
+            
+              [  "usr\/lib64\/libdcmfg.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmimage.so" ],
+            
+              [  "usr\/lib64\/libdcmimage.so.19" ],
+            
+              [  "usr\/lib64\/libdcmimage.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmimgle.so" ],
+            
+              [  "usr\/lib64\/libdcmimgle.so.19" ],
+            
+              [  "usr\/lib64\/libdcmimgle.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmiod.so" ],
+            
+              [  "usr\/lib64\/libdcmiod.so.19" ],
+            
+              [  "usr\/lib64\/libdcmiod.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmjpeg.so" ],
+            
+              [  "usr\/lib64\/libdcmjpeg.so.19" ],
+            
+              [  "usr\/lib64\/libdcmjpeg.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmjpls.so" ],
+            
+              [  "usr\/lib64\/libdcmjpls.so.19" ],
+            
+              [  "usr\/lib64\/libdcmjpls.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmnet.so" ],
+            
+              [  "usr\/lib64\/libdcmnet.so.19" ],
+            
+              [  "usr\/lib64\/libdcmnet.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmpmap.so" ],
+            
+              [  "usr\/lib64\/libdcmpmap.so.19" ],
+            
+              [  "usr\/lib64\/libdcmpmap.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmpstat.so" ],
+            
+              [  "usr\/lib64\/libdcmpstat.so.19" ],
+            
+              [  "usr\/lib64\/libdcmpstat.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmqrdb.so" ],
+            
+              [  "usr\/lib64\/libdcmqrdb.so.19" ],
+            
+              [  "usr\/lib64\/libdcmqrdb.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmrt.so" ],
+            
+              [  "usr\/lib64\/libdcmrt.so.19" ],
+            
+              [  "usr\/lib64\/libdcmrt.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmseg.so" ],
+            
+              [  "usr\/lib64\/libdcmseg.so.19" ],
+            
+              [  "usr\/lib64\/libdcmseg.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmsr.so" ],
+            
+              [  "usr\/lib64\/libdcmsr.so.19" ],
+            
+              [  "usr\/lib64\/libdcmsr.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmtkcharls.so" ],
+            
+              [  "usr\/lib64\/libdcmtkcharls.so.19" ],
+            
+              [  "usr\/lib64\/libdcmtkcharls.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmtls.so" ],
+            
+              [  "usr\/lib64\/libdcmtls.so.19" ],
+            
+              [  "usr\/lib64\/libdcmtls.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmtract.so" ],
+            
+              [  "usr\/lib64\/libdcmtract.so.19" ],
+            
+              [  "usr\/lib64\/libdcmtract.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmwlm.so" ],
+            
+              [  "usr\/lib64\/libdcmwlm.so.19" ],
+            
+              [  "usr\/lib64\/libdcmwlm.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libdcmxml.so" ],
+            
+              [  "usr\/lib64\/libdcmxml.so.19" ],
+            
+              [  "usr\/lib64\/libdcmxml.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libi2d.so" ],
+            
+              [  "usr\/lib64\/libi2d.so.19" ],
+            
+              [  "usr\/lib64\/libi2d.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libijg12.so" ],
+            
+              [  "usr\/lib64\/libijg12.so.19" ],
+            
+              [  "usr\/lib64\/libijg12.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libijg16.so" ],
+            
+              [  "usr\/lib64\/libijg16.so.19" ],
+            
+              [  "usr\/lib64\/libijg16.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libijg8.so" ],
+            
+              [  "usr\/lib64\/libijg8.so.19" ],
+            
+              [  "usr\/lib64\/libijg8.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libminizip-ng.so" ],
+            
+              [  "usr\/lib64\/libminizip-ng.so.4" ],
+            
+              [  "usr\/lib64\/libminizip-ng.so.4.0.8" ],
+            
+              [  "usr\/lib64\/liboficonv.so" ],
+            
+              [  "usr\/lib64\/liboficonv.so.19" ],
+            
+              [  "usr\/lib64\/liboficonv.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/liboflog.so" ],
+            
+              [  "usr\/lib64\/liboflog.so.19" ],
+            
+              [  "usr\/lib64\/liboflog.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libofstd.so" ],
+            
+              [  "usr\/lib64\/libofstd.so.19" ],
+            
+              [  "usr\/lib64\/libofstd.so.19.3.6.9" ],
+            
+              [  "usr\/lib64\/libpystring.so" ],
+            
+              [  "usr\/lib64\/libz-ng.so" ],
+            
+              [  "usr\/lib64\/libz-ng.so.2" ],
+            
+              [  "usr\/lib64\/libz-ng.so.2.2.3" ],
+            
+              [  "usr\/lib64\/pkgconfig\/OpenColorIO.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/OpenImageIO.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/dcmtk.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/minizip-ng.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/zlib-ng.pc" ],
+            
+              [  "usr\/share\/SC.dump" ],
+            
+              [  "usr\/share\/VLP.dump" ],
+            
+              [  "usr\/share\/acrnema.dic" ],
+            
+              [  "usr\/share\/camera.lut" ],
+            
+              [  "usr\/share\/cmake\/Ptex\/ptex-config-version.cmake" ],
+            
+              [  "usr\/share\/cmake\/Ptex\/ptex-config.cmake" ],
+            
+              [  "usr\/share\/cmake\/Ptex\/ptex-exports-relwithdebinfo.cmake" ],
+            
+              [  "usr\/share\/cmake\/Ptex\/ptex-exports.cmake" ],
+            
+              [  "usr\/share\/cmake\/tsl-robin-map\/tsl-robin-mapConfig.cmake" ],
+            
+              [  "usr\/share\/cmake\/tsl-robin-map\/tsl-robin-mapConfigVersion.cmake" ],
+            
+              [  "usr\/share\/cmake\/tsl-robin-map\/tsl-robin-mapTargets.cmake" ],
+            
+              [  "usr\/share\/csmapper\/CP\/CP936EXT%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/CP\/UCS%CP936EXT.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GB18030%UCS@BMP.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GB2312%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GB2312EXT%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GB2312GBK%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GB2312UDA1%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GB2312UDA2%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GBKEXT%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/GBKUDA%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/UCS%GB2312.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/UCS%GB2312EXT.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/UCS%GB2312UDA1.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/UCS%GB2312UDA2.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/UCS%GBKEXT.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/UCS%GBKUDA.mps" ],
+            
+              [  "usr\/share\/csmapper\/GB\/UCS@BMP%GB18030.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-11%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-15%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-2%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-3%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-4%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-5%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-6%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-7%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-8%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/ISO-8859-9%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-11.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-15.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-2.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-3.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-4.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-5.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-6.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-7.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-8.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO-8859\/UCS%ISO-8859-9.mps" ],
+            
+              [  "usr\/share\/csmapper\/ISO646\/ISO646-JP%UCS.646" ],
+            
+              [  "usr\/share\/csmapper\/ISO646\/ISO646-US%UCS.646" ],
+            
+              [  "usr\/share\/csmapper\/JIS\/JISX0201-KANA%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/JIS\/JISX0208@1990%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/JIS\/JISX0212%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/JIS\/UCS%JISX0201-KANA.mps" ],
+            
+              [  "usr\/share\/csmapper\/JIS\/UCS%JISX0208@1990.mps" ],
+            
+              [  "usr\/share\/csmapper\/JIS\/UCS%JISX0212.mps" ],
+            
+              [  "usr\/share\/csmapper\/KS\/KSC5601HANGUL%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/KS\/KSC5601HANJA%UCS.mps" ],
+            
+              [  "usr\/share\/csmapper\/KS\/UCS%KSC5601HANGUL.mps" ],
+            
+              [  "usr\/share\/csmapper\/KS\/UCS%KSC5601HANJA.mps" ],
+            
+              [  "usr\/share\/csmapper\/charset.pivot.pvdb" ],
+            
+              [  "usr\/share\/csmapper\/mapper.dir" ],
+            
+              [  "usr\/share\/csmapper\/mapper.dir.db" ],
+            
+              [  "usr\/share\/dcm2xml.dtd" ],
+            
+              [  "usr\/share\/dicom.dic" ],
+            
+              [  "usr\/share\/diconde.dic" ],
+            
+              [  "usr\/share\/dsr2xml.xsd" ],
+            
+              [  "usr\/share\/dumppat.txt" ],
+            
+              [  "usr\/share\/esdb\/EUC\/EUC-CN.esdb" ],
+            
+              [  "usr\/share\/esdb\/EUC\/EUC-KR.esdb" ],
+            
+              [  "usr\/share\/esdb\/GB\/GB18030.esdb" ],
+            
+              [  "usr\/share\/esdb\/GB\/GBK.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-1.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-11.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-15.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-2.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-3.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-4.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-5.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-6.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-7.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-8.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO-8859\/ISO-8859-9.esdb" ],
+            
+              [  "usr\/share\/esdb\/ISO646\/ISO646-US.esdb" ],
+            
+              [  "usr\/share\/esdb\/MISC\/JISX0201-KANA.esdb" ],
+            
+              [  "usr\/share\/esdb\/MISC\/JISX0208@1990.esdb" ],
+            
+              [  "usr\/share\/esdb\/MISC\/JISX0212.esdb" ],
+            
+              [  "usr\/share\/esdb\/MISC\/Shift_JIS.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-16-INTERNAL.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-16-SWAPPED.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-16.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-16BE.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-16LE.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-32-INTERNAL.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-32-SWAPPED.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-32.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-32BE.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-32LE.esdb" ],
+            
+              [  "usr\/share\/esdb\/UTF\/UTF-8.esdb" ],
+            
+              [  "usr\/share\/esdb\/esdb.alias.db" ],
+            
+              [  "usr\/share\/esdb\/esdb.dir.db" ],
+            
+              [  "usr\/share\/man\/man1\/cda2dcm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcm2cda.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcm2img.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcm2json.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcm2pdf.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcm2pnm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcm2xml.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmcjpeg.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmcjpls.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmconv.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmcrle.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmdjpeg.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmdjpls.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmdrle.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmdspfn.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmdump.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmftest.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmgpdir.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmicmp.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmj2pnm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcml2pnm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmmkcrv.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmmkdir.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmmklut.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmodify.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmp2pgm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmprscp.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmprscu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmpschk.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmpsmk.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmpsprt.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmpsrcv.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmpssnd.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmqridx.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmqrscp.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmqrti.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmquant.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmrecv.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmscale.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmsend.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcmsign.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dcod2lum.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dconvlum.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/drtdump.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dsr2html.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dsr2xml.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dsrdump.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dump2dcm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/echoscu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/findscu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/getscu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/img2dcm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/mkcsmapper.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/mkesdb.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/movescu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/pdf2dcm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/stl2dcm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/storescp.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/storescu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/termscu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/wlmscpfs.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/xml2dcm.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/xml2dsr.1.bz2" ],
+            
+              [  "usr\/share\/monitor.lut" ],
+            
+              [  "usr\/share\/ocio\/setup_ocio.sh" ],
+            
+              [  "usr\/share\/philips.lut" ],
+            
+              [  "usr\/share\/printer.lut" ],
+            
+              [  "usr\/share\/private.dic" ],
+            
+              [  "usr\/share\/report.css" ],
+            
+              [  "usr\/share\/reportx.css" ],
+            
+              [  "usr\/share\/scanner.lut" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/lockfile" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist1.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist10.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist2.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist3.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist4.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist5.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist6.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist7.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist8.dump" ],
+            
+              [  "usr\/share\/wlistdb\/OFFIS\/wklist9.dump" ],
+            
+              [  "usr\/share\/wlistdb\/README" ],
+            
+              [  "usr\/share\/wlistqry\/README" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry0.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry1.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry10.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry11.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry12.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry2.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry3.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry4.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry5.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry6.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry7.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry8.dump" ],
+            
+              [  "usr\/share\/wlistqry\/wlistqry9.dump" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
