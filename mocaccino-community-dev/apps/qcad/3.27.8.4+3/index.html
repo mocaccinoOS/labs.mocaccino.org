@@ -1,0 +1,2738 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/qcad-3.27.8.4&#43;3 in mocaccino-community-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/qcad-3.27.8.4&#43;3
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Open Source 2D CAD
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/qcad
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:qcad-apps-3.27.8.4-3" target="_blank"> quay.io/mocaccino/mocaccino-community:qcad-apps-3.27.8.4-3 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:qcad-apps-3.27.8.4-3/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 3.27.8.4&#43;3  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-3 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/kde-kf5">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  kde-kf5 &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-gfx/qcad
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="http://www.qcad.org" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> http://www.qcad.org </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-gfx/qcad">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  qcad &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/qcad" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/CourierCad.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Cursive.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Cyrillic_II.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GothGBT.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GothGRT.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GothITT.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GreekC.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GreekCS.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GreekP.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GreekS.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/GreekS_OL.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Greek_OL.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/ISO8859-11.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/ItalicC.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/ItalicCS.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/ItalicT.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/KochiGothic_with_ties.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/KochiMincho.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Kochigothic.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/LICENSE_E.mplus" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/NormalLatin2.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/README.sazanami" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/RomanC.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/RomanCS.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/RomanD.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/RomanP.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/RomanS.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/RomanS2.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/RomanT.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/SansND.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/SansNS.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/ScriptC.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/ScriptS.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Standard.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/SymbolCad.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Symbol_Astro.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Symbol_Misc1.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Symbol_Misc2.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/Unicode.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/gdt.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/hershey.readme" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/ltypeshp.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/osifont.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/osifont_license.txt" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qcadshp.cxf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSans-Bold.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSans-BoldOblique.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSans-Oblique.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSans.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSansMono-Bold.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSansMono-BoldOblique.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSansMono-Oblique.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSansMono.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSerif-Bold.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSerif-BoldOblique.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSerif-Oblique.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/DejaVuSerif.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/LICENSES.txt" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/UTBI____.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/UTB_____.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/UTI_____.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/UTRG____.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/Vera.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraBI.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraBd.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraIt.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraMoBI.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraMoBd.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraMoIt.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraMono.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraSe.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/VeraSeBd.ttf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0419bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0582bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0583bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0611bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0632bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0633bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0648bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/c0649bt_.pfb" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/cour.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/courb.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/courbi.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/couri.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/cursor.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/dejavu_sans_11_50.qpf2" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/fixed_120_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/fixed_70_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_100_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_100_50i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_100_75.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_100_75i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_120_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_120_50i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_120_75.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_120_75i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_140_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_140_50i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_140_75.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_140_75i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_180_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_180_50i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_180_75.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_180_75i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_240_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_240_50i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_240_75.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_240_75i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_80_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_80_50i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_80_75.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/helvetica_80_75i.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/japanese_230_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l047013t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l047016t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l047033t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l047036t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l048013t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l048016t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l048033t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l048036t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l049013t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l049016t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l049033t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/l049036t.pfa" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/micro_40_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/fonts\/qt\/unifont_160_50.qpf" ],
+            
+              [  "usr\/lib64\/qcad\/libdxflib.a" ],
+            
+              [  "usr\/lib64\/qcad\/libopennurbs.a" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadcore.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadecmaapi.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadentity.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadgrid.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadgui.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadoperations.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadsnap.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadspatialindex.so" ],
+            
+              [  "usr\/lib64\/qcad\/libqcadstemmer.so" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/bed_double_180_200.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/bed_double_180_200.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/bed_single_90_200.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/bed_single_90_200.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/desk.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/desk.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/sink.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Architecture\/sink.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/CubeCuttingOut.js" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/CubeCuttingOut.ui" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/DiningTable.js" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/DiningTable.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/DiningTable.ui" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/MyRectangle.js" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/MyRectangle.ui" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/screw.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Examples\/screw.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Hydraulics\/2-2valve.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Hydraulics\/2-2valve.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Hydraulics\/3-2valve.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Hydraulics\/3-2valve.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Hydraulics\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Hydraulics\/cylinder.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Hydraulics\/cylinder.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/Gears\/CrankWheel.js" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/Gears\/CrankWheel.ui" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/Gears\/CrankWheel_LICENSE.txt" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/Gears\/InvoluteSpur.js" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/Gears\/InvoluteSpur.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/Gears\/InvoluteSpur.ui" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN7991_t.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN7991_t.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN84_t.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN84_t.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN85_t.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN85_t.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN931_t.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN931_t.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN933_t.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN933_t.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN934_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN934_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN934_t.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN934_t.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN963_t.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_DIN963_t.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_c.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4_c.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN7991_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN7991_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN84_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN84_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN85_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN85_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN933_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN933_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN963_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x10_DIN963_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x18_DIN963_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x18_DIN963_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x25_DIN931_f.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/M4x25_DIN931_f.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Mechanics\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/fragile.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/fragile.svg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/idea.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/idea.svg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/protractor.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/protractor.svg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/ruler.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/ruler.svg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/windmill.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/Symbols\/windmill.svg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/misc\/Bath plan.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/misc\/Window 900.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/default\/misc\/rect.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/empty.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/imperial\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/imperial\/din_a3_foot_landscape.dwg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/imperial\/din_a3_inch_landscape.dwg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/imperial\/din_a3_inch_portrait.dwg" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/cici_A4L.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/cici_A4L.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/cici_A4P.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/cici_A4P.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/cici_A4P_kos.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/cici_A4P_kos.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/izometricna_A4P.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/izometricna_A4P.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/izometricna_v2_A4P.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/izometricna_v2_A4P.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/pravokotna_A4P.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/pravokotna_A4P.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/tehnoloski_list.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/SLO_OS\/tehnoloski_list.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/aec_layers.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/aec_layers.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/din_a3_m_landscape.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/din_a3_m_landscape_bw.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/din_a3_mm_landscape.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/din_a3_mm_portrait.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/din_a4.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/din_a4_landscape.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/01.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/02.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/03.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/04.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/05.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/06.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/07.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/08.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/A3_elt.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A0-Querformat-Rahmen-mit PK.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A0-Querformat-Rahmen.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A1-Querformat-Rahmen-mit PK.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A1-Querformat-Rahmen.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A2-Querformat-Rahmen-mit PK.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A2-Querformat-Rahmen.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-CD-Muster.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-Nordpfeile-Muster.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-Rahmen-PK mit Platzhalter.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-Rahmen-PK-schmal.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-Rahmen-PK_archi_01.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-Rahmen-mit PK.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-Rahmen-ohne PK.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN-A3-Querformat-Rahmen.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/DIN7200.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Layer.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Plankopf Hilfe.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Symbole.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/TGL31006.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/TGL31031_1.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/TGL31031_2.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vl_archi-1.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vl_nordpf-1.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vl_nordpf-2.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din6771-1_hoch_A4.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din6771-1_quer_A0.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din6771-1_quer_A1.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din6771-1_quer_A2.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din6771-1_quer_A3.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din6771-1_quer_A4.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din6771_quer_A3.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Din7200_quer_A3.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_Qcad_Plankopf gross_quer_A3.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_elt_2.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/Vorlage_elt_3.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/_META\/meta.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/dl3dl\/nur Plankopf.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a0.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a0_metric_landscape_aec.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a0_metric_landscape_aec.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a1.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a1_metric_landscape_aec.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a1_metric_landscape_aec.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a2.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a2_metric_landscape_aec.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a2_metric_landscape_aec.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a3.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a3_metric_landscape_aec.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a3_metric_landscape_aec.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a4.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a4_metric_landscape_aec.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a4_metric_landscape_aec.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a4_metric_portrait_aec.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/iso_en_a4_metric_portrait_aec.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/title_block_80mm_x_80mm.dxf" ],
+            
+              [  "usr\/lib64\/qcad\/libraries\/templates\/metric\/title_block_80mm_x_80mm.rdf" ],
+            
+              [  "usr\/lib64\/qcad\/libspatialindexnavel.so" ],
+            
+              [  "usr\/lib64\/qcad\/libstemmer.a" ],
+            
+              [  "usr\/lib64\/qcad\/libzlib.a" ],
+            
+              [  "usr\/lib64\/qcad\/linetypes\/imperial\/qcad.lin" ],
+            
+              [  "usr\/lib64\/qcad\/linetypes\/metric\/qcadiso.lin" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso02w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso03w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso04w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso05w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso06w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso07w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso08w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso09w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso10w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso11w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso12w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso13w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso14w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/acad_iso15w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/angle.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi31.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi32.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi33.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi34.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi35.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi36.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi37.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ansi38.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-b816.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-b816c.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-b88.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-brelm.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-brstd.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-conc-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-conc.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-hbone.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-parq1.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-rroof.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-rshke.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/ar-sand.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/barbwire.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/blocks-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/blocks-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/box-overlap.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/box.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/boxjoin-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/boxjoin-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/brass.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/brick.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/brstone.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/bubbles-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/bubbles-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/bubbles-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/celtic-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/celtic-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/celtic-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/celtic-04.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/circles-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/circles.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/clay.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/cork.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/cross.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/dash.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/dolmit.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/dots.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/earth.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/escher.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/explosion.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/flex.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/grass.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/grate.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/gravel-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/gravel.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/hatch-dots.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/hatch-sqrs.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/hex.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/hexagons.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/hexjoin-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/hexjoin-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/holly.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/honey.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/hound.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/insul.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/lattice-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/lattice-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/lattice-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/lattice-04.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/lattice-05.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/lattice-06.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/lattice-07.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/leaf-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/leaf-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/leaf-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/line.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/looplinks.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/maze-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/maze-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/mudst.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/net.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/net3.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/plast.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/plasti.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/qcad-logo.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/redback.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/sacncr.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/scaffold.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/square.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/squiggle-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/squiggle-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/stars.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/steel.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/swamp.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/trans.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/tri-overlap.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/triang.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/weatherboard.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/weaving.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/wire-fence.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/xmastree-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/xmastree-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/imperial\/zigzag.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso02w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso03w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso04w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso05w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso06w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso07w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso08w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso09w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso10w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso11w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso12w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso13w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso14w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/acad_iso15w100.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/angle.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi31.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi32.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi33.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi34.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi35.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi36.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi37.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ansi38.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-b816.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-b816c.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-b88.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-brelm.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-brstd.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-conc-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-conc.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-hbone.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-parq1.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-rroof.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-rshke.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/ar-sand.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/barbwire.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/blocks-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/blocks-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/box-overlap.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/box.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/boxjoin-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/boxjoin-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/brass.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/brick.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/brstone.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/bubbles-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/bubbles-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/bubbles-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/celtic-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/celtic-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/celtic-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/celtic-04.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/circles-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/circles.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/clay.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/cork.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/cross.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/dash.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/dolmit.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/dots.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/earth.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/escher.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/explosion.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/flex.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/grass.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/grate.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/gravel-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/gravel.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/hatch-dots.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/hatch-sqrs.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/hex.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/hexagons.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/hexjoin-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/hexjoin-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/holly.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/honey.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/hound.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/insul.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_lc_20.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_lc_20a.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_lc_8.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_lc_8a.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_rc_10.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_rc_15.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_rc_18.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_rc_30.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_stn_1e.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_stn_2.5.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/jis_wood.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/lattice-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/lattice-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/lattice-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/lattice-04.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/lattice-05.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/lattice-06.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/lattice-07.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/leaf-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/leaf-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/leaf-03.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/line.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/looplinks.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/maze-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/maze-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/mudst.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/net.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/net3.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/plast.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/plasti.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/qcad-logo.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/redback.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/sacncr.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/scaffold.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/square.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/squiggle-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/squiggle-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/stars.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/steel.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/swamp.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/trans.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/tri-overlap.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/triang.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/weatherboard.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/weaving.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/wire-fence.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/xmastree-01.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/xmastree-02.pat" ],
+            
+              [  "usr\/lib64\/qcad\/patterns\/metric\/zigzag.pat" ],
+            
+              [  "usr\/lib64\/qcad\/platforminputcontexts\/libcomposeplatforminputcontextplugin.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforminputcontexts\/libibusplatforminputcontextplugin.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforminputcontexts\/libqtvirtualkeyboardplugin.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforms\/libqeglfs.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforms\/libqminimal.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforms\/libqminimalegl.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforms\/libqoffscreen.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforms\/libqwayland-egl.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforms\/libqwayland-generic.so" ],
+            
+              [  "usr\/lib64\/qcad\/platforms\/libqxcb.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/designer\/libqcadcustomwidgets.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/imageformats\/libqgif.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/imageformats\/libqico.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/imageformats\/libqjpeg.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/imageformats\/libqsvg.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/imageformats\/libqtga.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/imageformats\/libqtiff.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/libqcaddxf.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/libqcadscripts.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/printsupport\/libcupsprintersupport.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_core.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_core.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_core.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_core.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_gui.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_gui.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_gui.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_gui.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_network.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_network.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_network.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_network.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_opengl.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_opengl.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_opengl.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_opengl.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_printsupport.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_printsupport.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_printsupport.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_printsupport.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_sql.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_sql.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_sql.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_sql.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_uitools.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_uitools.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_uitools.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_uitools.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_widgets.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_widgets.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_widgets.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_widgets.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xml.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xml.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xml.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xml.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xmlpatterns.so" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xmlpatterns.so.1" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xmlpatterns.so.1.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/script\/libqtscript_xmlpatterns.so.1.0.0" ],
+            
+              [  "usr\/lib64\/qcad\/plugins\/sqldrivers\/libqsqlite.so" ],
+            
+              [  "usr\/lib64\/qcad\/qcad-bin" ],
+            
+              [  "usr\/lib64\/qcad\/scripts\/.keep_media-gfx_qcad-0" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Coffee\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Cyan\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Dark Grey\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Default Plus\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Forest\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Heather\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Light Grey\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Midnight\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pastel\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/checkbox-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/checkbox-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/checkbox-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/checkbox-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/checkbox-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/checkbox-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/radio-checked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/radio-checked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/radio-checked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/radio-unchecked-disabled.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/radio-unchecked-hover.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/icons\/radio-unchecked.png" ],
+            
+              [  "usr\/lib64\/qcad\/themes\/Pink Champagne\/stylesheet.css" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/assistant_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/designer_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/linguist_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_bg.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_cs.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_da.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_de.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_el.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_el.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_en.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_es.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_et.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_et.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_fi.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_fr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_hr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_hr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_hu.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_it.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_ja.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_lt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_lt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_lv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_lv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_nl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_nl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_pl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_pt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_pt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_ro.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_ro.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_ru.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_sk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_sl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_sv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_sv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_tr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_tr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadcore_uk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_bg.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_cs.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_da.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_de.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_el.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_el.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_en.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_es.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_et.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_et.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_fi.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_fr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_hr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_hr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_hu.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_it.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_ja.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_lt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_lt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_lv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_lv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_nl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_nl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_pl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_pt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_pt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_ro.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_ro.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_ru.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_sk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_sl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_sv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_sv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_tr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_tr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadentity_uk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_bg.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_cs.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_da.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_de.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_el.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_el.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_en.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_es.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_et.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_et.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_fi.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_fr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_hr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_hr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_hu.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_it.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_ja.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_lt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_lt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_lv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_lv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_nl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_nl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_pl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_pt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_pt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_ro.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_ro.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_ru.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_sk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_sl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_sv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_sv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_tr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_tr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qcadgui_uk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_he.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qmlviewer_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_ca.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_fa.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_gl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_he.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_gl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_help_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_lt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_pt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_sv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qt_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_ca.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_gd.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_he.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_lv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_nl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_nl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_pt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_pt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtbase_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconfig_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtconnectivity_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_lv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtdeclarative_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtlocation_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_ca.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtmultimedia_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_ca.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_he.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquick1_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols2_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols2_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols2_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols2_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols2_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtquickcontrols_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_ar.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_ca.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_he.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_lv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtscript_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtserialport_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebengine_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebengine_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebengine_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebengine_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebengine_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebengine_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebengine_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtwebsockets_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_ca.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_ko.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/qtxmlpatterns_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_bg.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_bg.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_cs.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_cs.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_da.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_da.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_de.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_de.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_el.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_el.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_en.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_en.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_es.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_es.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_et.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_et.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_fi.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_fi.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_fr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_fr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_hr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_hr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_hu.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_hu.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_it.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_it.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_ja.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_ja.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_lt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_lt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_lv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_lv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_nl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_nl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_pl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_pl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_pt.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_pt.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_ro.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_ro.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_ru.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_ru.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_sk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_sk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_sl.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_sl.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_sv.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_sv.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_tr.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_tr.ts" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_uk.qm" ],
+            
+              [  "usr\/lib64\/qcad\/ts\/scripts_uk.ts" ],
+            
+              [  "usr\/lib64\/qcad\/wayland-decoration-client" ],
+            
+              [  "usr\/lib64\/qcad\/wayland-graphics-integration-client" ],
+            
+              [  "usr\/lib64\/qcad\/wayland-shell-integration" ],
+            
+              [  "usr\/lib64\/qcad\/xcbglintegrations\/libqxcb-egl-integration.so" ],
+            
+              [  "usr\/lib64\/qcad\/xcbglintegrations\/libqxcb-glx-integration.so" ],
+            
+              [  "usr\/share\/applications\/qcad-wayland.desktop" ],
+            
+              [  "usr\/share\/applications\/qcad.desktop" ],
+            
+              [  "usr\/share\/icons\/hicolor\/256x256\/apps\/qcad_icon.png" ],
+            
+              [  "usr\/share\/man\/man1\/qcad.1.bz2" ],
+            
+              [  "usr\/share\/pixmaps\/qcad_icon.svg" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
