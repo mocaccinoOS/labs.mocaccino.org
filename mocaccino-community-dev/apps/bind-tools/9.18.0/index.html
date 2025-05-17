@@ -1,0 +1,881 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/bind-tools-9.18.0 in mocaccino-community-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/bind-tools-9.18.0
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                bind tools: dig, nslookup, host, nsupdate, dnssec-keygen
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/bind-tools
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:bind-tools-apps-9.18.0" target="_blank"> quay.io/mocaccino/mocaccino-community:bind-tools-apps-9.18.0 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:bind-tools-apps-9.18.0/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 9.18.0  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> MPL-2.0 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/sys-fs">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  sys-fs &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/entity/named">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  named &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: net-dns/bind-tools
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://www.isc.org/software/bind" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://www.isc.org/software/bind </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/net-dns/bind-tools">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  bind-tools &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/net-dns/bind">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  bind &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/bind\/.keep_acct-user_named-0" ],
+            
+              [  "etc\/bind\/bind.keys" ],
+            
+              [  "etc\/bind\/dyn" ],
+            
+              [  "etc\/bind\/named.conf" ],
+            
+              [  "etc\/bind\/named.conf.auth" ],
+            
+              [  "etc\/bind\/pri" ],
+            
+              [  "etc\/bind\/rndc.key" ],
+            
+              [  "etc\/bind\/sec" ],
+            
+              [  "etc\/conf.d\/named" ],
+            
+              [  "etc\/env.d\/10bind" ],
+            
+              [  "etc\/init.d\/named" ],
+            
+              [  "usr\/bin\/arpaname" ],
+            
+              [  "usr\/bin\/ddns-confgen" ],
+            
+              [  "usr\/bin\/delv" ],
+            
+              [  "usr\/bin\/dig" ],
+            
+              [  "usr\/bin\/dnssec-cds" ],
+            
+              [  "usr\/bin\/dnssec-dsfromkey" ],
+            
+              [  "usr\/bin\/dnssec-importkey" ],
+            
+              [  "usr\/bin\/dnssec-keyfromlabel" ],
+            
+              [  "usr\/bin\/dnssec-keygen" ],
+            
+              [  "usr\/bin\/dnssec-revoke" ],
+            
+              [  "usr\/bin\/dnssec-settime" ],
+            
+              [  "usr\/bin\/dnssec-signzone" ],
+            
+              [  "usr\/bin\/dnssec-verify" ],
+            
+              [  "usr\/bin\/host" ],
+            
+              [  "usr\/bin\/mdig" ],
+            
+              [  "usr\/bin\/named" ],
+            
+              [  "usr\/bin\/named-checkconf" ],
+            
+              [  "usr\/bin\/named-checkzone" ],
+            
+              [  "usr\/bin\/named-compilezone" ],
+            
+              [  "usr\/bin\/named-journalprint" ],
+            
+              [  "usr\/bin\/named-rrchecker" ],
+            
+              [  "usr\/bin\/nsec3hash" ],
+            
+              [  "usr\/bin\/nslookup" ],
+            
+              [  "usr\/bin\/nsupdate" ],
+            
+              [  "usr\/bin\/rndc" ],
+            
+              [  "usr\/bin\/rndc-confgen" ],
+            
+              [  "usr\/bin\/tsig-keygen" ],
+            
+              [  "usr\/include\/bind9\/check.h" ],
+            
+              [  "usr\/include\/bind9\/getaddresses.h" ],
+            
+              [  "usr\/include\/dns\/acl.h" ],
+            
+              [  "usr\/include\/dns\/adb.h" ],
+            
+              [  "usr\/include\/dns\/badcache.h" ],
+            
+              [  "usr\/include\/dns\/bit.h" ],
+            
+              [  "usr\/include\/dns\/byaddr.h" ],
+            
+              [  "usr\/include\/dns\/cache.h" ],
+            
+              [  "usr\/include\/dns\/callbacks.h" ],
+            
+              [  "usr\/include\/dns\/catz.h" ],
+            
+              [  "usr\/include\/dns\/cert.h" ],
+            
+              [  "usr\/include\/dns\/client.h" ],
+            
+              [  "usr\/include\/dns\/clientinfo.h" ],
+            
+              [  "usr\/include\/dns\/compress.h" ],
+            
+              [  "usr\/include\/dns\/db.h" ],
+            
+              [  "usr\/include\/dns\/dbiterator.h" ],
+            
+              [  "usr\/include\/dns\/diff.h" ],
+            
+              [  "usr\/include\/dns\/dispatch.h" ],
+            
+              [  "usr\/include\/dns\/dlz.h" ],
+            
+              [  "usr\/include\/dns\/dlz_dlopen.h" ],
+            
+              [  "usr\/include\/dns\/dns64.h" ],
+            
+              [  "usr\/include\/dns\/dnsrps.h" ],
+            
+              [  "usr\/include\/dns\/dnssec.h" ],
+            
+              [  "usr\/include\/dns\/dnstap.h" ],
+            
+              [  "usr\/include\/dns\/ds.h" ],
+            
+              [  "usr\/include\/dns\/dsdigest.h" ],
+            
+              [  "usr\/include\/dns\/dyndb.h" ],
+            
+              [  "usr\/include\/dns\/ecs.h" ],
+            
+              [  "usr\/include\/dns\/edns.h" ],
+            
+              [  "usr\/include\/dns\/enumclass.h" ],
+            
+              [  "usr\/include\/dns\/enumtype.h" ],
+            
+              [  "usr\/include\/dns\/events.h" ],
+            
+              [  "usr\/include\/dns\/fixedname.h" ],
+            
+              [  "usr\/include\/dns\/forward.h" ],
+            
+              [  "usr\/include\/dns\/geoip.h" ],
+            
+              [  "usr\/include\/dns\/ipkeylist.h" ],
+            
+              [  "usr\/include\/dns\/iptable.h" ],
+            
+              [  "usr\/include\/dns\/journal.h" ],
+            
+              [  "usr\/include\/dns\/kasp.h" ],
+            
+              [  "usr\/include\/dns\/keydata.h" ],
+            
+              [  "usr\/include\/dns\/keyflags.h" ],
+            
+              [  "usr\/include\/dns\/keymgr.h" ],
+            
+              [  "usr\/include\/dns\/keytable.h" ],
+            
+              [  "usr\/include\/dns\/keyvalues.h" ],
+            
+              [  "usr\/include\/dns\/librpz.h" ],
+            
+              [  "usr\/include\/dns\/log.h" ],
+            
+              [  "usr\/include\/dns\/lookup.h" ],
+            
+              [  "usr\/include\/dns\/master.h" ],
+            
+              [  "usr\/include\/dns\/masterdump.h" ],
+            
+              [  "usr\/include\/dns\/message.h" ],
+            
+              [  "usr\/include\/dns\/name.h" ],
+            
+              [  "usr\/include\/dns\/ncache.h" ],
+            
+              [  "usr\/include\/dns\/nsec.h" ],
+            
+              [  "usr\/include\/dns\/nsec3.h" ],
+            
+              [  "usr\/include\/dns\/nta.h" ],
+            
+              [  "usr\/include\/dns\/opcode.h" ],
+            
+              [  "usr\/include\/dns\/order.h" ],
+            
+              [  "usr\/include\/dns\/peer.h" ],
+            
+              [  "usr\/include\/dns\/private.h" ],
+            
+              [  "usr\/include\/dns\/rbt.h" ],
+            
+              [  "usr\/include\/dns\/rcode.h" ],
+            
+              [  "usr\/include\/dns\/rdata.h" ],
+            
+              [  "usr\/include\/dns\/rdataclass.h" ],
+            
+              [  "usr\/include\/dns\/rdatalist.h" ],
+            
+              [  "usr\/include\/dns\/rdataset.h" ],
+            
+              [  "usr\/include\/dns\/rdatasetiter.h" ],
+            
+              [  "usr\/include\/dns\/rdataslab.h" ],
+            
+              [  "usr\/include\/dns\/rdatastruct.h" ],
+            
+              [  "usr\/include\/dns\/rdatatype.h" ],
+            
+              [  "usr\/include\/dns\/request.h" ],
+            
+              [  "usr\/include\/dns\/resolver.h" ],
+            
+              [  "usr\/include\/dns\/result.h" ],
+            
+              [  "usr\/include\/dns\/rootns.h" ],
+            
+              [  "usr\/include\/dns\/rpz.h" ],
+            
+              [  "usr\/include\/dns\/rriterator.h" ],
+            
+              [  "usr\/include\/dns\/rrl.h" ],
+            
+              [  "usr\/include\/dns\/sdb.h" ],
+            
+              [  "usr\/include\/dns\/sdlz.h" ],
+            
+              [  "usr\/include\/dns\/secalg.h" ],
+            
+              [  "usr\/include\/dns\/secproto.h" ],
+            
+              [  "usr\/include\/dns\/soa.h" ],
+            
+              [  "usr\/include\/dns\/ssu.h" ],
+            
+              [  "usr\/include\/dns\/stats.h" ],
+            
+              [  "usr\/include\/dns\/time.h" ],
+            
+              [  "usr\/include\/dns\/tkey.h" ],
+            
+              [  "usr\/include\/dns\/transport.h" ],
+            
+              [  "usr\/include\/dns\/tsec.h" ],
+            
+              [  "usr\/include\/dns\/tsig.h" ],
+            
+              [  "usr\/include\/dns\/ttl.h" ],
+            
+              [  "usr\/include\/dns\/types.h" ],
+            
+              [  "usr\/include\/dns\/update.h" ],
+            
+              [  "usr\/include\/dns\/validator.h" ],
+            
+              [  "usr\/include\/dns\/view.h" ],
+            
+              [  "usr\/include\/dns\/xfrin.h" ],
+            
+              [  "usr\/include\/dns\/zone.h" ],
+            
+              [  "usr\/include\/dns\/zonekey.h" ],
+            
+              [  "usr\/include\/dns\/zoneverify.h" ],
+            
+              [  "usr\/include\/dns\/zt.h" ],
+            
+              [  "usr\/include\/dst\/dst.h" ],
+            
+              [  "usr\/include\/dst\/gssapi.h" ],
+            
+              [  "usr\/include\/irs\/resconf.h" ],
+            
+              [  "usr\/include\/isc\/aes.h" ],
+            
+              [  "usr\/include\/isc\/align.h" ],
+            
+              [  "usr\/include\/isc\/app.h" ],
+            
+              [  "usr\/include\/isc\/assertions.h" ],
+            
+              [  "usr\/include\/isc\/astack.h" ],
+            
+              [  "usr\/include\/isc\/atomic.h" ],
+            
+              [  "usr\/include\/isc\/attributes.h" ],
+            
+              [  "usr\/include\/isc\/backtrace.h" ],
+            
+              [  "usr\/include\/isc\/barrier.h" ],
+            
+              [  "usr\/include\/isc\/base32.h" ],
+            
+              [  "usr\/include\/isc\/base64.h" ],
+            
+              [  "usr\/include\/isc\/buffer.h" ],
+            
+              [  "usr\/include\/isc\/cmocka.h" ],
+            
+              [  "usr\/include\/isc\/commandline.h" ],
+            
+              [  "usr\/include\/isc\/condition.h" ],
+            
+              [  "usr\/include\/isc\/counter.h" ],
+            
+              [  "usr\/include\/isc\/crc64.h" ],
+            
+              [  "usr\/include\/isc\/deprecated.h" ],
+            
+              [  "usr\/include\/isc\/dir.h" ],
+            
+              [  "usr\/include\/isc\/endian.h" ],
+            
+              [  "usr\/include\/isc\/errno.h" ],
+            
+              [  "usr\/include\/isc\/error.h" ],
+            
+              [  "usr\/include\/isc\/event.h" ],
+            
+              [  "usr\/include\/isc\/eventclass.h" ],
+            
+              [  "usr\/include\/isc\/file.h" ],
+            
+              [  "usr\/include\/isc\/formatcheck.h" ],
+            
+              [  "usr\/include\/isc\/fuzz.h" ],
+            
+              [  "usr\/include\/isc\/glob.h" ],
+            
+              [  "usr\/include\/isc\/hash.h" ],
+            
+              [  "usr\/include\/isc\/heap.h" ],
+            
+              [  "usr\/include\/isc\/hex.h" ],
+            
+              [  "usr\/include\/isc\/hmac.h" ],
+            
+              [  "usr\/include\/isc\/ht.h" ],
+            
+              [  "usr\/include\/isc\/httpd.h" ],
+            
+              [  "usr\/include\/isc\/interfaceiter.h" ],
+            
+              [  "usr\/include\/isc\/iterated_hash.h" ],
+            
+              [  "usr\/include\/isc\/lang.h" ],
+            
+              [  "usr\/include\/isc\/lex.h" ],
+            
+              [  "usr\/include\/isc\/list.h" ],
+            
+              [  "usr\/include\/isc\/log.h" ],
+            
+              [  "usr\/include\/isc\/magic.h" ],
+            
+              [  "usr\/include\/isc\/managers.h" ],
+            
+              [  "usr\/include\/isc\/md.h" ],
+            
+              [  "usr\/include\/isc\/mem.h" ],
+            
+              [  "usr\/include\/isc\/meminfo.h" ],
+            
+              [  "usr\/include\/isc\/mutex.h" ],
+            
+              [  "usr\/include\/isc\/mutexblock.h" ],
+            
+              [  "usr\/include\/isc\/net.h" ],
+            
+              [  "usr\/include\/isc\/netaddr.h" ],
+            
+              [  "usr\/include\/isc\/netdb.h" ],
+            
+              [  "usr\/include\/isc\/netmgr.h" ],
+            
+              [  "usr\/include\/isc\/netscope.h" ],
+            
+              [  "usr\/include\/isc\/nonce.h" ],
+            
+              [  "usr\/include\/isc\/offset.h" ],
+            
+              [  "usr\/include\/isc\/once.h" ],
+            
+              [  "usr\/include\/isc\/os.h" ],
+            
+              [  "usr\/include\/isc\/parseint.h" ],
+            
+              [  "usr\/include\/isc\/pool.h" ],
+            
+              [  "usr\/include\/isc\/portset.h" ],
+            
+              [  "usr\/include\/isc\/print.h" ],
+            
+              [  "usr\/include\/isc\/quota.h" ],
+            
+              [  "usr\/include\/isc\/radix.h" ],
+            
+              [  "usr\/include\/isc\/random.h" ],
+            
+              [  "usr\/include\/isc\/ratelimiter.h" ],
+            
+              [  "usr\/include\/isc\/refcount.h" ],
+            
+              [  "usr\/include\/isc\/regex.h" ],
+            
+              [  "usr\/include\/isc\/region.h" ],
+            
+              [  "usr\/include\/isc\/resource.h" ],
+            
+              [  "usr\/include\/isc\/result.h" ],
+            
+              [  "usr\/include\/isc\/rwlock.h" ],
+            
+              [  "usr\/include\/isc\/safe.h" ],
+            
+              [  "usr\/include\/isc\/serial.h" ],
+            
+              [  "usr\/include\/isc\/siphash.h" ],
+            
+              [  "usr\/include\/isc\/sockaddr.h" ],
+            
+              [  "usr\/include\/isc\/stat.h" ],
+            
+              [  "usr\/include\/isc\/stats.h" ],
+            
+              [  "usr\/include\/isc\/stdatomic.h" ],
+            
+              [  "usr\/include\/isc\/stdio.h" ],
+            
+              [  "usr\/include\/isc\/stdtime.h" ],
+            
+              [  "usr\/include\/isc\/strerr.h" ],
+            
+              [  "usr\/include\/isc\/string.h" ],
+            
+              [  "usr\/include\/isc\/symtab.h" ],
+            
+              [  "usr\/include\/isc\/syslog.h" ],
+            
+              [  "usr\/include\/isc\/task.h" ],
+            
+              [  "usr\/include\/isc\/taskpool.h" ],
+            
+              [  "usr\/include\/isc\/thread.h" ],
+            
+              [  "usr\/include\/isc\/time.h" ],
+            
+              [  "usr\/include\/isc\/timer.h" ],
+            
+              [  "usr\/include\/isc\/tls.h" ],
+            
+              [  "usr\/include\/isc\/tm.h" ],
+            
+              [  "usr\/include\/isc\/types.h" ],
+            
+              [  "usr\/include\/isc\/url.h" ],
+            
+              [  "usr\/include\/isc\/utf8.h" ],
+            
+              [  "usr\/include\/isc\/util.h" ],
+            
+              [  "usr\/include\/isccc\/alist.h" ],
+            
+              [  "usr\/include\/isccc\/base64.h" ],
+            
+              [  "usr\/include\/isccc\/cc.h" ],
+            
+              [  "usr\/include\/isccc\/ccmsg.h" ],
+            
+              [  "usr\/include\/isccc\/events.h" ],
+            
+              [  "usr\/include\/isccc\/sexpr.h" ],
+            
+              [  "usr\/include\/isccc\/symtab.h" ],
+            
+              [  "usr\/include\/isccc\/symtype.h" ],
+            
+              [  "usr\/include\/isccc\/types.h" ],
+            
+              [  "usr\/include\/isccc\/util.h" ],
+            
+              [  "usr\/include\/isccfg\/aclconf.h" ],
+            
+              [  "usr\/include\/isccfg\/cfg.h" ],
+            
+              [  "usr\/include\/isccfg\/duration.h" ],
+            
+              [  "usr\/include\/isccfg\/grammar.h" ],
+            
+              [  "usr\/include\/isccfg\/kaspconf.h" ],
+            
+              [  "usr\/include\/isccfg\/log.h" ],
+            
+              [  "usr\/include\/isccfg\/namedconf.h" ],
+            
+              [  "usr\/include\/ns\/client.h" ],
+            
+              [  "usr\/include\/ns\/events.h" ],
+            
+              [  "usr\/include\/ns\/hooks.h" ],
+            
+              [  "usr\/include\/ns\/interfacemgr.h" ],
+            
+              [  "usr\/include\/ns\/listenlist.h" ],
+            
+              [  "usr\/include\/ns\/log.h" ],
+            
+              [  "usr\/include\/ns\/notify.h" ],
+            
+              [  "usr\/include\/ns\/query.h" ],
+            
+              [  "usr\/include\/ns\/server.h" ],
+            
+              [  "usr\/include\/ns\/sortlist.h" ],
+            
+              [  "usr\/include\/ns\/stats.h" ],
+            
+              [  "usr\/include\/ns\/types.h" ],
+            
+              [  "usr\/include\/ns\/update.h" ],
+            
+              [  "usr\/include\/ns\/xfrout.h" ],
+            
+              [  "usr\/lib\/systemd\/system\/named.service" ],
+            
+              [  "usr\/lib\/sysusers.d\/acct-group-named.conf" ],
+            
+              [  "usr\/lib\/sysusers.d\/acct-user-named.conf" ],
+            
+              [  "usr\/lib\/tmpfiles.d\/named.conf" ],
+            
+              [  "usr\/lib64\/bind\/filter-a.so" ],
+            
+              [  "usr\/lib64\/bind\/filter-aaaa.so" ],
+            
+              [  "usr\/lib64\/libbind9-9.18.29.so" ],
+            
+              [  "usr\/lib64\/libbind9.so" ],
+            
+              [  "usr\/lib64\/libdns-9.18.29.so" ],
+            
+              [  "usr\/lib64\/libdns.so" ],
+            
+              [  "usr\/lib64\/libirs-9.18.29.so" ],
+            
+              [  "usr\/lib64\/libirs.so" ],
+            
+              [  "usr\/lib64\/libisc-9.18.29.so" ],
+            
+              [  "usr\/lib64\/libisc.so" ],
+            
+              [  "usr\/lib64\/libisccc-9.18.29.so" ],
+            
+              [  "usr\/lib64\/libisccc.so" ],
+            
+              [  "usr\/lib64\/libisccfg-9.18.29.so" ],
+            
+              [  "usr\/lib64\/libisccfg.so" ],
+            
+              [  "usr\/lib64\/libns-9.18.29.so" ],
+            
+              [  "usr\/lib64\/libns.so" ],
+            
+              [  "usr\/libexec\/generate-rndc-key.sh" ],
+            
+              [  "usr\/share\/man\/man1\/arpaname.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/delv.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dig.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-cds.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-dsfromkey.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-importkey.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-keyfromlabel.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-keygen.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-revoke.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-settime.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-signzone.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/dnssec-verify.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/host.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/mdig.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/named-checkconf.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/named-checkzone.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/named-compilezone.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/named-journalprint.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/named-rrchecker.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/nsec3hash.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/nslookup.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/nsupdate.1.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/named.conf.5.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/rndc.conf.5.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ddns-confgen.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/filter-a.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/filter-aaaa.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/named.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rndc-confgen.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rndc.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tsig-keygen.8.bz2" ],
+            
+              [  "var\/bind\/dyn\/.keep_net-dns_bind-0" ],
+            
+              [  "var\/bind\/named.cache" ],
+            
+              [  "var\/bind\/pri\/.keep_net-dns_bind-0" ],
+            
+              [  "var\/bind\/pri\/localhost.zone" ],
+            
+              [  "var\/bind\/root.cache" ],
+            
+              [  "var\/bind\/sec\/.keep_net-dns_bind-0" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
