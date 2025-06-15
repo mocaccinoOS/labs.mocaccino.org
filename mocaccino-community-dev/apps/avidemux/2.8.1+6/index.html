@@ -1,0 +1,1799 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/avidemux-2.8.1&#43;6 in mocaccino-community-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/avidemux-2.8.1&#43;6
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Video editor designed for simple cutting, filtering and encoding tasks
+A/52 (AC-3) audio encoder
+DTS Coherent Acoustics audio encoder
+
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/avidemux
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:avidemux-apps-2.8.1-6" target="_blank"> quay.io/mocaccino/mocaccino-community:avidemux-apps-2.8.1-6 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:avidemux-apps-2.8.1-6/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 2.8.1&#43;6  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-1 GPL-2 MIT PSF-2 public-domain LGPL-2.1 LGPL-2.1&#43; BSD </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/kde-kf5">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  kde-kf5 &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/libmp4v2">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libmp4v2 2.1.3-r1&#43;1 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/apps/twolame">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  twolame 0.4.0&#43;3 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: media-libs/avidemux-core media-libs/aften media-sound/dcaenc media-libs/avidemux-plugins media-video/avidemux
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="http://fixounet.free.fr/avidemux" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> http://fixounet.free.fr/avidemux </a>
+    </span>
+  
+    <span class="tag">
+    <a href="http://aften.sourceforge.net/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> http://aften.sourceforge.net/ </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://aepatrakov.narod.ru/index/0-2" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://aepatrakov.narod.ru/index/0-2 </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://gitlab.com/patrakov/dcaenc" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://gitlab.com/patrakov/dcaenc </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-libs/avidemux-core">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  avidemux-core &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-libs/avidemux-plugins">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  avidemux-plugins &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-video/avidemux">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  avidemux &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-libs/aften">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  aften &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/media-sound/dcaenc">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  dcaenc &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/alsa\/conf.d\/dca.conf" ],
+            
+              [  "usr\/bin\/aften" ],
+            
+              [  "usr\/bin\/avidemux3_cli" ],
+            
+              [  "usr\/bin\/avidemux3_jobs_qt5" ],
+            
+              [  "usr\/bin\/avidemux3_qt5" ],
+            
+              [  "usr\/bin\/dcaenc" ],
+            
+              [  "usr\/bin\/wavfilter" ],
+            
+              [  "usr\/bin\/wavinfo-aften" ],
+            
+              [  "usr\/bin\/wavrms" ],
+            
+              [  "usr\/include\/aften\/aften-types.h" ],
+            
+              [  "usr\/include\/aften\/aften.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_assert.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_byteBuffer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_clock.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_core6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_coreTranslator.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_cpp.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_cpuCap.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_crashdump.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_crashdump_apple.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_crashdump_mingw.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_crashdump_other.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_crashdump_unix.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_crashdump_vs.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_default.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_dynamicLoading.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_files.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_inttype.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_mangle.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_mangle_gcc.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_mangle_vs.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_memsupport.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_misc.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_prettyPrint.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_ptrQueue.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_queue.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_threads.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_vidMisc.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/ADM_win32.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/BVector.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/admx86inc.asm" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_core\/admx86util.asm" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioAccessFile.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioAccessFileAACADTS.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioClock.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioCodecEnum.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioIdentify.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStream.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStreamAC3.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStreamBuffered.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStreamConstantChunk.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStreamDCA.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStreamEac3.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStreamMP3.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioStreamPCM.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioWrite.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioWriteAAC.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioWriteWav.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audioXiphUtils.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_audiodef.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_baseAudioStream.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_coreAudio.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudio\/ADM_coreAudio6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioCodec\/ADM_ad_plugin.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioCodec\/ADM_audiocodec.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioCodec\/ADM_audiocodeclist.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioCodec\/adm_ogg.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioDevice\/ADM_audioDeviceInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioDevice\/ADM_audiodevice.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioDevice\/ADM_coreAudioDevice6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioDevice\/audio_out.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioEncoder\/ADM_coreAudioEncoder6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioEncoder\/audioencoder.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioEncoder\/audioencoderInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/ADM_audioFilter.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/ADM_audioResample.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/ADM_audioStretch.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/ADM_coreAudioFilterAPI6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audioEncoderApi.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audio_encoderPlugin.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_SRC.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_bridge.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_channels.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_conf.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_dolby.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_eq.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_film2pal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_internal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_limiter.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_limiter_param.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_mixer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_normalize.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_normalize_param.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioFilter\/audiofilter_stretch.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_a52info.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_aacLatm.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_aacadts.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_aacinfo.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_audioParser6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_dcainfo.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_eac3info.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreAudioParser\/ADM_mp3info.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreConfig.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/ADM_Video.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/ADM_bitmap.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/ADM_coreDemuxer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/ADM_coreDemuxer6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/ADM_coreDemuxerMpeg.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/ADM_coreDemuxerMpegTemplate.cpp.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/ADM_demuxerInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/avifmt2.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxer\/unix\/avifmt.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/ADM_coreDemuxerMpeg6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/ADM_indexFile.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmxPSPacket.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmxPacket.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_demuxer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_demuxerEs.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_demuxerMSDVR.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_demuxerPS.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_demuxerTS.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_identify.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_indexer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_io.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreDemuxerMpeg\/dmx_mpegstartcode.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_colorspace.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_coreImage6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_image.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_imageFlags.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_imageResizer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_interlaced.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_pp.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_print_priv.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_rgb.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_toneMapper.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_vidField.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_vidFieldUtil.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_videoFilterDynamic.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_videoFilter_iface.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImage\/ADM_videoFilter_internal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImageLoader\/ADM_coreImageLoader6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreImageLoader\/ADM_imageLoader.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreJobs\/ADM_coreJobs.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreJobs\/ADM_coreJobs_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreJobs\/sqlJobs.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreLibVA\/ADM_coreLibVA.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreLibVA\/ADM_coreLibVA_internal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreLibVAEnc\/ADM_coreLibVA_bitstream.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreLibVAEnc\/ADM_coreLibVA_buffer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreLibVAEnc\/ADM_coreLibVA_encodingContext.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreLibVAEnc\/ADM_coreLibVA_h264Encoding.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreLibVAEnc\/ADM_coreLibVA_hevcEncoding.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreMuxer\/ADM_coreMuxer6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreMuxer\/ADM_coreMuxerFfmpeg.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreMuxer\/ADM_muxer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreMuxer\/ADM_muxerInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreMuxer\/ADM_muxerProto.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreMuxer\/ADM_muxerUtils.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_ScriptEngineLoader.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_coreScript_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_scriptDF.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_scriptDFInteger.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_scriptDFMenu.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_scriptDFTimeStamp.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_scriptDFToggle.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ADM_scriptDialogFactory.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/IScriptEngine.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/IScriptWriter.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreScript\/ScriptShell.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSocket\/ADM_coreAvsProtocol.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSocket\/ADM_coreCommandSocket.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSocket\/ADM_coreSocket.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSocket\/ADM_coreSocket6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSqlLight3\/ADM_coreSqlLight3_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSqlLight3\/Database.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSqlLight3\/IError.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSqlLight3\/Query.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSqlLight3\/StderrLog.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSqlLight3\/SysLog2.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSqlLight3\/libsqlitewrapped.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSubtitles\/ADM_coreSubtitles.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreSubtitles\/ADM_coreSubtitles_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/ADM_coreUI6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/ADM_windowInfo.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_audioTracks.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_coreToolkit.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_coreUI_internal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_encoding.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_enter.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_factory.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_factoryStubs.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_fileSel.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_processing.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_uiTypes.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUI\/DIA_working.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_bitstream.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_codecType.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_compressedImage.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_confCouple.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_coreCodecMapping.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_coreJson.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_coreUtils.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_coreUtils6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_fileio.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_frameType.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_getbits.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_h264_tag.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_h265_tag.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_iso639.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_last.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_memio.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_paramList.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_quota.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_string.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_threadQueue.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_videoInfoExtractor.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/ADM_writeRiff.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/FFcodecContext_param.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/fourcc.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/prefs.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreUtils\/prefs2_list.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVdpau\/ADM_coreVdpau.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVdpau\/ADM_coreVdpauInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_codec.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_codecEmpty.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_codecFFVP9.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_codecFFsimple.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_codecNull.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_coreVideoCodec6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_coreVideoDecoderInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_ffmp43.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_hwAccel.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_rgb16.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoCodec\/ADM_uyvy.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/ADM_coreVideoEncoder.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/ADM_coreVideoEncoder6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/ADM_coreVideoEncoderFFmpeg.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/ADM_coreVideoEncoderFFmpeg_param.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/ADM_coreVideoEncoderInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/ADM_encoderConf.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/FFcodecContext.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/FFcodecSettings.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoEncoder\/FFcodecSettings_desc.cpp.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoFilter\/ADM_coreVideoFilter.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoFilter\/ADM_coreVideoFilter6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoFilter\/ADM_coreVideoFilterFunc.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoFilter\/ADM_coreVideoFilterInternal.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoFilter\/ADM_filterCategory.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoFilter\/ADM_videoFilterBridge.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/ADM_coreVideoFilter\/ADM_videoFilterCache.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cli\/ADM_UIs\/ADM_UI_Cli6_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cli\/config.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ADM_coreConfig.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ADM_coreConfig.h.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/DeployQt5.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindAlsa.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindArts.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindBourne.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindGitSvn.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindGnuMake.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindPatch.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindSDL.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindSDL2.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindSubversion.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/FindTar.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/Po.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/_CMakeParseArguments.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ad_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admAsNeeded.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCPack.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCPackRpm.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckAom.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckAudioDeviceLibs.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckAudioEncoderLibs.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckDca.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckDxva2.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckFaad.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckFdkAac.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckFontConfig.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckFreeType.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckFribidi.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckFtello.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckGettext.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckGtk.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckLibVA.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckLibxml2.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckMiscLibs.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckNvEnc.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckOpenGl.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckOpencore.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckOpus.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckQt.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckQt4.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckQt5.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckQt6.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckRequiredLibs.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckSpiderMonkey.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckSqlLite.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckThreads.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckVDPAU.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckVapourSynth.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckVideoToolbox.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckVorbisDec.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckVpx.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckX264.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckX265.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckXvba.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCheckXvid.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCmakeParseArgument.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admConfigHelper.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admConfigSummary.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCoreIncludes.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCoreIncludesExternalBuild.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCrossCompile.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admCrossQt4.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admDebianUtils.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admDetermineSystem.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegBuild.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegBuild.cmake.original" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegBuild_crossMingw.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegBuild_helpers.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegBuild_native.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegBuild_vs.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegBuild_vs_import.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegPrepareGit.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegPrepareSvn.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegPrepareTar.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegUtil.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admFFmpegVersion.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admGetRevision.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admInstallDir.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admMainChecks.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admOpenGl.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admPackager.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admPluginLocation.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admPluginVideoEncoder.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admQtMacro.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admTimeStamp.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admWindRes.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admYasm.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admYasm_gcc.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/admYasm_vs.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/adm_log.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ae_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/av_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/avidemuxVersion.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/CheckFunctionExists.c" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/check_vdpau.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/cpu_arm64_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/cpu_armel_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/cpu_riscv_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/cpu_x86-64_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/cpu_x86_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/dxva2.c" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/execinfo.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/faad_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/ftello.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/gettext.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/gtk_x11_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/iconv_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/libva.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/libva_dummy.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/libva_hevcdec.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/libva_vp9dec.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_compile_check\/os_bsd_check.cpp" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_win32_rc\/VersionInfo.in" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_win32_rc\/VersionResource.rc" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/cmake_win32_rc\/generate_product_version.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/commonCmakeApplication.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/config.h.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/debianArch.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/dm_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ffmpeg_configure.sh.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ffmpeg_make.sh.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/mx_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/plugin_cli.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/plugin_qt4.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/se_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/vd_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ve_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ve_plugin_qt4.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/ve_settings_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/vf_plugin.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/vf_plugin_cli.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/vf_plugin_gtk.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/vf_plugin_qt4.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/cmake\/vf_plugin_qt4gl.cmake" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/avcodec.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/bsf.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/codec.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/codec_desc.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/codec_id.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/codec_par.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/packet.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/vaapi.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/vdpau.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/version.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavcodec\/videotoolbox.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavformat\/avformat.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavformat\/avio.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavformat\/flv.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavformat\/version.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/attributes.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/avconfig.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/avutil.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/bswap.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/buffer.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/channel_layout.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/common.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/cpu.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/dict.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/error.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/frame.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/hdr_dynamic_metadata.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/hwcontext.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/hwcontext_dxva2.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/hwcontext_vaapi.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/hwcontext_vdpau.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/intfloat.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/log.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/macros.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/mastering_display_metadata.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/mathematics.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/mem.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/opt.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/pixdesc.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/pixfmt.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/rational.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/samplefmt.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/time.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libavutil\/version.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libpostproc\/postprocess.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libpostproc\/version.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libswscale\/swscale.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/libswscale\/version.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_UIs\/ADM_QSettings.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_UIs\/ADM_UIQT46_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_UIs\/ADM_dialogFactoryQt4.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_UIs\/ADM_toolkitQt.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_UIs\/DIA_flyDialogQt4.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_UIs\/DIA_flyDialogQt4_template.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_UIs\/T_openGLFilter.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_openGL\/ADM_openGL_export.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/ADM_openGL\/ADM_openGl.h" ],
+            
+              [  "usr\/include\/avidemux\/2.8\/qt5\/config.h" ],
+            
+              [  "usr\/include\/dcaenc.h" ],
+            
+              [  "usr\/lib\/alsa-lib\/libasound_module_pcm_dca.so" ],
+            
+              [  "usr\/lib\/libdcaenc.so" ],
+            
+              [  "usr\/lib\/libdcaenc.so.0" ],
+            
+              [  "usr\/lib\/libdcaenc.so.0.0.0" ],
+            
+              [  "usr\/lib\/pkgconfig\/dcaenc.pc" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_Mad.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_a52.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_alaw.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_dca.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_faad.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_ima_adpcm.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_lav.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_ms_adpcm.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_opencore_amrnb.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_opencore_amrwb.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_opus.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_ulaw.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDecoder\/libADM_ad_vorbis.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDevices\/libADM_av_alsaDMix.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDevices\/libADM_av_alsaDefault.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDevices\/libADM_av_alsaHw.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDevices\/libADM_av_jack.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDevices\/libADM_av_oss.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioDevices\/libADM_av_pulseAudio.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_aften.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_dcaenc.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_faac.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_fdk_aac.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_lame.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_lav_aac.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_lav_ac3.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_lav_mp2.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_opus.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_pcm.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_twolame.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/audioEncoders\/libADM_ae_vorbis.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/720p.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/PSP.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/check24fps.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/dvd.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/lib\/ADM_image.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/lib\/ADM_imageInfo.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/svcd.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/autoScripts\/vcd.py" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_asf.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_avsproxy.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_flv.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_matroska.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_mp4.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_mxf.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_opendml.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_pic.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_ps.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/demuxers\/libADM_dm_ts.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_avi.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_dummy.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_ffPS.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_ffTS.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_flv.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_mkv.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_mov.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_mp4.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_mp4v2.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_raw.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/muxers\/libADM_mx_webm.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/scriptEngines\/libADM_script_tinyPy.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/shaderDemo\/1\/bump.shader" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/shaderDemo\/1\/lightning.shader" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/shaderDemo\/1\/ripple.shader" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/shaderDemo\/1\/zigzag.shader" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoDecoders\/libADM_vd_aom.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_ffDv.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_ffFlv1.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_ffMpeg2.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_ffMpeg4.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_ffVaEncH264.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_ffVaEncHEVC.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_ffv1.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_huff.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_jpeg.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_libva.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_null.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_utvideo.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_vp9.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_x264_other.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_x265_other.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_xvid4.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/libADM_ve_yv12.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/qt5\/libADM_ve_x264_QT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoEncoders\/qt5\/libADM_ve_x265_QT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_CropCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_HueCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_ZoomCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_analyzerCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artCartoonCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artCharcoalCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artChromaHoldCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artChromaKeyCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artColorEffectCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artDynThresholdCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artGridCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artMirrorCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artPixelizeCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artPosterizeCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artVHSCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_artVignetteCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_blackenBordersCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_blurCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_chromaShiftCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_colorBalanceCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_colorTempCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_contrastCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_cubicLUTCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_debandCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_delogoHQCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_eq2Cli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_fadeFromImageCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_fadeInCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_fadeOutCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_fadeThroughCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_fitToSizeCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_flipCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_imageStabCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_logoCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_lumaStabCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_mpdelogoCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_msharpenCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_quadTransCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_swscaleResize_cli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_waveletDenoiseCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/cli\/libADM_vf_waveletSharpCli.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_DgBob.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_FluxSmooth.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_aarotate.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_addBorders.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_admIvtc.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_ascii.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_avsfilter.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_black.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_blend.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_changeFps.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_colorYuv.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_decimateFrame.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_denoise3d.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_denoise3dhq.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_dummy.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_fadeTo.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_fadeToBlack.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_gauss.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_hzstackField.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_ivtcDupeRemover.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_kernelDeint.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_largeMedian.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_lavDeint.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_lumaOnly.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_mean.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_median.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_mergeField.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_negative.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_printInfo.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_removePlane.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_resampleFps.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_rotate.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_separateField.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_sharpen.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_ssa.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_stackField.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_stillimage.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_swapUV.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_telecide.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_unstackField.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_vaapiFilter.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_vaapiFilterDeint.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_vdpauFilter.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_vdpauFilterDeint.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/libADM_vf_yadif.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_HueQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_analyzerQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artCartoonQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artCharcoalQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artChromaHoldQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artChromaKeyQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artColorEffectQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artDynThresholdQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artGridQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artMirrorQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artPixelizeQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artPosterizeQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artVHSQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_artVignetteQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_asharpQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_blackenBordersQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_blurQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_chromaShiftQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_colorBalanceQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_colorTempQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_contrastQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_cropQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_cubicLUTQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_debandQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_delogoHQQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_eq2QT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_fadeFromImageQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_fadeInQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_fadeOutQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_fadeThroughQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_fitToSizeQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_flipQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_glBenchmark.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_glResize.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_imageStabQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_logoQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_lumaStabQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_mpdelogoQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_msharpenQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_quadTransQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_rotateGlFrag2.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_sampleGlFrag2.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_sampleGlVertex.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_shaderLoaderGl.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_swscaleResizeQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_waveletDenoiseQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_waveletSharpQT5.so" ],
+            
+              [  "usr\/lib64\/ADM_plugins6\/videoFilters\/qt5\/libADM_vf_zoomQT5.so" ],
+            
+              [  "usr\/lib64\/alsa-lib\/libasound_module_pcm_dca.so" ],
+            
+              [  "usr\/lib64\/libADM6avcodec.so.58" ],
+            
+              [  "usr\/lib64\/libADM6avformat.so.58" ],
+            
+              [  "usr\/lib64\/libADM6avutil.so.56" ],
+            
+              [  "usr\/lib64\/libADM6postproc.so.55" ],
+            
+              [  "usr\/lib64\/libADM6swscale.so.5" ],
+            
+              [  "usr\/lib64\/libADM_UIQT56.so" ],
+            
+              [  "usr\/lib64\/libADM_UI_Cli6.so" ],
+            
+              [  "usr\/lib64\/libADM_audioParser6.so" ],
+            
+              [  "usr\/lib64\/libADM_core6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreAudio6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreAudioDevice6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreAudioEncoder6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreAudioFilterAPI6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreDemuxer6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreDemuxerMpeg6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreImage6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreImageLoader6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreJobs.so" ],
+            
+              [  "usr\/lib64\/libADM_coreLibVA6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreLibVAEnc6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreMuxer6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreScript.so" ],
+            
+              [  "usr\/lib64\/libADM_coreSocket6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreSqlLight3.so" ],
+            
+              [  "usr\/lib64\/libADM_coreSubtitles6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreUI6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreUtils6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreVDPAU6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreVideoCodec6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreVideoEncoder6.so" ],
+            
+              [  "usr\/lib64\/libADM_coreVideoFilter6.so" ],
+            
+              [  "usr\/lib64\/libADM_openGLQT56.so" ],
+            
+              [  "usr\/lib64\/libADM_render6_QT5.so" ],
+            
+              [  "usr\/lib64\/libADM_render6_cli.so" ],
+            
+              [  "usr\/lib64\/libaften.so" ],
+            
+              [  "usr\/lib64\/libaften.so.0" ],
+            
+              [  "usr\/lib64\/libaften.so.0.0.8" ],
+            
+              [  "usr\/lib64\/libdcaenc.so" ],
+            
+              [  "usr\/lib64\/libdcaenc.so.0" ],
+            
+              [  "usr\/lib64\/libdcaenc.so.0.0.0" ],
+            
+              [  "usr\/lib64\/pkgconfig\/dcaenc.pc" ],
+            
+              [  "usr\/share\/alsa\/pcm\/dca.conf" ],
+            
+              [  "usr\/share\/applications\/avidemux-2.7.desktop" ],
+            
+              [  "usr\/share\/applications\/org.avidemux.Avidemux.desktop" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_ca.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_cs.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_da.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_de.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_el.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_en.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_es.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_eu.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_fr.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_hu.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_it.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_ja.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_ko.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_pl.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_pt_BR.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_ru.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_sk.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_sr.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_sr@latin.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_tr.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_uk.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_zh_CN.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/avidemux_zh_TW.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_ar.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_bg.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_ca.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_cs.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_da.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_de.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_es.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_fi.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_fr.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_gd.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_he.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_hu.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_it.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_ja.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_ko.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_lv.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_pl.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_ru.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_sk.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_tr.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_uk.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_zh_CN.qm" ],
+            
+              [  "usr\/share\/avidemux6\/qt5\/i18n\/qtbase_zh_TW.qm" ],
+            
+              [  "usr\/share\/icons\/hicolor\/128x128\/apps\/org.avidemux.Avidemux.png" ],
+            
+              [  "usr\/share\/metainfo\/org.avidemux.Avidemux.appdata.xml" ],
+            
+              [  "usr\/share\/pixmaps\/avidemux-2.7.png" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
