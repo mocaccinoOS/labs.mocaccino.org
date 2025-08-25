@@ -1,0 +1,4465 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/kstars-3.7.5-r1 in mocaccino-community-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/kstars-3.7.5-r1
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Desktop Planetarium
+Cross-platform Sextractor and Astrometry.net-Based internal astrometric solver
+3D data visualization library for the Qt5 framework
+Astronomical World Coordinate System transformations library
+
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/kstars
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/mocaccino-community:kstars-apps-3.7.5-r1" target="_blank"> quay.io/mocaccino/mocaccino-community:kstars-apps-3.7.5-r1 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/mocaccino-community:kstars-apps-3.7.5-r1/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 3.7.5-r1  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> BSD GPL-2 GPL-3&#43; GPL-3&#43; LGPL-3 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/kde-common">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  kde-common &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/indilib">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  indilib 2.1.2.1-r2 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 3
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: sci-astronomy/kstars
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://apps.kde.org/kstars/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://apps.kde.org/kstars/ </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://edu.kde.org/kstars/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://edu.kde.org/kstars/ </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://github.com/rlancaste/stellarsolver" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/rlancaste/stellarsolver </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://community.kde.org/Qt5PatchCollection" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://community.kde.org/Qt5PatchCollection </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://invent.kde.org/qt/qt/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://invent.kde.org/qt/qt/ </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://www.qt.io/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://www.qt.io/ </a>
+    </span>
+  
+    <span class="tag">
+    <a href="https://www.atnf.csiro.au/people/mcalabre/WCS/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://www.atnf.csiro.au/people/mcalabre/WCS/ </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/sci-astronomy/kstars">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  kstars &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/sci-libs/stellarsolver">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  stellarsolver &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community-dev/sci-astronomy/wcslib">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  wcslib &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/HPXcvt" ],
+            
+              [  "usr\/bin\/fitshdr" ],
+            
+              [  "usr\/bin\/kstars" ],
+            
+              [  "usr\/bin\/sundazel" ],
+            
+              [  "usr\/bin\/tofits" ],
+            
+              [  "usr\/bin\/wcsware" ],
+            
+              [  "usr\/lib64\/libhtmesh.a" ],
+            
+              [  "usr\/lib64\/libstellarsolver.so" ],
+            
+              [  "usr\/lib64\/libstellarsolver.so.2" ],
+            
+              [  "usr\/lib64\/libstellarsolver.so.2.6" ],
+            
+              [  "usr\/lib64\/libwcs.so" ],
+            
+              [  "usr\/lib64\/libwcs.so.8" ],
+            
+              [  "usr\/lib64\/libwcs.so.8.3" ],
+            
+              [  "usr\/lib64\/pkgconfig\/stellarsolver.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/wcslib.pc" ],
+            
+              [  "usr\/share\/applications\/org.kde.kstars.desktop" ],
+            
+              [  "usr\/share\/config.kcfg\/kstars.kcfg" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/Another_way4.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/Another_way5.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/Another_way6.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/Another_way_to_add_part3.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/KStars_Neptune.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/add_object.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/advanced_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/blackbody.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-angdist.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-daylength.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-ecliptic.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-equinox.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-planetcoords.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/catalog_details.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/color_editor.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/color_indices.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/colors_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/create_catalog.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/csv_import.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/detaildialog.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/dso_manager.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-align.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-analyze.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-capture.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-extensions.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-focus.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-guide.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-logs.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-profile-editor.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-profile-wizard.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-scheduler.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-setup.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-tutorials.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos-user-interface.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ekos_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/eyepieceview.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/find.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/find2.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/fits_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/flux.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/fovdialog.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/guides_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/hips.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/imagingplanner.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/indi_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/indicapture.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/indiclient.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/kepler2nd.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/lightcurve.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/newfov.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/open_dialog_ldn.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/profile_wizard_done.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/profile_wizard_remote.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/profile_wizard_select.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/profile_wizard_welcome.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/satellites_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/screen1.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/scriptbuilder.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/sds.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/solarsystem.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/solarsystem_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/star_colors.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/supernovae_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/terrain_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/viewops.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/wut.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/xplanet_page.png" ],
+            
+              [  "usr\/share\/help\/ca\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Add_Object_to_Session_plan.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Another_way4.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Another_way5.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Another_way6.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Another_way_to_add.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Another_way_to_add_part3.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Arp84_EyepieceView.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Delete_all_images.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/EPView_Screenshot.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/KStars_Neptune.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/Savin_session.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/aberration_inspector.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/aberration_inspector_3dgraphic.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/aberration_inspector_results.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/aberration_inspector_table.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/aberration_inspector_vcurve.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/add-circle.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/add_object.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/advanced_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/alignment_polaris.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/alpha.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/archive-extract.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/astrometry_indexes_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/astrometry_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/astrometry_windows_ansvr.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/blackbody.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/build_filter_offsets.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/build_filter_offsets2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/build_filter_offsets3.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-angdist.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-daylength.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-ecliptic.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-equinox.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-planetcoords.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/calibration_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/capture_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/catalog_details.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/center_telescope.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/color_editor.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/color_indices.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/colors_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/complete_info_ldn.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/create_catalog.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/csv_import.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/csv_import_populated.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/csv_openngc.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/dark_library.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/delete_catalog.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/detaildialog.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/developer_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/devicemanager.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/dialog-ok-apply.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/document-edit.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/document-open.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/dome-park.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/dome-unpark.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/draw-text.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/dso_manager.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/dss.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-align.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-analyze.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-capture.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-extensions.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-focus.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-guide.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-logs.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-profile-editor.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-profile-wizard.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-scheduler-mosaic-atpole.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-scheduler-mosaic-rotation.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-scheduler-mosaic-std.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-scheduler-mosaic-threequarteroverlap.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-scheduler.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-setup.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-tutorials.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos-user-interface.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_analyze.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_astrometry.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_capture.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_capture_sequence_editor.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_focus.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_guide.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_guide_dithering_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_guide_gpg_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_guide_multistar_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_guide_optical_train.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_guide_phd2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_live_overlay.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_live_overlay_options.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_profile_guide.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_profile_guider_select.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_remote_astrometry.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_rotator_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_scheduler.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_scheduler_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_stellarsolver_external.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_stellarsolver_options.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_stellarsolver_profiles.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_stellarsolver_scale.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_summary.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ekos_summary_cheatsheet.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/execute_session_nt.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/execute_session_the_nt.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/exposure-calculator-integration-graph.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/exposure-calculator-integration-table.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/exposure-calculator.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/exposurecalculation-example_subexp30.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/exposurecalculation-example_subexp300.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/exposurecalculation_gain_at_step-avoid.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/exposurecalculation_gain_at_step-shift.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/eyepieceview.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/file_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/filter_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/find.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/find2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fits_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fits_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsarea.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer-magnifier.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer-mark-stars.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer-selection.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer-solver.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer-status.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer-stretch.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer1.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer_embedded.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer_histogram.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fitsviewer_selstat.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/flag-green.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/flag-red.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/flux.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/flux1.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/flux2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_adaptive_focus.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_advisor.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_advisor_coarse_adj.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_advisor_find_stars.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_advisor_fine_adj.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_advisor_help.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_analyze.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_autofocus_log.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_bad_focus.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_ccdfw_group.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_cfz_classic.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_cfz_gold.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_cfz_moustache.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_cfz_wavefront.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_display.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_display_mosaic.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_good_focus.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_mechanics.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_mechanics1.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_process.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_relative_profile.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_vcurve.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_vcurve_fourier.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_vcurve_fwhm.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_vcurve_hfradj.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_vcurve_numstars.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focus_vcurve_timeseries.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/focuser_group.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/fovdialog.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/guide_calibration_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/guide_drift_graphics.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/guide_guide_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/guides_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/hips.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/imageOverlays1.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/imageOverlays2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/imagingplanner.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/imagingplanner.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/import_catalog.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/indi_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/indicapture.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/indiclient.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/indicontrolpanel.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kepler2nd.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kepler3d.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kstars_annotation.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kstars_ekos.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kstars_fitsviewer.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kstars_hips.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kstars_horizon.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kstars_indi.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/kstars_m44_mac.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/lambda_ex.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/lambda_max.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/lightcurve.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/limit_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/list-add.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/load_catalog.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/lock-open.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/luminosity.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/luminosity_ex.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/media-playback-pause.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/media-playback-start.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/media-record.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/mosaic_adjust_grid.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/mosaic_close_pole.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/mosaic_confirm_equipment.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/mosaic_create_jobs.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/mosaic_planner.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/mosaic_select_grid.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/mosaic_wizard.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/newfov.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/newview.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/object-rotate-right.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/open_dialog_ldn.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/open_ldn.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/optical_train_group.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/overwrite_catalog.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/polar_alignment_result.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/polar_assistant_main.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/polar_assistant_main2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/polar_assistant_ps1.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/polar_assistant_ps2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/polar_assistant_ps3.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/popup.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/process-stop.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/profile_editor.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/profile_editor_scripts.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/profile_wizard_done.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/profile_wizard_remote.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/profile_wizard_select.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/profile_wizard_welcome.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/satellites_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/scheduler_planner.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/screen1.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/scriptbuilder.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/sds.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/security-high.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/security-low.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/security-medium.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/sequence_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/skymapdevice.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/solarsystem.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/solarsystem_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/solver_settings.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/star_colors.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/star_profile_examine_pixels.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/star_profile_final.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/star_profile_main.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/star_profile_toolbar1.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/star_profile_toolbar2.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/star_profile_vertical.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/supernovae_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/terrain_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/view-filter.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/view-fullscreen.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/view-refresh.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/viewmanager.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/viewops.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/wut.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/xplanet_page.png" ],
+            
+              [  "usr\/share\/help\/en\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/blackbody.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-angdist.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-ecliptic.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-equinox.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-planetcoords.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/color_indices.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/detaildialog.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ekos-logs.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ekos-setup.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ekos-tutorials.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ekos-user-interface.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ekos.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/eyepieceview.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/find.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/fovdialog.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/hips.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/indiclient.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/install.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/kepler2nd.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/newfov.png" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/observinglist.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/es\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Add_Object_to_Session_plan.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Another_way4.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Another_way5.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Another_way6.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Another_way_to_add.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Another_way_to_add_part3.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Arp84_EyepieceView.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Delete_all_images.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/EPView_Screenshot.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/KStars_Neptune.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/Savin_session.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/aavso.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/add-circle.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/add_object.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/advanced_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/alignment_polaris.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/alpha.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/archive-extract.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/astrometry_indexes_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/astrometry_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/astrometry_windows_ansvr.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/blackbody.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/build_filter_offsets.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/build_filter_offsets2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/build_filter_offsets3.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-altvstime.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-angdist.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-appcoords.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-daylenght.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-daylength.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-ecliptic.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-equinox.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-planetcoords.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-precess.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/calibration_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/capture_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/catalog_details.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/center_telescope.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/color_editor.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/color_indices.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/colors_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/complete_info_ldn.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/configurer_kstars.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/create_catalog.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/csv_import.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/csv_import_populated.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/csv_openngc.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/dark_library.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/delete_catalog.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/detaildialog.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/devicemanager.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/dialog-ok-apply.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/document-edit.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/document-open.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/dome-park.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/dome-unpark.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/draw-text.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/dso_manager.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/dss.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-align.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-analyze.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-capture.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-extensions.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-focus.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-guide.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-logs.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-profile-editor.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-profile-wizard.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-scheduler-mosaic-atpole.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-scheduler-mosaic-rotation.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-scheduler-mosaic-std.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-scheduler-mosaic-threequarteroverlap.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-scheduler.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-setup.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-tutorials.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos-user-interface.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_analyze.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_astrometry.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_capture.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_focus.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_guide.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_guide_dithering_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_guide_gpg_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_guide_optical_train.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_guide_phd2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_profile_guide.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_profile_guider_select.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_remote_astrometry.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_rotator_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_scheduler.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_scheduler_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_summary.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_summary_cheatsheet.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ekos_summary_cheatsheet_original.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/execute_session_nt.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/execute_session_the_nt.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/eyepieceview.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/file_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/filter_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/find.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/find2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fits_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fits_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fitsarea.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fitsviewer.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fitsviewer_embedded.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fitsviewer_histogram.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fitsviewer_selstat.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/flag-green.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/flag-red.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/flux.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/flux1.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/flux2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_adaptive_focus.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_advisor.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_analyze.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_autofocus_log.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_bad_focus.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_ccdfw_group.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_cfz_classic.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_cfz_gold.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_cfz_moustache.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_cfz_wavefront.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_display.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_display_mosaic.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_good_focus.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_mechanics.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_mechanics1.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_process.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_relative_profile.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_vcurve.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_vcurve_fourier.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_vcurve_fwhm.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_vcurve_hfradj.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_vcurve_numstars.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focus_vcurve_timeseries.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/focuser_group.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/fovdialog.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/graph1.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/graph2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/graph3.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/guide_calibration_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/guide_drift_graphics.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/guide_guide_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/guides_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/hips.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/imagingplanner.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/import_catalog.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/indi_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/indicapture.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/indiclient.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/indicontrolpanel.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/indieclient.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/install.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kepler2nd.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kepler3d.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kstars_annotation.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kstars_ekos.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kstars_fitsviewer.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kstars_hips.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kstars_horizon.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kstars_indi.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/kstars_m44_mac.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/lambda_ex.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/lambda_max.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/lightcurve.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/limit_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/list-add.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/load_catalog.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/lock-open.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/luminosity.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/luminosity_ex.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/media-playback-pause.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/media-playback-start.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/media-record.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/mosaic_adjust_grid.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/mosaic_close_pole.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/mosaic_confirm_equipment.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/mosaic_create_jobs.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/mosaic_planner.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/mosaic_select_grid.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/mosaic_wizard.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/newfov.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/object-rotate-right.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/observinglist.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/observinglist.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/open_dialog_ldn.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/open_ldn.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/optical_train_group.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/overwrite_catalog.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/polar_alignment_result.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/polar_assistant_main.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/polar_assistant_main2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/polar_assistant_ps1.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/polar_assistant_ps2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/polar_assistant_ps3.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/popup.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/process-stop.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/profile_editor.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/profile_editor_scripts.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/profile_wizard_done.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/profile_wizard_remote.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/profile_wizard_select.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/profile_wizard_welcome.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/satellites_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/scheduler_planner.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/screen1.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/screen2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/screen3.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/screen4.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/scriptbuilder.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/sds.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/security-high.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/security-low.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/security-medium.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/sequence_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/skymapdevice.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/solarsystem.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/solarsystem_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/solver_settings.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/star_colors.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/star_profile_examine_pixels.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/star_profile_final.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/star_profile_main.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/star_profile_toolbar1.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/star_profile_toolbar2.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/star_profile_vertical.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/supernovae_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/terrain_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/view-filter.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/view-fullscreen.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/view-refresh.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/viewops.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/wut.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/xplanet_page.png" ],
+            
+              [  "usr\/share\/help\/fr\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/aavso.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/blackbody.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-daylength.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-precess.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/color_indices.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/detaildialog.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/devicemanager.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-align.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-analyze.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-capture.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-extensions.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-focus.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-guide.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-logs.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-profile-editor.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-profile-wizard.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-scheduler.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-setup.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-tutorials.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos-user-interface.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ekos.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/eyepieceview.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/find.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/fovdialog.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/hips.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/imagingplanner.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/indiclient.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/indicontrolpanel.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/install.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/kepler2nd.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/lightcurve.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/newfov.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/observinglist.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/popup.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/screen1.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/scriptbuilder.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/skymapdevice.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/solarsystem.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/star_colors.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/viewops.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/wut.png" ],
+            
+              [  "usr\/share\/help\/nl\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/aavso.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-angdist.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-daylength.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-ecliptic.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-equinox.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-planetcoords.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/detaildialog.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/devicemanager.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/find.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/fovdialog.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/indiclient.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/indicontrolpanel.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/install.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/lightcurve.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/newfov.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/popup.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/screen1.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/scriptbuilder.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/skymapdevice.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/solarsystem.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/star_colors.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/viewops.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/wut.png" ],
+            
+              [  "usr\/share\/help\/pt_BR\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/aavso.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/blackbody.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-angdist.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-daylength.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-ecliptic.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-equinox.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-planetcoords.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-precess.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/color_indices.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/detaildialog.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/devicemanager.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-align.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-analyze.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-capture.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-extensions.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-fits-viewer.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-focus.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-guide.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-logs.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-profile-editor.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-profile-wizard.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-scheduler.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-setup.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-tutorials.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos-user-interface.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ekos.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/eyepieceview.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/find.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/fitsarea.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/fovdialog.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/hips.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/indicapture.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/indiclient.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/indicontrolpanel.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/install.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/lightcurve.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/newfov.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/observinglist.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/popup.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/screen1.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/scriptbuilder.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/skymapdevice.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/solarsystem.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/star_colors.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/viewops.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/wut.png" ],
+            
+              [  "usr\/share\/help\/sv\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Add_Object_to_Session_plan.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Another_way4.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Another_way5.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Another_way6.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Another_way_to_add.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Another_way_to_add_part3.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Delete_all_images.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/KStars_Neptune.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/Savin_session.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/advanced_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ai-contents.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/alpha.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/altvstime.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/altvstime.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/astroinfo.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/blackbody.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/blackbody.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-angdist.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-angdist.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-apcoords.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-apcoords.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-dayduration.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-daylength.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-ecliptic.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-eqgal.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-eqgal.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-equinox.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-equinox.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-geodetic.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-geodetic.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-horizontal.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-horizontal.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-julian.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-julianday.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-planetcoords.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-planetcoords.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calc-sidereal.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/calculator.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/cequator.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/color_editor.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/color_indices.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/colorandtemp.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/colors_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/commands.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/config.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/cosmicdist.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/cpoles.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/credits.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/csphere.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/darkmatter.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/details.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/devicemanager.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/dss.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/dumpmode.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ecliptic.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-align.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-analyze.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-capture.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-extensions.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-focus.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-guide.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-logs.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-profile-editor.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-profile-wizard.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-scheduler.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-setup.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-tutorials.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos-user-interface.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ekos_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/ellipticalgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/epoch.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/equinox.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/execute_session_nt.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/execute_session_the_nt.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/eyepieceview.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/faq.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/fits_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/fitsarea.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/fitsviewer.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/flux.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/flux.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/flux2.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/geocoords.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/geolocator.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/greatcircle.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/guides_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/hips.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/horizon.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/hourangle.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/imagingplanner.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/index.cache.bz2" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/index.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/indi.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/indi_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/jmoons.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/jmoons.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/julianday.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/kepler2nd.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/lambda_ex.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/lambda_max.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/leapyear.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/lightcurves.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/luminosity.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/magnitude.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/meridian.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/obsplanner.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/parallax.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/precession.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/quicktour.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/retrograde.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/satellites_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/scriptbuilder.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/scriptbuilder.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/sds.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/sidereal.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/skycoords.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/solarsys.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/solarsystem.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/solarsystem_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/spiralgalaxies.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/stars.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/supernovae_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/telescopes.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/terrain_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/timezones.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/tools.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/utime.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/viewops.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/wut.docbook" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/wut.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/xplanet_tab.png" ],
+            
+              [  "usr\/share\/help\/uk\/kstars\/zenith.docbook" ],
+            
+              [  "usr\/share\/icons\/hicolor\/128x128\/apps\/kstars.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/kstars.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/kstars.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/apps\/kstars.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/64x64\/apps\/kstars.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/kstars.svgz" ],
+            
+              [  "usr\/share\/knotifications6\/kstars.notifyrc" ],
+            
+              [  "usr\/share\/kstars\/Henry-Draper.idx" ],
+            
+              [  "usr\/share\/kstars\/Interesting.dat" ],
+            
+              [  "usr\/share\/kstars\/OpenNGC.kscat" ],
+            
+              [  "usr\/share\/kstars\/PlanetFacts.dat" ],
+            
+              [  "usr\/share\/kstars\/TZrules.dat" ],
+            
+              [  "usr\/share\/kstars\/advinterface.dat" ],
+            
+              [  "usr\/share\/kstars\/asteroids.dat" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/Atik-16200CCD_Mono.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/Canon_DSLR_EOS_Ra.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/FLI-16200CCD_Mono.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/MI_CCD_C3.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/Nikon_DSLR_DSC_D5000_(PTP_mode).xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/Nikon_DSLR_DSC_D5100_(PTP_mode).xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/Nikon_DSLR_DSC_D700_(PTP_mode).xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/Player_One_Poseidon-C_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/Player_One_Saturn-C_SQR.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_163C.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_163M.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_268C.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_268M.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_294M.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_461_PH.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_533M.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/QHY_CCD_600_PH.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI071MC_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI120MC.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI1600MM.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI178MC.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI183MC_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI183MM_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI224MC.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI2600MC_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI2600MM_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI290MM_Mini.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI294MC_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI294MM_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI533MC_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI533MM_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI6200MC_Pro.xml" ],
+            
+              [  "usr\/share\/kstars\/cameradata\/ZWO_CCD_ASI6200MM.xml" ],
+            
+              [  "usr\/share\/kstars\/catalog.min.json" ],
+            
+              [  "usr\/share\/kstars\/cbounds-3.idx" ],
+            
+              [  "usr\/share\/kstars\/cbounds-4.idx" ],
+            
+              [  "usr\/share\/kstars\/cbounds-5.idx" ],
+            
+              [  "usr\/share\/kstars\/cbounds-6.idx" ],
+            
+              [  "usr\/share\/kstars\/cbounds.dat" ],
+            
+              [  "usr\/share\/kstars\/chart.colors" ],
+            
+              [  "usr\/share\/kstars\/citydb.sqlite" ],
+            
+              [  "usr\/share\/kstars\/classic.colors" ],
+            
+              [  "usr\/share\/kstars\/clines.dat" ],
+            
+              [  "usr\/share\/kstars\/cnames.dat" ],
+            
+              [  "usr\/share\/kstars\/cometels.json.gz" ],
+            
+              [  "usr\/share\/kstars\/comets.dat" ],
+            
+              [  "usr\/share\/kstars\/defaultflag.gif" ],
+            
+              [  "usr\/share\/kstars\/earth.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.B5.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.R5.vsop" ],
+            
+              [  "usr\/share\/kstars\/earth.orbit" ],
+            
+              [  "usr\/share\/kstars\/ekoslive.png" ],
+            
+              [  "usr\/share\/kstars\/fr\/info_url.dat" ],
+            
+              [  "usr\/share\/kstars\/geomap.jpg" ],
+            
+              [  "usr\/share\/kstars\/glossary.xml" ],
+            
+              [  "usr\/share\/kstars\/image_url.dat" ],
+            
+              [  "usr\/share\/kstars\/indidrivers.xml" ],
+            
+              [  "usr\/share\/kstars\/info_url.dat" ],
+            
+              [  "usr\/share\/kstars\/jupiter.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.B5.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.R5.vsop" ],
+            
+              [  "usr\/share\/kstars\/jupiter.orbit" ],
+            
+              [  "usr\/share\/kstars\/kstars.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/constants\/Constants.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/constants\/qmldir" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/AboutDialog.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/DetailsDialog.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/FindDialog.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/LocationDialog.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/helpers\/DetailsAddLink.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/helpers\/DetailsItem.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/helpers\/LocationEdit.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/helpers\/LocationLoading.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/menus\/DetailsLinkMenu.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/dialogs\/menus\/LocationsGeoMenu.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/appointment-new.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/appointment-new@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/appointment-new@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/appointment-new@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-down.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-down@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-down@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-down@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-up.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-up@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-up@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow-up@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/arrow@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/back.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/back@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/back@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/back@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/draw-star.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/draw-star@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/draw-star@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/draw-star@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/edit-find.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/edit-find@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/edit-find@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/edit-find@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kde-logo.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kde-logo@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kde-logo@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kde-logo@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_automode.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_automode@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_automode@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_automode@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cbound.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cbound@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cbound@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cbound@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_clines.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_clines@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_clines@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_clines@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cnames.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cnames@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cnames@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_cnames@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_constellationart.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_constellationart@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_constellationart@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_constellationart@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_deepsky.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_deepsky@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_deepsky@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_deepsky@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_ekos.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_ekos@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_ekos@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_ekos@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_fitsviewer.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_fitsviewer@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_fitsviewer@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_fitsviewer@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_grid.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_grid@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_grid@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_grid@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_guides.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_guides@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_guides@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_guides@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_hgrid.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_hgrid@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_hgrid@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_hgrid@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_horizon.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_horizon@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_horizon@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_horizon@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_indi.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_indi@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_indi@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_indi@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_mw.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_mw@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_mw@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_mw@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_planets.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_planets@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_planets@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_planets@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_satellites.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_satellites@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_satellites@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_satellites@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_solarsystem.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_solarsystem@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_solarsystem@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_solarsystem@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_stars.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_stars@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_stars@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_stars@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_supernovae.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_supernovae@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_supernovae@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/kstars_supernovae@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/left-arrow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/left-arrow@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/left-arrow@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/left-arrow@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-closed.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-closed@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-closed@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-closed@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-open.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-open@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-open@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/lock-open@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-pause.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-pause@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-pause@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-pause@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-start.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-start@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-start@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-playback-start@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-backward.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-backward@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-backward@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-backward@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-forward.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-forward@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-forward@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/media-skip-forward@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/right-arrow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/right-arrow@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/right-arrow@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/right-arrow@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash_bg.jpeg" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash_bg@2x.jpeg" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash_bg@3x.jpeg" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/splash_bg@4x.jpeg" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-down.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-down@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-left.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-left@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-right.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-right@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-up.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/telescope-up@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-horizontal.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-horizontal@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-horizontal@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-horizontal@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-vertical.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-vertical@2x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-vertical@3x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/images\/tutorial-arrow-vertical@4x.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/DevicePanel.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/INDIControlPanel.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/ImagePreview.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/KSButtonSwitch.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/KSButtonsSwitchRow.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/KSCheckBox.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/KSINDIText.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/KSINDITextField.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/KSLed.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/Led.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/MotionControl.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/Property.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/hdpi\/green.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/hdpi\/grey.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/hdpi\/red.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/hdpi\/yellow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/ldpi\/green.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/ldpi\/grey.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/ldpi\/red.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/ldpi\/yellow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/mdpi\/green.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/mdpi\/grey.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/mdpi\/red.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/mdpi\/yellow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xhdpi\/green.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xhdpi\/grey.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xhdpi\/red.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xhdpi\/yellow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxhdpi\/green.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxhdpi\/grey.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxhdpi\/red.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxhdpi\/yellow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxxhdpi\/green.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxxhdpi\/grey.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxxhdpi\/red.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/indi\/modules\/images\/xxxhdpi\/yellow.png" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/main.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/BottomMenu.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSButton.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSLabel.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSListView.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSPage.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSTab.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSTabBarArrow.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSTabButton.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSText.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/KSTextField.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/SkyMapLiteWrapper.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/Splash.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/TimePage.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/TopMenu.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/helpers\/BottomMenuButton.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/helpers\/KSMenuItem.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/helpers\/PassiveNotification.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/helpers\/TelescopeControl.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/helpers\/TimeSpinBox.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/helpers\/TopMenuButton.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/helpers\/Units.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/menus\/ContextMenu.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/popups\/ColorSchemePopup.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/popups\/FOVPopup.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/popups\/ProjectionsPopup.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialExitPopup.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialPane.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialPopup.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialStep1.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialStep2.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialStep3.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialStep4.qml" ],
+            
+              [  "usr\/share\/kstars\/kstarslite\/qml\/modules\/tutorial\/TutorialStep5.qml" ],
+            
+              [  "usr\/share\/kstars\/lmc.dat" ],
+            
+              [  "usr\/share\/kstars\/mars.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.B5.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.R5.vsop" ],
+            
+              [  "usr\/share\/kstars\/mars.orbit" ],
+            
+              [  "usr\/share\/kstars\/mercury.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.B5.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.R5.vsop" ],
+            
+              [  "usr\/share\/kstars\/mercury.orbit" ],
+            
+              [  "usr\/share\/kstars\/milkyway.dat" ],
+            
+              [  "usr\/share\/kstars\/moonB.dat" ],
+            
+              [  "usr\/share\/kstars\/moonLR.dat" ],
+            
+              [  "usr\/share\/kstars\/moonless-night.colors" ],
+            
+              [  "usr\/share\/kstars\/namedstars.dat" ],
+            
+              [  "usr\/share\/kstars\/nds\/info_url.dat" ],
+            
+              [  "usr\/share\/kstars\/neptune.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.B5.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/neptune.orbit" ],
+            
+              [  "usr\/share\/kstars\/night.colors" ],
+            
+              [  "usr\/share\/kstars\/pluto.orbit" ],
+            
+              [  "usr\/share\/kstars\/satellites.dat" ],
+            
+              [  "usr\/share\/kstars\/saturn.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.B5.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.R5.vsop" ],
+            
+              [  "usr\/share\/kstars\/saturn.orbit" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/blubber-container.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/breastbone.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/caribou.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/collarbones.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/dogs.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/lamp-stand.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/runners.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/the-one-behind.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/two-in-front.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/two-placed-far-apart.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/inuit\/two-sunbeams.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/andromeda.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/antlia.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/apus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/aquarius.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/aquila.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/ara.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/argonavis.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/aries.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/auriga.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/bootes.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/caelum.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/camelopardalis.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/cancer.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/canes-venatici.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/canis-major.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/canis-minor.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/capricornus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/cassiopeia.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/centaurus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/cepheus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/cetus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/chamaeleon.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/circinus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/columba.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/coma-berenices.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/corona-australis.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/corona-borealis.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/corvus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/crater.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/crux.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/cygnus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/delphinus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/dorado.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/draco.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/equuleus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/eridanus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/fornax.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/gemini.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/grus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/hercules.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/horlogium.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/hydra.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/hydrus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/indus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/lacerta.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/leo-minor.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/leo.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/lepus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/libra.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/lupus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/lynx.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/lyra.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/mensa.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/microscopium.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/monoceros.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/musca.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/norma.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/octans.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/ophiuchus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/orion.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/pavo.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/pegasus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/perseus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/phoenix.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/pictor.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/pisces.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/piscis-austrinus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/pyxis.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/reticulum.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/sagitta.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/sagittarius.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/scorpius.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/sculptor.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/scutum.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/sextans.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/taurus.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/telescopium.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/triangulum-australe.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/triangulum.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/tucana.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/ursa-major.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/ursa-minor.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/virgo.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/volans.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures\/western\/vulpecula.png" ],
+            
+              [  "usr\/share\/kstars\/skycultures.sqlite" ],
+            
+              [  "usr\/share\/kstars\/smc.dat" ],
+            
+              [  "usr\/share\/kstars\/starlnum.idx" ],
+            
+              [  "usr\/share\/kstars\/starnames.dat" ],
+            
+              [  "usr\/share\/kstars\/stars.dat" ],
+            
+              [  "usr\/share\/kstars\/textures\/defaultflag.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/galaxy-cluster.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/galaxy.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/gaseous-nebula.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/globular-cluster.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/jupiter.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/mars.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/mercury.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon00.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon01.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon02.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon03.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon04.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon05.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon06.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon07.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon08.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon09.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon10.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon11.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon12.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon13.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon14.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon15.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon16.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon17.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon18.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon19.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon20.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon21.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon22.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon23.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon24.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon25.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon26.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon27.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon28.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon29.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon30.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon31.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon32.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon33.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon34.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/moon35.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/neptune.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/obslistsymbol.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/open-cluster.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/planetary-nebula.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/pluto.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/saturn.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/star.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/sun.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/uranus.png" ],
+            
+              [  "usr\/share\/kstars\/textures\/venus.png" ],
+            
+              [  "usr\/share\/kstars\/themes\/blackbody.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/colorcontrast.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/darkroom.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/graycard.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/highkey.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/lowkey.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/nightvision.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/shadeofgray.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/sunsetcolor.colors" ],
+            
+              [  "usr\/share\/kstars\/themes\/whitebalance.colors" ],
+            
+              [  "usr\/share\/kstars\/tips" ],
+            
+              [  "usr\/share\/kstars\/tns_public_objects.csv" ],
+            
+              [  "usr\/share\/kstars\/unnamedstars.dat" ],
+            
+              [  "usr\/share\/kstars\/uranus.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/uranus.orbit" ],
+            
+              [  "usr\/share\/kstars\/venus.B0.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.B1.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.B2.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.B3.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.B4.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.B5.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.L0.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.L1.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.L2.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.L3.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.L4.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.L5.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.R0.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.R1.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.R2.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.R3.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.R4.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.R5.vsop" ],
+            
+              [  "usr\/share\/kstars\/venus.orbit" ],
+            
+              [  "usr\/share\/kstars\/wzdownload.png" ],
+            
+              [  "usr\/share\/kstars\/wzekos.png" ],
+            
+              [  "usr\/share\/kstars\/wzgeo.png" ],
+            
+              [  "usr\/share\/kstars\/wzscope.png" ],
+            
+              [  "usr\/share\/kstars\/wzserialportassistant.png" ],
+            
+              [  "usr\/share\/kstars\/wzstars.png" ],
+            
+              [  "usr\/share\/locale\/af\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/az\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/be\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/bg\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/bn\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/br\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/bs\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ca@valencia\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/cy\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/eo\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/fa\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ga\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/gu\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/hi\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/hne\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/hr\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/hu\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/is\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ka\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/kk\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/km\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/lt\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/lv\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/mai\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/mk\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ml\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/mr\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ms\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/nb\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/nds\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ne\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/oc\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/pa\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/se\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/si\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/sq\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ta\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/tg\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/th\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/tr\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/ug\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/xh\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/kstars.mo" ],
+            
+              [  "usr\/share\/man\/man1\/HPXcvt.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/fitshdr.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/sundazel.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/tofits.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/wcsware.1.bz2" ],
+            
+              [  "usr\/share\/metainfo\/org.kde.kstars.appdata.xml" ],
+            
+              [  "usr\/share\/sounds\/KDE-KStars-Alert.ogg" ],
+            
+              [  "usr\/share\/sounds\/KDE-KStars-FITS-Received.ogg" ],
+            
+              [  "usr\/share\/sounds\/KDE-KStars-Finish-Success.ogg" ],
+            
+              [  "usr\/share\/sounds\/KDE-KStars-Sys-App-Error-Serious.ogg" ],
+            
+              [  "usr\/share\/sounds\/KDE-KStars-Sys-App-Message.ogg" ],
+            
+              [  "usr\/share\/sounds\/KDE-KStars-Warning.ogg" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
