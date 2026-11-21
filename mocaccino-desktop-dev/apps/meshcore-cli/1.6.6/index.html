@@ -1,0 +1,868 @@
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/meshcore-cli-1.6.6 in mocaccino-desktop-dev </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/meshcore-cli-1.6.6
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                CLI interface to MeshCore companion app over BLE, TCP or Serial
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-desktop-dev">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-desktop-dev
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/meshcore-cli
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/mocaccino/desktop:meshcore-cli-apps-1.6.6" target="_blank"> quay.io/mocaccino/desktop:meshcore-cli-apps-1.6.6 </a> </strong>  
+	<a class="button is-link is-light is-small" href="https://containerbay.io/quay.io/mocaccino/desktop:meshcore-cli-apps-1.6.6/" target=_blank>
+	<span class="icon is-small">
+      		<i class="fas fa-external-link-square-alt"></i>
+    	</span>
+	 &nbsp; Browse</a>
+ <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.6.6  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> BSD MIT </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/sys-fs">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  sys-fs &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> description: CLI interface to MeshCore companion app over BLE, TCP or Serial
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: dev-python/bleak::mocaccino-overlay dev-python/meshcore::mocaccino-overlay dev-python/meshcore-cli::mocaccino-overlay dev-python/pycayennelpp::mocaccino-overlay dev-python/pyserial-asyncio-fast::mocaccino-overlay
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://github.com/meshcore-dev/meshcore-cli" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/meshcore-dev/meshcore-cli </a>
+    </span>
+  
+</div>
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/bleak">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  bleak &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/prompt-toolkit">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  prompt-toolkit &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/pyserial-asyncio-fast">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  pyserial-asyncio-fast &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/pycayennelpp">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  pycayennelpp &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/meshcore">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  meshcore &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/meshcore-cli">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  meshcore-cli &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-desktop-dev/dev-python/wcwidth">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  wcwidth &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/meshcli" ],
+            
+              [  "usr\/bin\/meshcore-cli" ],
+            
+              [  "usr\/lib\/python-exec\/python3.14\/meshcli" ],
+            
+              [  "usr\/lib\/python-exec\/python3.14\/meshcore-cli" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/_compat.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/args\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/args\/bluez.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/args\/corebluetooth.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/args\/winrt.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/assigned_numbers.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/_manufacturers.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/_utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/advertisement_monitor.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/client.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/defs.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/manager.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/scanner.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/signals.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/bluezdbus\/version.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/characteristic.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/client.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/corebluetooth\/CentralManagerDelegate.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/corebluetooth\/PeripheralDelegate.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/corebluetooth\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/corebluetooth\/client.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/corebluetooth\/scanner.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/corebluetooth\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/descriptor.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/device.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/client.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/defs.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/java\/com\/github\/hbldh\/bleak\/PythonBluetoothGattCallback.java" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/java\/com\/github\/hbldh\/bleak\/PythonScanCallback.java" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/recipes\/bleak\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/recipes\/bleak\/fix_setup.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/scanner.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/p4android\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/scanner.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/service.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/winrt\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/winrt\/client.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/winrt\/scanner.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/backends\/winrt\/util.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/exc.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/py.typed" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak\/uuids.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak-3.0.2.dist-info\/METADATA" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/bleak-3.0.2.dist-info\/WHEEL" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/cayennelpp\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/cayennelpp\/lpp_data.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/cayennelpp\/lpp_frame.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/cayennelpp\/lpp_type.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/cayennelpp\/lpp_util.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/ble_cx.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/commands\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/commands\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/commands\/binary.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/commands\/contact.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/commands\/control_data.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/commands\/device.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/commands\/messaging.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/connection_manager.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/events.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/lpp_json_encoder.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/meshcore.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/meshcore_parser.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/packets.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/parsing.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/reader.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/serial_cx.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore\/tcp_cx.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore-2.3.17.dist-info\/METADATA" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore-2.3.17.dist-info\/WHEEL" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore_cli\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore_cli\/__main__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore_cli\/meshcore_cli.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore_cli-1.6.6.dist-info\/METADATA" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore_cli-1.6.6.dist-info\/WHEEL" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/meshcore_cli-1.6.6.dist-info\/entry_points.txt" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/application\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/application\/application.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/application\/current.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/application\/dummy.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/application\/run_in_terminal.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/auto_suggest.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/buffer.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/cache.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/clipboard\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/clipboard\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/clipboard\/in_memory.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/clipboard\/pyperclip.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/completion\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/completion\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/completion\/deduplicate.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/completion\/filesystem.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/completion\/fuzzy_completer.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/completion\/nested.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/completion\/word_completer.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/completers\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/completers\/system.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/regular_languages\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/regular_languages\/compiler.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/regular_languages\/completion.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/regular_languages\/lexer.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/regular_languages\/regex_parser.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/regular_languages\/validation.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/ssh\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/ssh\/server.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/telnet\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/telnet\/log.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/telnet\/protocol.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/contrib\/telnet\/server.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/cursor_shapes.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/data_structures.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/document.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/enums.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/eventloop\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/eventloop\/async_generator.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/eventloop\/inputhook.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/eventloop\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/eventloop\/win32.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/filters\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/filters\/app.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/filters\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/filters\/cli.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/filters\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/formatted_text\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/formatted_text\/ansi.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/formatted_text\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/formatted_text\/html.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/formatted_text\/pygments.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/formatted_text\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/history.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/ansi_escape_sequences.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/defaults.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/posix_pipe.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/posix_utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/typeahead.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/vt100.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/vt100_parser.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/win32.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/input\/win32_pipe.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/auto_suggest.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/basic.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/completion.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/cpr.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/emacs.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/focus.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/mouse.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/named_commands.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/open_in_editor.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/page_navigation.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/scroll.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/search.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/bindings\/vi.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/defaults.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/digraphs.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/emacs_state.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/key_bindings.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/key_processor.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/key_binding\/vi_state.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/keys.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/containers.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/controls.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/dimension.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/dummy.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/layout.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/margins.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/menus.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/mouse_handlers.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/processors.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/screen.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/scrollable_pane.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/layout\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/lexers\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/lexers\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/lexers\/pygments.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/log.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/mouse_events.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/color_depth.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/conemu.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/defaults.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/flush_stdout.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/plain_text.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/vt100.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/win32.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/output\/windows10.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/patch_stdout.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/py.typed" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/renderer.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/search.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/selection.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/choice_input.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/dialogs.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/progress_bar\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/progress_bar\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/progress_bar\/formatters.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/prompt.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/shortcuts\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/styles\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/styles\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/styles\/defaults.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/styles\/named_colors.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/styles\/pygments.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/styles\/style.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/styles\/style_transformation.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/token.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/utils.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/validation.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/widgets\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/widgets\/base.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/widgets\/dialogs.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/widgets\/menus.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/widgets\/toolbars.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit\/win32_types.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit-3.0.53.dist-info\/METADATA" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit-3.0.53.dist-info\/WHEEL" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/prompt_toolkit-3.0.53.dist-info\/top_level.txt" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/pycayennelpp-2.4.0.dist-info\/METADATA" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/pycayennelpp-2.4.0.dist-info\/WHEEL" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/pycayennelpp-2.4.0.dist-info\/top_level.txt" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/pyserial_asyncio_fast-0.16.dist-info\/METADATA" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/pyserial_asyncio_fast-0.16.dist-info\/WHEEL" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/pyserial_asyncio_fast-0.16.dist-info\/top_level.txt" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/serial_asyncio_fast\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/serial_asyncio_fast\/py.typed" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/_clip.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/_constants.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/_wcswidth.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/_wcwidth.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/_wcwidth_c.abi3.so" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/_wcwidth_c.pyi" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/_width.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/align.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/bisearch.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/control_codes.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/escape_sequences.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/grapheme.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/hyperlink.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/py.typed" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/sgr_state.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_ambiguous.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/__init__.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_058c7585.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_2148ff29.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_244dc88b.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_336a71a1.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_33ac73f2.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_3a1895d5.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_59180a0d.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_65c6beb5.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_78f828e8.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_8c2ae14d.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_900356bf.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_97904ece.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_a5880eeb.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_b6d33cf4.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_c57c295b.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_cf02297d.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_e18ac6a7.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_e2b75ee3.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_fb5fd79b.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_known_fdc99132.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_grapheme_overrides\/_registry.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_mc.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_overrides.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_term_programs.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_vs15.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_vs16.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_wide.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/table_zero.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/text_sizing.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/textwrap.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/unicode_versions.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth\/wcwidth.py" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth-0.9.2.dist-info\/METADATA" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth-0.9.2.dist-info\/WHEEL" ],
+            
+              [  "usr\/lib\/python3.14\/site-packages\/wcwidth-0.9.2.dist-info\/top_level.txt" ],
+            
+              [  "usr\/share\/doc\/bleak-3.0.2\/README.rst.bz2" ],
+            
+              [  "usr\/share\/doc\/meshcore-2.3.17\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/meshcore-cli-1.6.6\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/prompt-toolkit-3.0.53\/CHANGELOG.bz2" ],
+            
+              [  "usr\/share\/doc\/prompt-toolkit-3.0.53\/README.rst.bz2" ],
+            
+              [  "usr\/share\/doc\/pycayennelpp-2.4.0\/README.md.bz2" ],
+            
+              [  "usr\/share\/doc\/pyserial-asyncio-fast-0.16\/README.rst.bz2" ],
+            
+              [  "usr\/share\/doc\/wcwidth-0.9.2\/README.rst.bz2" ],
+            
+              [  "usr\/share\/doc\/wcwidth-0.9.2\/docs\/intro.rst.bz2" ],
+            
+              [  "usr\/share\/mocaccino\/packagelists\/apps-meshcore-cli-1.6.6.pkglist" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
